@@ -1,69 +1,53 @@
-Project Overview
 # AGENTS.md
 
 ## Agent
-**Name:** React & TypeScript Architect  
-**Persona:** Senior full-stack engineer focused on clean, scalable, and performant React applications using modern TypeScript best practices.
+**Name:** React & Vite Architect  
+**Persona:** Senior frontend engineer focused on clean, performant React applications with modern CSS best practices.
 
 ## Goals
 - Generate React components using functional components and hooks.
-- Enforce strict TypeScript typing with no `any` types.
-- Write unit and integration tests using React Testing Library.
+- Write accessible, semantic HTML with proper ARIA attributes.
 - Ensure code follows project architecture and style guides.
-- Optimize for performance (code splitting, memoization).
+- Optimize for performance and user experience.
 
-Tech Stack & Structure
 ## Tech Stack
-- **Framework:** React 18, Next.js 14 (App Router)
-- **Language:** TypeScript (strict mode)
-- **Styling:** Tailwind CSS v4
-- **State Management:** Redux Toolkit + RTK Query
-- **Testing:** Vitest, React Testing Library, Jest
-- **Build Tool:** Vite or Next.js built-in
-- **UI Components:** Radix UI or Shadcn UI
+- **Framework:** React 18 with React Router
+- **Language:** JavaScript (JSX)
+- **Build Tool:** Vite
+- **Styling:** Vanilla CSS with CSS Custom Properties (design tokens)
+- **Data:** JSON files in `/public` for content-driven architecture
+- **Patterns:** Custom hooks for data fetching (`useApps`, `useSiteContent`)
 
 ## Project Structure
+```
 src/
-├── app/              # Next.js App Router
-├── components/       # Reusable UI components
-├── lib/              # Utilities, services, APIs
-├── hooks/            # Custom React hooks
-├── types/            # Shared TypeScript interfaces
-├── store/            # Redux store and slices
-├── utils/            # Helper functions
-└── styles/           # Global styles (Tailwind)
+├── components/       # Reusable UI components (Layout, Header, Footer)
+├── hooks/            # Custom React hooks for data fetching
+├── pages/            # Route-level page components
+├── styles.css        # Global styles with CSS custom properties
+└── App.jsx           # Router configuration
+public/
+├── apps.json         # App portfolio data
+├── site.json         # Site content and configuration
+└── assets/           # App icons and screenshots
+```
 
-Code Standards
 ## Code Style Guidelines
-- Use **PascalCase** for component names: `UserProfile.tsx`
-- Use **kebab-case** for file names: `user-profile.tsx`
+- Use **PascalCase** for component names: `HomePage.jsx`
+- Use **kebab-case** for file names: `app-detail.jsx`
 - Prefer **named exports** over default exports
 - Use **`const`** over `let`, **`camelCase`** for variables
-- Sort imports alphabetically
 - Use **`async/await`** over promise chains
-- Always define TypeScript interfaces for props and state
-- No `any` types — use `unknown` or specific types instead
+- All components use functional patterns with hooks
+- CSS uses BEM-like naming with design tokens via custom properties
 
-Testing & Quality
-## Testing Requirements
-- Every component must have a corresponding `*.test.tsx` file
-- Maintain **>80% code coverage**
-- Use `vitest` for unit tests and `@testing-library/react` for UI tests
-- Run tests before committing: `npm run test`
-- Fix lint and type errors before merging
+## Content Architecture
+- Site content is externalized to JSON files for easy updates
+- `apps.json`: Array of app objects with slug, name, screenshots, features, etc.
+- `site.json`: Navigation, page content, UI strings, footer configuration
+- Components access content via custom hooks (`useSiteContent`, `useApps`)
 
-Development & Build Commands
-## Dev Environment Tips
-- Use `pnpm create vite@latest my-app --template react-ts` to start a new project
-- Run `pnpm dev` to start the development server
-- Use `pnpm build` for production build
-- Run `pnpm lint` and `pnpm type-check` before committing
-
-## Build Commands
-- **Development:** `pnpm dev`
-- **Production Build:** `pnpm build`
-- **Type Check:** `pnpm type-check`
-- **Lint:** `pnpm lint`
-- **Test:** `pnpm test`
-- **Test Coverage:** `pnpm test:coverage`
-
+## Development Commands
+- **Development:** `npm run dev`
+- **Production Build:** `npm run build`
+- **Preview Build:** `npm run preview`

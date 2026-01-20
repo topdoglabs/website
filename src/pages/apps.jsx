@@ -15,25 +15,18 @@ export const AppsPage = () => {
 
   return (
     <Layout>
-      <section className="hero hero-split">
-        <div className="hero-copy">
-          {appsPage.heroTitle ? <h1>{appsPage.heroTitle}</h1> : null}
-          {appsPage.heroSubtitle ? (
-            <p className="hero-sub">{appsPage.heroSubtitle}</p>
-          ) : null}
-          <div className="hero-actions">
-            <a className="button primary" href="mailto:info@topdoglabs.com">
-              {appsPage.heroPrimaryCta}
-            </a>
-            <Link className="button ghost" to="/support">
-              {appsPage.heroSecondaryCta}
-            </Link>
-          </div>
-        </div>
-        <div className="hero-media">
-          <div className="device-mock" aria-hidden="true">
-            <div className="device-screen"></div>
-          </div>
+      <section className="hero">
+        {appsPage.heroTitle ? <h1>{appsPage.heroTitle}</h1> : null}
+        {appsPage.heroSubtitle ? (
+          <p className="hero-sub">{appsPage.heroSubtitle}</p>
+        ) : null}
+        <div className="hero-actions">
+          <a className="button primary" href="mailto:info@topdoglabs.com">
+            {appsPage.heroPrimaryCta}
+          </a>
+          <Link className="button ghost" to="/support">
+            {appsPage.heroSecondaryCta}
+          </Link>
         </div>
       </section>
 

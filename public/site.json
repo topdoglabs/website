@@ -1,9 +1,18 @@
 {
   "navigation": {
     "headerLinks": [
-      { "label": "Apps", "href": "/apps" },
-      { "label": "Support", "href": "/support" },
-      { "label": "About", "href": "/about" }
+      {
+        "label": "Apps",
+        "href": "/apps"
+      },
+      {
+        "label": "Support",
+        "href": "/support"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      }
     ]
   },
   "home": {
@@ -69,7 +78,7 @@
     "nameLabel": "Name",
     "namePlaceholder": "Jane Smith",
     "emailLabel": "Email",
-    "emailPlaceholder": "jane@framer.com",
+    "emailPlaceholder": "you@example.com",
     "messageLabel": "Message",
     "messagePlaceholder": "Your message...",
     "submitLabel": "Submit"
@@ -108,24 +117,48 @@
     {
       "title": "Navigation",
       "links": [
-        { "label": "Apps", "href": "/apps" },
-        { "label": "About", "href": "/about" }
+        {
+          "label": "Apps",
+          "href": "/apps"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        }
       ]
     },
     {
       "title": "Support",
       "links": [
-        { "label": "Email", "href": "mailto:info@topdoglabs.com" },
-        { "label": "Support", "href": "/support" },
-        { "label": "FAQ", "href": "/faq" }
+        {
+          "label": "Email",
+          "href": "mailto:info@topdoglabs.com"
+        },
+        {
+          "label": "Support",
+          "href": "/support"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        }
       ]
     },
     {
       "title": "Legal",
       "links": [
-        { "label": "Privacy Policy", "href": "/privacy" },
-        { "label": "Terms", "href": "/terms" },
-        { "label": "Cookies", "href": "/cookies" }
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy"
+        },
+        {
+          "label": "Terms",
+          "href": "/terms"
+        },
+        {
+          "label": "Cookies",
+          "href": "/cookies"
+        }
       ]
     }
   ],
