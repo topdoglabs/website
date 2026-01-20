@@ -21,6 +21,7 @@ export const SupportPage = () => {
   });
 
   const [status, setStatus] = useState("idle"); // idle, loading, success, error
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +31,7 @@ export const SupportPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
 
     try {
       const response = await fetch("/api/send-email", {
@@ -38,13 +40,17 @@ export const SupportPage = () => {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setStatus("success");
       } else {
         setStatus("error");
+        setErrorMessage(result.error || "Failed to send email");
       }
     } catch (err) {
       setStatus("error");
+      setErrorMessage("Network error. Please try again.");
     }
   };
 
@@ -82,7 +88,7 @@ export const SupportPage = () => {
           {support.bodyText ? <p>{support.bodyText}</p> : null}
           {status === "error" && (
             <p style={{ color: "var(--accent)", marginTop: "20px" }}>
-              Something went wrong. Please try emailing us directly.
+              {errorMessage || "Something went wrong. Please try emailing us directly."}
             </p>
           )}
         </div>
