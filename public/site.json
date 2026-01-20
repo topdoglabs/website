@@ -16,33 +16,33 @@
     ]
   },
   "home": {
-    "heroTitle": "Independent iOS apps.",
-    "heroSubtitle": "Apps by TopDog Labs.",
-    "heroPrimaryCta": "View Apps",
+    "heroTitle": "Crafting premium iOS experiences.",
+    "heroSubtitle": "Simple, focused apps built for clarity and performance.",
+    "heroPrimaryCta": "Browse Apps",
     "heroSecondaryCta": "Get Support",
-    "splitTitle": "Building quality iOS apps for everyone.",
-    "splitBody": "Crafted and maintained by TopDog Labs. Focused on performance, privacy, and ease of use for players, planners, and power users.",
-    "splitCardTitle": "TopDog Labs",
-    "splitCardBody": "Explore original iOS experiences ranging from classic casino games to modern utilities. Designed with clarity, reliability, and a premium feel.",
+    "splitTitle": "Quality over quantity.",
+    "splitBody": "We ship small, high-polish utilities and games that respect your time and privacy. No tracking, no clutter.",
+    "splitCardTitle": "Always Native",
+    "splitCardBody": "Built with SwiftUI and modern Apple frameworks for the best possible experience on iPhone and iPad.",
     "pillars": [
       {
-        "title": "Privacy-first",
-        "body": "No tracking, no surprise data collection, and clear disclosures."
+        "title": "Private",
+        "body": "No tracking, no analytics, no surprise data collection."
       },
       {
-        "title": "Native polish",
-        "body": "SwiftUI interfaces tuned for performance and feel."
+        "title": "Native",
+        "body": "SwiftUI interfaces tuned for speed and haptic feedback."
       },
       {
-        "title": "Offline ready",
-        "body": "Core experiences stay available even without Wi-Fi."
+        "title": "Offline",
+        "body": "Your apps work everywhere, even without a connection."
       }
     ],
-    "featuredEyebrow": "Featured app",
-    "featuredTitle": "A launch-ready experience",
-    "featuredBody": "Every TopDog Labs release ships with a focused feature set, careful onboarding, and a support-first approach.",
-    "featuredPrimaryCta": "See all apps",
-    "featuredSecondaryCta": "Get Support",
+    "featuredEyebrow": "Latest Release",
+    "featuredTitle": "A new way to play.",
+    "featuredBody": "Our apps represent a commitment to craft, from the first launch to everyday use.",
+    "featuredPrimaryCta": "View All",
+    "featuredSecondaryCta": "Support",
     "newsletterTitle": "",
     "newsletterBody": "",
     "newsletterPlaceholder": "",

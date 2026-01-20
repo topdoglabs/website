@@ -14,16 +14,27 @@ export const HomePage = () => {
 
   return (
     <Layout>
-      <section className="hero">
-        {home.heroTitle ? <h1>{home.heroTitle}</h1> : null}
-        {home.heroSubtitle ? <p className="hero-sub">{home.heroSubtitle}</p> : null}
-        <div className="hero-actions">
-          <Link className="button primary" to="/apps">
-            {home.heroPrimaryCta}
-          </Link>
-          <Link className="button ghost" to="/support">
-            {home.heroSecondaryCta}
-          </Link>
+      <section className="hero hero-visual">
+        <div className="hero-content">
+          {home.heroTitle ? <h1>{home.heroTitle}</h1> : null}
+          {home.heroSubtitle ? <p className="hero-sub">{home.heroSubtitle}</p> : null}
+          <div className="hero-actions">
+            <Link className="button primary" to="/apps">
+              {home.heroPrimaryCta}
+            </Link>
+            <Link className="button ghost" to="/support">
+              {home.heroSecondaryCta}
+            </Link>
+          </div>
+        </div>
+        <div className="hero-decoration">
+          <div className="icon-stack">
+            {apps.slice(0, 3).map((app, i) => (
+              <div key={app.slug} className={`icon-stack-item item-${i}`}>
+                <img src={app.icon} alt={app.name} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -113,19 +113,75 @@ a {
 .hero {
   text-align: center;
   padding: 44px 0 12px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero-split {
-  text-align: left;
+.hero-visual {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
   align-items: center;
-  gap: 32px;
+  text-align: left;
+  max-width: 1100px;
+  padding: 60px 0 100px;
 }
 
-.hero-copy {
+.hero-visual .hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-decoration {
   display: grid;
-  gap: 12px;
+  place-items: center;
+  position: relative;
+}
+
+.icon-stack {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.icon-stack-item {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.icon-stack-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-stack-item.item-0 {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: rotate(-10deg);
+}
+
+.icon-stack-item.item-1 {
+  top: 40px;
+  right: 0;
+  z-index: 2;
+  transform: rotate(15deg);
+}
+
+.icon-stack-item.item-2 {
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%) rotate(5deg);
 }
 
 .hero-media {
@@ -236,16 +292,22 @@ a {
 
 .pillars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 .pillars article {
-  background: var(--panel);
-  border-radius: 18px;
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.pillars article:hover {
+  transform: translateY(-8px);
+  border-color: rgba(70, 209, 161, 0.2);
 }
 
 .pillars h3 {
