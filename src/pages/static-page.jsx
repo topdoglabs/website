@@ -34,7 +34,7 @@ export const StaticPage = ({ slug }) => {
 
   return (
     <Layout>
-      <section className="hero">
+      <section className="hero hero-bg">
         <h1>{page.title}</h1>
         <p className="hero-sub">{page.subtitle}</p>
       </section>

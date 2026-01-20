@@ -14,7 +14,7 @@ export const SupportPage = () => {
 
   return (
     <Layout>
-      <section className="hero">
+      <section className="hero hero-bg">
         {support.heroTitle ? <h1>{support.heroTitle}</h1> : null}
         {support.heroSubtitle ? (
           <p className="hero-sub">{support.heroSubtitle}</p>

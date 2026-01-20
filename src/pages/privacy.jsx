@@ -40,7 +40,7 @@ export const PrivacyPage = () => {
 
   return (
     <Layout>
-      <section className="hero">
+      <section className="hero hero-bg">
         {privacy.heroTitle ? <h1>{privacy.heroTitle}</h1> : null}
         {privacy.heroSubtitle ? (
           <p className="hero-sub">{privacy.heroSubtitle}</p>

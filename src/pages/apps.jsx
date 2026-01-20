@@ -15,7 +15,7 @@ export const AppsPage = () => {
 
   return (
     <Layout>
-      <section className="hero">
+      <section className="hero hero-bg">
         {appsPage.heroTitle ? <h1>{appsPage.heroTitle}</h1> : null}
         {appsPage.heroSubtitle ? (
           <p className="hero-sub">{appsPage.heroSubtitle}</p>
@@ -31,25 +31,25 @@ export const AppsPage = () => {
       </section>
 
       <section className="apps-overview">
-        <div>
+        <div className="overview-content">
           {appsPage.overviewTitle ? <h2>{appsPage.overviewTitle}</h2> : null}
           {appsPage.overviewBody ? <p>{appsPage.overviewBody}</p> : null}
         </div>
         <div className="apps-stats">
           {appsPage.statsLabels?.apps ? (
-            <div>
+            <div className="stat-card">
               <span>{appsPage.statsLabels.apps}</span>
               <strong>{appCount}</strong>
             </div>
           ) : null}
           {appsPage.statsLabels?.categories ? (
-            <div>
+            <div className="stat-card">
               <span>{appsPage.statsLabels.categories}</span>
               <strong>{categories.join(", ") || "iOS"}</strong>
             </div>
           ) : null}
           {appsPage.statsLabels?.focus ? (
-            <div>
+            <div className="stat-card">
               <span>{appsPage.statsLabels.focus}</span>
               <strong>{appsPage.focusValue}</strong>
             </div>

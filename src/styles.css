@@ -41,7 +41,8 @@ a {
 .content {
   width: min(1100px, 100%);
   margin: 0 auto;
-  padding: 24px 32px 96px;
+  padding: 0 32px 96px;
+  /* Removed top padding to allow hero to be seamless */
   display: flex;
   flex-direction: column;
   gap: 56px;
@@ -50,6 +51,8 @@ a {
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  /* Ensure hero background stays within curves */
 }
 
 .header {
@@ -111,77 +114,27 @@ a {
 }
 
 .hero {
+  padding: 60px 24px;
   text-align: center;
-  padding: 44px 0 12px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-visual {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
-  align-items: center;
-  text-align: left;
-  max-width: 1100px;
-  padding: 60px 0 100px;
-}
-
-.hero-visual .hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.hero-decoration {
-  display: grid;
-  place-items: center;
+  max-width: 100%;
+  margin: 0;
   position: relative;
-}
-
-.icon-stack {
-  position: relative;
-  width: 280px;
-  height: 280px;
-}
-
-.icon-stack-item {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 28px;
-  background: var(--panel);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.icon-stack-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.icon-stack-item.item-0 {
-  top: 0;
-  left: 0;
-  z-index: 3;
-  transform: rotate(-10deg);
-}
-
-.icon-stack-item.item-1 {
-  top: 40px;
-  right: 0;
-  z-index: 2;
-  transform: rotate(15deg);
-}
-
-.icon-stack-item.item-2 {
-  bottom: 0;
-  left: 50%;
   z-index: 1;
-  transform: translateX(-50%) rotate(5deg);
+}
+
+.hero-bg {
+  background: radial-gradient(circle at 50% -20%, rgba(70, 209, 161, 0.12) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(23, 28, 39, 0.5) 0%, transparent 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, var(--bg) 100%);
+  pointer-events: none;
 }
 
 .hero-media {
@@ -418,24 +371,58 @@ a {
 
 .apps-overview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  margin: 0 0 48px;
+  align-items: start;
+}
+
+.overview-content {
   background: var(--surface);
+  padding: 32px;
   border-radius: 24px;
-  padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.apps-overview h2 {
-  margin: 0 0 10px;
+.overview-content h2 {
+  margin: 0 0 12px;
   font-family: var(--font-serif);
+  font-size: 24px;
 }
 
-.apps-overview p {
+.overview-content p {
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.apps-stats {
+  display: grid;
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--panel);
+  padding: 20px 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-card span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.stat-card strong {
+  font-size: 16px;
+  color: var(--ink);
 }
 
 .apps-stats {
@@ -581,6 +568,13 @@ a {
   margin: 10px 0 0;
   font-size: 14px;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 3em;
+  /* Ensures consistent card height */
 }
 
 .status {
