@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "blackjack",
+    "name": "Blackjack by TopDog",
+    "tagline": "Master strategy, count cards, and play like a pro — no real money at stake.",
+    "date": "January 19, 2026",
+    "year": "2026",
+    "category": "Casino",
+    "version": "1.8.1",
+    "price": "Free",
+    "platform": "iOS",
+    "rating": "4.8",
+    "icon": "/assets/blackjack/AppIcon.png",
+    "screenshots": [
+      "/assets/blackjack/screen-1.png",
+      "/assets/blackjack/screen-2.png",
+      "/assets/blackjack/screen-3.png",
+      "/assets/blackjack/screen-4.png",
+      "/assets/blackjack/screen-5.png",
+      "/assets/blackjack/screen-6.png",
+      "/assets/blackjack/screen-7.png"
+    ],
+    "summary": "Authentic multi-deck blackjack with pro strategy hints, Hi-Lo card counting trainer, side bets, session stats, and iCloud sync — all offline and ad-free.",
+    "description": "Blackjack by TopDog brings the casino table to your phone with realistic gameplay, configurable rules (Vegas Strip, Atlantic City, European + custom), animated card dealing, sound effects, and haptic feedback. Learn mathematically optimal play with real-time basic strategy hints, train Hi-Lo card counting (running/true count, bet hints, Illustrious 18), and track every session with detailed statistics. Perfect Pairs and 21+3 side bets add extra excitement. First-time users get a guided welcome sheet and spotlight tour. Built with SwiftUI and strict concurrency — no ads, no tracking, just pure blackjack.",
+    "highlights": [
+      "Real-time basic strategy suggestions",
+      "Professional Hi-Lo card counting trainer",
+      "Multiple rule sets + full custom configuration",
+      "Perfect Pairs & 21+3 side bets",
+      "Detailed session stats & iCloud sync",
+      "Beautiful SwiftUI design with animations & haptics"
+    ],
+    "features": [
+      {
+        "title": "Authentic Gameplay",
+        "description": "Hit, Stand, Double, Split, Surrender, Insurance, multi-deck shoe, reshuffle alerts, realistic animations and sound effects."
+      },
+      {
+        "title": "Strategy & Counting Tools",
+        "description": "Real-time basic strategy hints, Hi-Lo card counting (running/true count, bet recommendations, Illustrious 18 deviations)."
+      },
+      {
+        "title": "Side Bets & Variations",
+        "description": "Perfect Pairs (6:1–25:1) and 21+3 (5:1–100:1). Play Vegas Strip, Atlantic City, European, or fully custom rules."
+      },
+      {
+        "title": "Session Tracking",
+        "description": "Live and lifetime stats, win/loss breakdowns, hand history, session management — all synced via iCloud."
+      },
+      {
+        "title": "First-Time Experience",
+        "description": "Interactive welcome sheet and spotlight-guided onboarding — skippable and shown only once."
+      }
+    ],
+    "whatsNew": "Initial release featuring authentic multi-deck blackjack, basic strategy hints, Hi-Lo card counting trainer, side bets, detailed stats, and iCloud sync.",
+    "supportEmail": "info@topdoglabs.com",
+    "website": "https://topdoglabs.com",
+    "appStoreUrl": ""
+  },
+  {
+    "slug": "baccarat",
+    "name": "Baccarat by TopDog",
+    "tagline": "Authentic Punto Banco with side bets & road maps.",
+    "date": "January 19, 2026",
+    "year": "2026",
+    "category": "Casino",
+    "version": "1.0",
+    "price": "Free",
+    "platform": "iOS",
+    "rating": "4.7",
+    "icon": "/assets/baccarat/AppIcon.png",
+    "screenshots": [
+      "/assets/baccarat/screen-1.png",
+      "/assets/baccarat/screen-2.png",
+      "/assets/baccarat/screen-3.png"
+    ],
+    "summary": "Classic Baccarat (Punto Banco) with realistic table play, side bets, Big Road history, and iCloud sync — no real money at stake.",
+    "description": "Baccarat by TopDog delivers the elegant casino experience of Punto Banco right to your phone. Enjoy automatic third-card rules, natural detection, multi-deck shoes (1, 6, or 8 decks), animated card dealing, sound effects, and haptic feedback. Place main bets (Player, Banker, Tie) and exciting side bets including Player/Banker Pair and Dragon Bonus. Track every hand with a scrollable Big Road display (color-coded Player/Red, Banker/Blue, Tie/Green, pairs, naturals). Built with SwiftUI and strict concurrency — fully offline, ad-free, and beautifully designed.",
+    "highlights": [
+      "Authentic Punto Banco rules with automatic third-card logic",
+      "Side bets: Player/Banker Pair (11:1), Dragon Bonus (up to 30:1)",
+      "Visual Big Road history with pair & natural markers",
+      "Configurable table limits from Casual to VIP",
+      "iCloud sync for balance, stats, and settings",
+      "Guided onboarding with welcome sheet & spotlight tour"
+    ],
+    "features": [
+      {
+        "title": "Complete Baccarat Gameplay",
+        "description": "Player/Banker/Tie bets, automatic third-card rules, natural wins, multi-deck shoe with reshuffle and burn card."
+      },
+      {
+        "title": "Side Bets",
+        "description": "Player Pair and Banker Pair (11:1), Dragon Bonus (1:1 to 30:1 based on win margin)."
+      },
+      {
+        "title": "Road Map History",
+        "description": "Big Road style display — scrollable, color-coded results, pair dots, natural stars."
+      },
+      {
+        "title": "Flexible Table Limits",
+        "description": "Casual ($5–$500) up to VIP ($500–$50,000) betting levels."
+      },
+      {
+        "title": "First-Time Experience",
+        "description": "Interactive welcome sheet and spotlight-guided tour — skippable and shown only once."
+      },
+      {
+        "title": "iCloud Sync & Stats",
+        "description": "Balance, statistics, and settings sync across devices with automatic conflict resolution."
+      }
+    ],
+    "whatsNew": "Initial release featuring authentic Punto Banco gameplay, side bets, Big Road history, multiple table limits, and iCloud sync.",
+    "supportEmail": "info@topdoglabs.com",
+    "website": "https://topdoglabs.com",
+    "appStoreUrl": ""
+  },
+  {
+    "slug": "selfiecam",
+    "name": "Selfie Cam by TopDog",
+    "tagline": "Professional selfies with customizable ring light overlay.",
+    "date": "January 19, 2026",
+    "year": "2026",
+    "category": "Photo & Video",
+    "version": "1.0",
+    "price": "Free",
+    "platform": "iOS",
+    "rating": "4.9",
+    "icon": "/assets/selfie-cam/AppIcon.png",
+    "screenshots": [
+      "/assets/selfie-cam/screen-1.png",
+      "/assets/selfie-cam/screen-2.png",
+      "/assets/selfie-cam/screen-3.png"
+    ],
+    "summary": "Modern selfie camera with screen-based ring light, premium controls, flash sync, and iCloud sync — perfect for low-light photos and content creation.",
+    "description": "Selfie Cam by TopDog elevates your selfies with a configurable screen-based ring light (adjustable thickness/opacity), multiple color temperatures (Pure White, Warm Cream, and premium presets like Ice Blue, Soft Pink, Warm Amber, Cool Lavender), and pro camera tools. Capture high-quality photos with self-timer (3s free, 5/10s premium), pinch-to-zoom, grid overlay, HDR, skin smoothing, center stage, and true mirror mode. Built with SwiftUI and MijickCamera — ad-free core experience, iCloud sync for settings, and beautiful launch animation. Freemium model unlocks custom colors, flash sync, and more.",
+    "highlights": [
+      "Customizable ring light with thickness, opacity, and color presets",
+      "Pro capture: Self-timer, pinch-zoom, grid overlay, front flash",
+      "Premium features: Custom colors, HDR, skin smoothing, center stage, true mirror",
+      "iCloud sync for settings across devices",
+      "Full VoiceOver accessibility with Dynamic Type",
+      "Hardware support: Camera Control button & volume shutter"
+    ],
+    "features": [
+      {
+        "title": "Ring Light Overlay",
+        "description": "Screen-based ring light with adjustable border (10-120pt), opacity, and color temperatures (Pure White, Warm Cream + premium presets)."
+      },
+      {
+        "title": "Capture Controls",
+        "description": "Front/back camera switch, flash modes (Off/On/Auto), front flash via screen, self-timer (3s free, 5/10s premium), pinch-zoom, and rule-of-thirds grid."
+      },
+      {
+        "title": "Premium Tools",
+        "description": "Custom ring colors, flash sync, HDR mode, high-quality photos, true mirror preview, skin smoothing filter, and center stage tracking."
+      },
+      {
+        "title": "iCloud Sync",
+        "description": "Automatic settings synchronization across devices with real-time status and manual sync option."
+      },
+      {
+        "title": "Accessibility & Polish",
+        "description": "VoiceOver support, Dynamic Type, high-contrast visuals, prevents screen dimming, and animated launch screen with app icon generator."
+      }
+    ],
+    "whatsNew": "Initial release with customizable ring light, pro camera controls, premium features, iCloud sync, and full accessibility support.",
+    "supportEmail": "info@topdoglabs.com",
+    "website": "https://topdoglabs.com",
+    "appStoreUrl": ""
+  },
+  {
+    "slug": "businesscard",
+    "name": "BusinessCard by TopDog",
+    "tagline": "Create, share, and track digital business cards with QR codes.",
+    "date": "January 19, 2026",
+    "year": "2026",
+    "category": "Productivity",
+    "version": "1.0",
+    "price": "Free",
+    "platform": "iOS + watchOS",
+    "rating": "4.9",
+    "icon": "/assets/business-cards/AppIcon.png",
+    "screenshots": [
+      "/assets/business-cards/screen-1.png",
+      "/assets/business-cards/screen-2.png",
+      "/assets/business-cards/screen-3.png"
+    ],
+    "summary": "Digital business cards with QR codes, rich profiles, dynamic contact fields, quick sharing, and iCloud sync — works on iPhone and Apple Watch.",
+    "description": "BusinessCard by TopDog lets you design and share professional digital business cards instantly. Customize layouts (header styles, cover/logo/profile photos), add unlimited contact fields (email, phone, social, developer links, payment, scheduling, custom URLs), and share via QR code, link, SMS, email, WhatsApp, LinkedIn, and more. Track who received your card and when. Full-screen card viewer, dark-themed share sheet, offline sharing toggle, and iCloud sync across iPhone and Apple Watch. Built with SwiftUI, SwiftData, and CloudKit — no ads, no tracking, beautiful and private.",
+    "highlights": [
+      "Multiple header layouts with smart suggestions",
+      "Unlimited dynamic contact fields (social, developer, payment, scheduling, custom)",
+      "QR code + one-tap sharing (SMS, email, WhatsApp, LinkedIn, etc.)",
+      "Share tracking and offline mode",
+      "iCloud sync across iPhone and Apple Watch",
+      "Guided onboarding with welcome sheet & spotlight tour"
+    ],
+    "features": [
+      {
+        "title": "Custom Card Design",
+        "description": "Choose from multiple header layouts (Profile Banner, Cover + Avatar, Centered Logo, Logo Badge, Side by Side), add cover/profile/company photos with crop/zoom editor, and pick from modern color themes."
+      },
+      {
+        "title": "Rich Profiles & Fields",
+        "description": "Full name details (prefix, maiden, preferred, pronouns), headline, bio, accreditations, plus unlimited contact fields (email, phone, social media, developer links, payment apps, Calendly, custom URLs)."
+      },
+      {
+        "title": "Quick & Trackable Sharing",
+        "description": "Floating share button, dark-themed QR code sheet, offline sharing toggle, track shares (who and when), support for Apple Wallet and NFC (stubs)."
+      },
+      {
+        "title": "Cross-Device Sync",
+        "description": "iCloud sync for cards, settings, and contact tracking — works on iPhone and Apple Watch."
+      },
+      {
+        "title": "First-Time Experience",
+        "description": "Interactive welcome sheet and spotlight-guided tour — skippable and shown only once."
+      }
+    ],
+    "whatsNew": "Initial release featuring customizable digital business cards, QR code sharing, dynamic contact fields, share tracking, and full iPhone + Apple Watch support with iCloud sync.",
+    "supportEmail": "info@topdoglabs.com",
+    "website": "https://topdoglabs.com",
+    "appStoreUrl": ""
+  }
+]

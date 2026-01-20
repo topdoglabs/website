@@ -1,0 +1,148 @@
+{
+  "footerColumns": [
+    {
+      "title": "Portfolio",
+      "links": [
+        { "label": "Apps", "href": "/apps" },
+        { "label": "About", "href": "/about" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    {
+      "title": "Support",
+      "links": [
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Email", "href": "mailto:info@topdoglabs.com" },
+        { "label": "Help", "href": "/help" }
+      ]
+    },
+    {
+      "title": "Legal",
+      "links": [
+        { "label": "Privacy Policy", "href": "/privacy" },
+        { "label": "Terms", "href": "/terms" },
+        { "label": "Cookies", "href": "/cookies" }
+      ]
+    },
+    {
+      "title": "Connect",
+      "links": [
+        { "label": "Twitter", "href": "/connect" },
+        { "label": "GitHub", "href": "/connect" },
+        { "label": "LinkedIn", "href": "/connect" }
+      ]
+    }
+  ],
+  "pages": {
+   
+  "about": {
+    "title": "About TopDog Labs",
+    "subtitle": "A one-person iOS studio crafting focused, intentional apps.",
+    "summaryTitle": "Our philosophy",
+    "summaryBody": "We build iOS apps that feel calm, reliable, and delightful to use. Every project prioritizes clean SwiftUI interfaces, privacy-first decisions, offline-first design, and thoughtful onboarding — so users can jump in and feel at home immediately.",
+    "sections": [
+      {
+        "title": "What we build",
+        "body": "Focused mobile experiences: quick-play games, productivity tools, creative utilities, and anything that benefits from native iOS polish. No clutter, no ads, no unnecessary permissions."
+      },
+      {
+        "title": "How we work",
+        "body": "Small scope, high attention to detail. We ship fast, listen to real users, and iterate steadily. Every release includes accessibility (VoiceOver, Dynamic Type), iCloud sync where it makes sense, and strict attention to modern Swift concurrency and performance."
+      },
+      {
+        "title": "Tech we love",
+        "body": "SwiftUI for declarative, beautiful UIs • Swift 6 with strict concurrency • CloudKit for seamless iCloud sync • SwiftData for local persistence • RevenueCat for clean premium unlocks • MijickCamera & AVFoundation for advanced capture • Bedrock for consistent design tokens and components • Full accessibility & Dynamic Type support from day one."
+      },
+      {
+        "title": "Guiding principles",
+        "body": "Privacy by default — no tracking, no analytics, minimal data collection. Offline-first whenever possible. Thoughtful first-time experiences (welcome sheets, spotlight tours). Haptics, animations, and sound used intentionally to make interactions feel premium."
+      }
+    ],
+    "closing": "TopDog Labs is a solo effort by Matt Bruce in Frisco, Texas. We’re here to ship apps that respect your time and attention."
+    },
+    "faq": {
+      "title": "FAQ.",
+      "subtitle": "Quick answers to common questions.",
+      "summaryTitle": "Need help fast?",
+      "summaryBody": "If you do not see your question, email us at info@topdoglabs.com and we will get back quickly.",
+      "sections": [
+        {
+          "title": "Where can I get support?",
+          "body": "Email info@topdoglabs.com and include the app name, device, and iOS version."
+        },
+        {
+          "title": "How do I report a bug?",
+          "body": "Send steps to reproduce and screenshots if possible. We review all reports."
+        },
+        {
+          "title": "Do you offer refunds?",
+          "body": "All purchases are handled through the App Store. Please request refunds via Apple."
+        }
+      ]
+    },
+    "help": {
+      "title": "Help Center.",
+      "subtitle": "Guides and troubleshooting for TopDog apps.",
+      "summaryTitle": "Support workflow",
+      "summaryBody": "We respond to all support requests within two business days. For urgent issues, include \"Urgent\" in the subject line.",
+      "sections": [
+        {
+          "title": "Getting started",
+          "body": "Check the app settings first for tutorial access and gameplay options."
+        },
+        {
+          "title": "Account & access",
+          "body": "TopDog Labs apps do not require accounts unless stated in the app description."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms.",
+      "subtitle": "How our apps and services are provided.",
+      "summaryTitle": "Overview",
+      "summaryBody": "These terms outline basic usage expectations and responsibilities when using TopDog Labs apps.",
+      "sections": [
+        {
+          "title": "Usage",
+          "body": "Use the apps for personal, non-commercial purposes unless otherwise stated."
+        },
+        {
+          "title": "Availability",
+          "body": "We may update, pause, or discontinue features as we improve the experience."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookies.",
+      "subtitle": "How we handle cookies on TopDog Labs sites.",
+      "summaryTitle": "Current usage",
+      "summaryBody": "TopDog Labs does not use tracking cookies on this brochure site. If that changes, we will update this page.",
+      "sections": [
+        {
+          "title": "Analytics",
+          "body": "We do not currently collect analytics cookies on this site."
+        },
+        {
+          "title": "Control",
+          "body": "You can manage cookies via your browser settings at any time."
+        }
+      ]
+    },
+    "connect": {
+      "title": "Connect.",
+      "subtitle": "Follow TopDog Labs.",
+      "summaryTitle": "Stay in touch",
+      "summaryBody": "Social channels will be linked here once they are live. For now, reach us by email.",
+      "sections": [
+        {
+          "title": "Email",
+          "body": "info@topdoglabs.com"
+        },
+        {
+          "title": "Updates",
+          "body": "App updates and launch news will be shared through our website."
+        }
+      ]
+    }
+  }
+}
