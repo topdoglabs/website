@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
@@ -11,6 +12,55 @@ export const SupportPage = () => {
     ...(support.subjectOptions || []),
     ...apps.map((app) => app.name),
   ];
+
+  const [formData, setFormData] = useState({
+    subject: subjects[0] || "",
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("idle"); // idle, loading, success, error
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <Layout>
+        <section className="hero hero-bg">
+          <h1>Thank you!</h1>
+          <p className="hero-sub">Your message has been sent. We'll get back to you soon.</p>
+          <div className="hero-actions">
+            <Link className="button primary" to="/">Back Home</Link>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -30,11 +80,16 @@ export const SupportPage = () => {
         <div className="support-copy">
           {support.bodyTitle ? <h2>{support.bodyTitle}</h2> : null}
           {support.bodyText ? <p>{support.bodyText}</p> : null}
+          {status === "error" && (
+            <p style={{ color: "var(--accent)", marginTop: "20px" }}>
+              Something went wrong. Please try emailing us directly.
+            </p>
+          )}
         </div>
-        <form className="form wide">
+        <form className="form wide" onSubmit={handleSubmit}>
           <label>
             {support.subjectLabel}
-            <select>
+            <select name="subject" value={formData.subject} onChange={handleChange}>
               {subjects.map((subject) => (
                 <option key={subject} value={subject}>
                   {subject}
@@ -45,26 +100,42 @@ export const SupportPage = () => {
           <label>
             {support.nameLabel}
             <input
+              name="name"
               type="text"
+              required
               placeholder={support.namePlaceholder}
+              value={formData.name}
+              onChange={handleChange}
             />
           </label>
           <label>
             {support.emailLabel}
             <input
+              name="email"
               type="email"
+              required
               placeholder={support.emailPlaceholder}
+              value={formData.email}
+              onChange={handleChange}
             />
           </label>
           <label>
             {support.messageLabel}
             <textarea
+              name="message"
+              required
               placeholder={support.messagePlaceholder}
               rows="4"
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
           </label>
-          <button className="button primary" type="button">
-            {support.submitLabel}
+          <button
+            className="button primary"
+            type="submit"
+            disabled={status === "loading"}
+          >
+            {status === "loading" ? "Sending..." : support.submitLabel}
           </button>
         </form>
       </section>
