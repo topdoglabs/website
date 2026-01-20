@@ -63,29 +63,54 @@ export const AppsPage = () => {
         ) : error ? (
           <p className="status">{ui.errorApps}</p>
         ) : (
-          apps.map((app) => (
-            <Link key={app.slug} className="app-card" to={`/apps/${app.slug}`}>
-              <div className="app-thumb" aria-hidden="true">
-                {app.icon ? (
-                  <img
-                    className="app-icon"
-                    src={app.icon}
-                    alt={`${app.name} app icon`}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="app-icon placeholder" aria-hidden="true"></div>
-                )}
-              </div>
-              <div className="app-meta">
-                <div>
-                  <h4>{app.name}</h4>
-                  <span>{app.date}</span>
+          apps.map((app) =>
+            app.comingSoon ? (
+              <div key={app.slug} className="app-card coming-soon">
+                <div className="app-thumb" aria-hidden="true">
+                  {app.icon ? (
+                    <img
+                      className="app-icon"
+                      src={app.icon}
+                      alt={`${app.name} app icon`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="app-icon placeholder" aria-hidden="true"></div>
+                  )}
+                  <span className="coming-soon-badge">Coming<br />Soon</span>
                 </div>
-                <p>{app.summary}</p>
+                <div className="app-meta">
+                  <div>
+                    <h4>{app.name}</h4>
+                    <span>{app.category}</span>
+                  </div>
+                  <p>{app.tagline}</p>
+                </div>
               </div>
-            </Link>
-          ))
+            ) : (
+              <Link key={app.slug} className="app-card" to={`/apps/${app.slug}`}>
+                <div className="app-thumb" aria-hidden="true">
+                  {app.icon ? (
+                    <img
+                      className="app-icon"
+                      src={app.icon}
+                      alt={`${app.name} app icon`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="app-icon placeholder" aria-hidden="true"></div>
+                  )}
+                </div>
+                <div className="app-meta">
+                  <div>
+                    <h4>{app.name}</h4>
+                    <span>{app.date}</span>
+                  </div>
+                  <p>{app.summary}</p>
+                </div>
+              </Link>
+            )
+          )
         )}
       </section>
     </Layout>

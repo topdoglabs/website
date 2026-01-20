@@ -196,47 +196,95 @@
       "sections": [
         {
           "title": "Where can I get support?",
-          "body": "Email info@topdoglabs.com and include the app name, device, and iOS version."
+          "body": "Email us anytime at info@topdoglabs.com. Please include the app name, your device model, and the iOS version you are running for faster assistance."
         },
         {
-          "title": "How do I report a bug?",
-          "body": "Send steps to reproduce and screenshots if possible. We review all reports."
+          "title": "Which iOS versions are supported?",
+          "body": "Most TopDog Labs apps require iOS 17.0 or later to take advantage of the latest SwiftUI and Swift 6 features. Check the individual app's page for specific requirements."
         },
         {
-          "title": "Do you offer refunds?",
-          "body": "All purchases are handled through the App Store. Please request refunds via Apple."
+          "title": "Do the apps work on iPad or Mac?",
+          "body": "Yes! While designed for iPhone, many of our apps are 'Universal' and run natively on iPad. Some are also available as 'Designed for iPad' apps on Apple Silicon-based Mac computers."
+        },
+        {
+          "title": "How is my data handled?",
+          "body": "Privacy is a core pillar of TopDog Labs. We do not use third-party analytics or tracking. Most apps use iCloud (via Apple's CloudKit) to sync your data privately and securely between your own devices."
+        },
+        {
+          "title": "Are purchases shareable?",
+          "body": "Yes, we support Apple's Family Sharing for all premium unlocks and one-time purchases. Subscriptions (if applicable) are also shareable according to Apple's policies."
+        },
+        {
+          "title": "How can I suggest a new feature?",
+          "body": "We love hearing from users! Send your ideas and feedback to info@topdoglabs.com. Many of our best features started as user requests."
+        },
+        {
+          "title": "How often are the apps updated?",
+          "body": "We ship updates regularly to fix bugs, improve performance, and add new features. We also ensure our apps are updated promptly for every major new iOS release."
         }
       ]
     },
     "terms": {
-      "title": "Terms.",
-      "subtitle": "How our apps and services are provided.",
-      "summaryTitle": "Overview",
-      "summaryBody": "These terms outline basic usage expectations and responsibilities when using TopDog Labs apps.",
+      "title": "Terms of Service",
+      "subtitle": "Last updated: January 20, 2026",
+      "summaryTitle": "Agreement to Terms",
+      "summaryBody": "By accessing or using TopDog Labs apps and services, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the service.",
       "sections": [
         {
-          "title": "Usage",
-          "body": "Use the apps for personal, non-commercial purposes unless otherwise stated."
+          "title": "1. Usage License",
+          "body": "TopDog Labs grants you a personal, non-exclusive, non-transferable, limited license to use our apps for personal, non-commercial purposes on devices you own or control, in accordance with the App Store Terms of Service."
         },
         {
-          "title": "Availability",
-          "body": "We may update, pause, or discontinue features as we improve the experience."
+          "title": "2. Intellectual Property",
+          "body": "The apps, including their original content, features, and functionality, are and will remain the exclusive property of TopDog Labs and its licensors. Our trademarks and trade dress may not be used in connection with any product or service without prior written consent."
+        },
+        {
+          "title": "3. User Conduct",
+          "body": "You agree not to attempt to decompile, reverse engineer, or otherwise extract the source code of the apps. You also agree not to use the services for any unlawful purpose or in any way that could damage, disable, or impair the service."
+        },
+        {
+          "title": "4. Service Availability & Updates",
+          "body": "We strive to maintain high availability but do not guarantee that our services will always be available or uninterrupted. We may update apps to add features, fix bugs, or respond to security needs. These updates may be required to continue using the services."
+        },
+        {
+          "title": "5. Limitation of Liability",
+          "body": "In no event shall TopDog Labs be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of the service."
+        },
+        {
+          "title": "6. Changes to Terms",
+          "body": "We reserve the right to modify these terms at any time. We will provide notice of any significant changes by posting the new terms on this page. Your continued use of the apps after changes constitute acceptance of the new terms."
+        },
+        {
+          "title": "7. Contact",
+          "body": "If you have any questions about these Terms, please contact us at info@topdoglabs.com."
         }
       ]
     },
     "cookies": {
-      "title": "Cookies.",
-      "subtitle": "How we handle cookies on TopDog Labs sites.",
-      "summaryTitle": "Current usage",
-      "summaryBody": "TopDog Labs does not use tracking cookies on this brochure site. If that changes, we will update this page.",
+      "title": "Cookie Policy",
+      "subtitle": "Transparency regarding our usage of cookies.",
+      "summaryTitle": "Our Approach to Privacy",
+      "summaryBody": "At TopDog Labs, we believe in minimal data collection. This brochure website is designed to be as private as possible.",
       "sections": [
         {
-          "title": "Analytics",
-          "body": "We do not currently collect analytics cookies on this site."
+          "title": "What are cookies?",
+          "body": "Cookies are small text files that are placed on your device by websites that you visit. They are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site."
         },
         {
-          "title": "Control",
-          "body": "You can manage cookies via your browser settings at any time."
+          "title": "Our Usage",
+          "body": "TopDog Labs does not use persistent tracking cookies, advertising cookies, or third-party analytics cookies on this website. We respect your privacy and aim for a cookie-free experience."
+        },
+        {
+          "title": "Essential Cookies",
+          "body": "If we use any cookies, they are strictly necessary for the technical operation of the site (e.g., to remember your preference for dark mode). These do not track your behavior across other websites."
+        },
+        {
+          "title": "Third-Party Services",
+          "body": "While our apps may use iCloud (CloudKit) for syncing your data, this brochure website is self-contained and does not load third-party trackers or scripts from social media networks or advertising platforms."
+        },
+        {
+          "title": "How to Control Cookies",
+          "body": "You can control and/or delete cookies as you wish — for details, see aboutcookies.org. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed."
         }
       ]
     },

@@ -1,6 +1,7 @@
 [
   {
     "slug": "blackjack",
+    "comingSoon": false,
     "name": "Blackjack by TopDog",
     "tagline": "Master strategy, count cards, and play like a pro — no real money at stake.",
     "date": "January 19, 2026",
@@ -59,6 +60,7 @@
   },
   {
     "slug": "baccarat",
+    "comingSoon": true,
     "name": "Baccarat by TopDog",
     "tagline": "Authentic Punto Banco with side bets & road maps.",
     "date": "January 19, 2026",
@@ -117,6 +119,7 @@
   },
   {
     "slug": "selfiecam",
+    "comingSoon": true,
     "name": "Selfie Cam by TopDog",
     "tagline": "Professional selfies with customizable ring light overlay.",
     "date": "January 19, 2026",
@@ -171,6 +174,7 @@
   },
   {
     "slug": "businesscard",
+    "comingSoon": true,
     "name": "BusinessCard by TopDog",
     "tagline": "Create, share, and track digital business cards with QR codes.",
     "date": "January 19, 2026",
