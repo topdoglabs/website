@@ -14,12 +14,6 @@ export const SiteFooter = () => {
         <Link className="logo" to="/">
           TopDog Labs<span>®</span>
         </Link>
-        <nav className="footer-nav">
-          <Link to="/apps">Portfolio</Link>
-          <Link to="/support">Support</Link>
-          <Link to="/privacy">Privacy</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
       </div>
       <div className="footer-grid">
         {columns.map((column) => (

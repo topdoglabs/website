@@ -2,10 +2,14 @@ import { useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
+import { useSiteContent } from "../hooks/use-site-content.js";
 
 export const AppDetailPage = () => {
   const { slug } = useParams();
   const { apps, isLoading, error } = useApps();
+  const { content } = useSiteContent();
+  const appDetail = content.appDetail || {};
+  const ui = content.ui || {};
   const sliderRef = useRef(null);
   const [activeShotIndex, setActiveShotIndex] = useState(null);
   const app = useMemo(
@@ -17,8 +21,10 @@ export const AppDetailPage = () => {
     return (
       <Layout>
         <section className="hero">
-          <h1>Loading...</h1>
-          <p className="hero-sub">Fetching app details.</p>
+          {ui.appLoadingTitle ? <h1>{ui.appLoadingTitle}</h1> : null}
+          {ui.appLoadingSubtitle ? (
+            <p className="hero-sub">{ui.appLoadingSubtitle}</p>
+          ) : null}
         </section>
       </Layout>
     );
@@ -28,11 +34,13 @@ export const AppDetailPage = () => {
     return (
       <Layout>
         <section className="hero">
-          <h1>App not found.</h1>
-          <p className="hero-sub">We could not find that release.</p>
+          {ui.errorAppTitle ? <h1>{ui.errorAppTitle}</h1> : null}
+          {ui.errorAppSubtitle ? (
+            <p className="hero-sub">{ui.errorAppSubtitle}</p>
+          ) : null}
           <div className="hero-actions">
             <Link className="button primary" to="/apps">
-              View all apps
+              {ui.viewAllAppsCta}
             </Link>
           </div>
         </section>
@@ -59,27 +67,43 @@ export const AppDetailPage = () => {
 
   return (
     <Layout>
-      <section className="hero detail-hero-head">
-        <div className="detail-title">
-          <div className="detail-icon">
-            {app.icon ? (
-              <img src={app.icon} alt={`${app.name} app icon`} loading="lazy" />
-            ) : (
-              <div className="app-icon placeholder" aria-hidden="true"></div>
-            )}
+      <section className="app-hero">
+        <div className="app-hero-copy">
+          <div className="detail-title">
+            <div className="detail-icon">
+              {app.icon ? (
+                <img src={app.icon} alt={`${app.name} app icon`} loading="lazy" />
+              ) : (
+                <div className="app-icon placeholder" aria-hidden="true"></div>
+              )}
+            </div>
+            <div>
+              <h1>{app.name}</h1>
+              <p className="hero-sub">{app.tagline || app.date}</p>
+            </div>
           </div>
-          <div>
-            <h1>{app.name}</h1>
-            <p className="hero-sub">{app.tagline || app.date}</p>
+          <p className="detail-copy left">{app.description}</p>
+          <div className="hero-actions">
+            {appDetail.primaryCta ? (
+              <button className="button primary" type="button">
+                {appDetail.primaryCta}
+              </button>
+            ) : null}
+            {appDetail.secondaryCta ? (
+              <a className="button ghost" href={`mailto:${app.supportEmail}`}>
+                {appDetail.secondaryCta}
+              </a>
+            ) : null}
           </div>
         </div>
-        <div className="hero-actions">
-          <button className="button primary" type="button">
-            App Store (soon)
-          </button>
-          <a className="button ghost" href={`mailto:${app.supportEmail}`}>
-            Support
-          </a>
+        <div className="app-hero-media">
+          <div className="device-mock large" aria-hidden="true">
+            {screenshots[0] ? (
+              <img src={screenshots[0]} alt="" loading="lazy" />
+            ) : (
+              <div className="device-screen"></div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -149,12 +173,13 @@ export const AppDetailPage = () => {
             <div className="shape triangle"></div>
           </div>
         )}
-        <p className="detail-copy">{app.description}</p>
       </section>
 
       <section className="detail-sections">
         <div>
-          <h2>Highlights</h2>
+          {appDetail.highlightsTitle ? (
+            <h2>{appDetail.highlightsTitle}</h2>
+          ) : null}
           <ul>
             {highlights.map((item) => (
               <li key={item}>{item}</li>
@@ -162,7 +187,7 @@ export const AppDetailPage = () => {
           </ul>
         </div>
         <div>
-          <h2>Features</h2>
+          {appDetail.featuresTitle ? <h2>{appDetail.featuresTitle}</h2> : null}
           <div className="feature-grid">
             {features.map((feature) => (
               <article key={feature.title}>
@@ -175,7 +200,7 @@ export const AppDetailPage = () => {
       </section>
 
       <section className="detail-update">
-        <h2>What's new</h2>
+        {appDetail.whatsNewTitle ? <h2>{appDetail.whatsNewTitle}</h2> : null}
         <p>{app.whatsNew}</p>
       </section>
 

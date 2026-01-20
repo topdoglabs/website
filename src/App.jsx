@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AppDetailPage } from "./pages/app-detail.jsx";
 import { AppsPage } from "./pages/apps.jsx";
-import { ContactPage } from "./pages/contact.jsx";
 import { HomePage } from "./pages/home.jsx";
 import { PrivacyPage } from "./pages/privacy.jsx";
 import { StaticPage } from "./pages/static-page.jsx";
@@ -15,10 +14,8 @@ export const App = () => {
       <Route path="/apps/:slug" element={<AppDetailPage />} />
       <Route path="/support" element={<SupportPage />} />
       <Route path="/privacy" element={<PrivacyPage />} />
-      <Route path="/contact" element={<ContactPage />} />
       <Route path="/about" element={<StaticPage slug="about" />} />
       <Route path="/faq" element={<StaticPage slug="faq" />} />
-      <Route path="/help" element={<StaticPage slug="help" />} />
       <Route path="/terms" element={<StaticPage slug="terms" />} />
       <Route path="/cookies" element={<StaticPage slug="cookies" />} />
       <Route path="/connect" element={<StaticPage slug="connect" />} />

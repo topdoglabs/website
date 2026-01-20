@@ -1,19 +1,123 @@
 {
+  "navigation": {
+    "headerLinks": [
+      { "label": "Apps", "href": "/apps" },
+      { "label": "Support", "href": "/support" },
+      { "label": "About", "href": "/about" }
+    ]
+  },
+  "home": {
+    "heroTitle": "Independent iOS apps.",
+    "heroSubtitle": "Apps by TopDog Labs.",
+    "heroPrimaryCta": "View Apps",
+    "heroSecondaryCta": "Get Support",
+    "splitTitle": "Building quality iOS apps for everyone.",
+    "splitBody": "Crafted and maintained by TopDog Labs. Focused on performance, privacy, and ease of use for players, planners, and power users.",
+    "splitCardTitle": "TopDog Labs",
+    "splitCardBody": "Explore original iOS experiences ranging from classic casino games to modern utilities. Designed with clarity, reliability, and a premium feel.",
+    "pillars": [
+      {
+        "title": "Privacy-first",
+        "body": "No tracking, no surprise data collection, and clear disclosures."
+      },
+      {
+        "title": "Native polish",
+        "body": "SwiftUI interfaces tuned for performance and feel."
+      },
+      {
+        "title": "Offline ready",
+        "body": "Core experiences stay available even without Wi-Fi."
+      }
+    ],
+    "featuredEyebrow": "Featured app",
+    "featuredTitle": "A launch-ready experience",
+    "featuredBody": "Every TopDog Labs release ships with a focused feature set, careful onboarding, and a support-first approach.",
+    "featuredPrimaryCta": "See all apps",
+    "featuredSecondaryCta": "Get Support",
+    "newsletterTitle": "",
+    "newsletterBody": "",
+    "newsletterPlaceholder": "",
+    "newsletterButton": ""
+  },
+  "appsPage": {
+    "heroTitle": "Apps",
+    "heroSubtitle": "Focused iOS releases built for calm, clarity, and performance.",
+    "heroPrimaryCta": "Email Support",
+    "heroSecondaryCta": "Support Form",
+    "overviewTitle": "Made for iPhone, tuned for real life.",
+    "overviewBody": "TopDog Labs ships small, focused apps that feel premium and stay fast. Every release emphasizes privacy-first defaults, offline readiness, and a clean interface that keeps you in the flow.",
+    "statsLabels": {
+      "apps": "Apps",
+      "categories": "Categories",
+      "focus": "Focus"
+    },
+    "focusValue": "Single-purpose, no clutter"
+  },
+  "support": {
+    "heroTitle": "Support Center.",
+    "heroSubtitle": "Find help for TopDog apps.",
+    "heroPrimaryCta": "Email Support",
+    "heroSecondaryCta": "Send a Message",
+    "bodyTitle": "Welcome to TopDog Labs Support.",
+    "bodyText": "We help you get the most out of our iOS apps, including Blackjack by TopDog and upcoming releases. Send your request below and we will respond quickly.",
+    "subjectLabel": "Subject",
+    "subjectOptions": [
+      "General Support",
+      "Bug Report",
+      "Feature Request"
+    ],
+    "nameLabel": "Name",
+    "namePlaceholder": "Jane Smith",
+    "emailLabel": "Email",
+    "emailPlaceholder": "jane@framer.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Your message...",
+    "submitLabel": "Submit"
+  },
+  "appDetail": {
+    "primaryCta": "App Store (soon)",
+    "secondaryCta": "Support",
+    "highlightsTitle": "Highlights",
+    "featuresTitle": "Features",
+    "whatsNewTitle": "What's new"
+  },
+  "privacy": {
+    "heroTitle": "Privacy matters.",
+    "heroSubtitle": "Your data, our promise.",
+    "heroPrimaryCta": "Learn More",
+    "heroSecondaryCta": "Support",
+    "sectionTitle": "Privacy policy"
+  },
+  "ui": {
+    "loadingApps": "Loading apps...",
+    "loadingApp": "Loading app...",
+    "loadingPolicy": "Loading policy...",
+    "appLoadingTitle": "Loading...",
+    "appLoadingSubtitle": "Fetching app details.",
+    "pageLoadingTitle": "Loading...",
+    "pageLoadingSubtitle": "Fetching content.",
+    "errorApps": "Unable to load apps right now.",
+    "errorAppTitle": "App not found.",
+    "errorAppSubtitle": "We could not find that release.",
+    "errorPageTitle": "Page not found.",
+    "errorPageSubtitle": "We could not load this section.",
+    "viewAllAppsCta": "View all apps",
+    "errorPolicy": "We could not load the privacy policy. Please try again."
+  },
   "footerColumns": [
     {
-      "title": "Portfolio",
+      "title": "Navigation",
       "links": [
         { "label": "Apps", "href": "/apps" },
-        { "label": "About", "href": "/about" },
-        { "label": "Contact", "href": "/contact" }
+        { "label": "About", "href": "/about" }
       ]
     },
     {
       "title": "Support",
       "links": [
-        { "label": "FAQ", "href": "/faq" },
         { "label": "Email", "href": "mailto:info@topdoglabs.com" },
-        { "label": "Help", "href": "/help" }
+        { "label": "Support", "href": "/support" },
+        { "label": "FAQ", "href": "/faq" }
       ]
     },
     {
@@ -23,42 +127,33 @@
         { "label": "Terms", "href": "/terms" },
         { "label": "Cookies", "href": "/cookies" }
       ]
-    },
-    {
-      "title": "Connect",
-      "links": [
-        { "label": "Twitter", "href": "/connect" },
-        { "label": "GitHub", "href": "/connect" },
-        { "label": "LinkedIn", "href": "/connect" }
-      ]
     }
   ],
   "pages": {
-   
-  "about": {
-    "title": "About TopDog Labs",
-    "subtitle": "A one-person iOS studio crafting focused, intentional apps.",
-    "summaryTitle": "Our philosophy",
-    "summaryBody": "We build iOS apps that feel calm, reliable, and delightful to use. Every project prioritizes clean SwiftUI interfaces, privacy-first decisions, offline-first design, and thoughtful onboarding — so users can jump in and feel at home immediately.",
-    "sections": [
-      {
-        "title": "What we build",
-        "body": "Focused mobile experiences: quick-play games, productivity tools, creative utilities, and anything that benefits from native iOS polish. No clutter, no ads, no unnecessary permissions."
-      },
-      {
-        "title": "How we work",
-        "body": "Small scope, high attention to detail. We ship fast, listen to real users, and iterate steadily. Every release includes accessibility (VoiceOver, Dynamic Type), iCloud sync where it makes sense, and strict attention to modern Swift concurrency and performance."
-      },
-      {
-        "title": "Tech we love",
-        "body": "SwiftUI for declarative, beautiful UIs • Swift 6 with strict concurrency • CloudKit for seamless iCloud sync • SwiftData for local persistence • RevenueCat for clean premium unlocks • MijickCamera & AVFoundation for advanced capture • Bedrock for consistent design tokens and components • Full accessibility & Dynamic Type support from day one."
-      },
-      {
-        "title": "Guiding principles",
-        "body": "Privacy by default — no tracking, no analytics, minimal data collection. Offline-first whenever possible. Thoughtful first-time experiences (welcome sheets, spotlight tours). Haptics, animations, and sound used intentionally to make interactions feel premium."
-      }
-    ],
-    "closing": "TopDog Labs is a solo effort by Matt Bruce in Frisco, Texas. We’re here to ship apps that respect your time and attention."
+    "about": {
+      "title": "About TopDog Labs",
+      "subtitle": "A one-person iOS studio crafting focused, intentional apps.",
+      "summaryTitle": "Our philosophy",
+      "summaryBody": "We build iOS apps that feel calm, reliable, and delightful to use. Every project prioritizes clean SwiftUI interfaces, privacy-first decisions, offline-first design, and thoughtful onboarding — so users can jump in and feel at home immediately.",
+      "sections": [
+        {
+          "title": "What we build",
+          "body": "Focused mobile experiences: quick-play games, productivity tools, creative utilities, and anything that benefits from native iOS polish. No clutter, no ads, no unnecessary permissions."
+        },
+        {
+          "title": "How we work",
+          "body": "Small scope, high attention to detail. We ship fast, listen to real users, and iterate steadily. Every release includes accessibility (VoiceOver, Dynamic Type), iCloud sync where it makes sense, and strict attention to modern Swift concurrency and performance."
+        },
+        {
+          "title": "Tech we love",
+          "body": "SwiftUI for declarative, beautiful UIs • Swift 6 with strict concurrency • CloudKit for seamless iCloud sync • SwiftData for local persistence • RevenueCat for clean premium unlocks • MijickCamera & AVFoundation for advanced capture • Bedrock for consistent design tokens and components • Full accessibility & Dynamic Type support from day one."
+        },
+        {
+          "title": "Guiding principles",
+          "body": "Privacy by default — no tracking, no analytics, minimal data collection. Offline-first whenever possible. Thoughtful first-time experiences (welcome sheets, spotlight tours). Haptics, animations, and sound used intentionally to make interactions feel premium."
+        }
+      ],
+      "closing": "TopDog Labs is a solo effort by Matt Bruce in Frisco, Texas. We’re here to ship apps that respect your time and attention."
     },
     "faq": {
       "title": "FAQ.",
@@ -77,22 +172,6 @@
         {
           "title": "Do you offer refunds?",
           "body": "All purchases are handled through the App Store. Please request refunds via Apple."
-        }
-      ]
-    },
-    "help": {
-      "title": "Help Center.",
-      "subtitle": "Guides and troubleshooting for TopDog apps.",
-      "summaryTitle": "Support workflow",
-      "summaryBody": "We respond to all support requests within two business days. For urgent issues, include \"Urgent\" in the subject line.",
-      "sections": [
-        {
-          "title": "Getting started",
-          "body": "Check the app settings first for tutorial access and gameplay options."
-        },
-        {
-          "title": "Account & access",
-          "body": "TopDog Labs apps do not require accounts unless stated in the app description."
         }
       ]
     },

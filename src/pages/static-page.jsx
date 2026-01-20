@@ -3,14 +3,17 @@ import { useSiteContent } from "../hooks/use-site-content.js";
 
 export const StaticPage = ({ slug }) => {
   const { content, isLoading, error } = useSiteContent();
+  const ui = content.ui || {};
   const page = content.pages ? content.pages[slug] : null;
 
   if (isLoading) {
     return (
       <Layout>
         <section className="hero">
-          <h1>Loading...</h1>
-          <p className="hero-sub">Fetching content.</p>
+          {ui.pageLoadingTitle ? <h1>{ui.pageLoadingTitle}</h1> : null}
+          {ui.pageLoadingSubtitle ? (
+            <p className="hero-sub">{ui.pageLoadingSubtitle}</p>
+          ) : null}
         </section>
       </Layout>
     );
@@ -20,8 +23,10 @@ export const StaticPage = ({ slug }) => {
     return (
       <Layout>
         <section className="hero">
-          <h1>Page not found.</h1>
-          <p className="hero-sub">We could not load this section.</p>
+          {ui.errorPageTitle ? <h1>{ui.errorPageTitle}</h1> : null}
+          {ui.errorPageSubtitle ? (
+            <p className="hero-sub">{ui.errorPageSubtitle}</p>
+          ) : null}
         </section>
       </Layout>
     );

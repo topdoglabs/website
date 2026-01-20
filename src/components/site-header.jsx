@@ -1,25 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
+import { useSiteContent } from "../hooks/use-site-content.js";
 
 const navClass = ({ isActive }) => (isActive ? "active" : undefined);
 
-export const SiteHeader = () => (
-  <header className="header">
-    <Link className="logo" to="/">
-      TopDog Labs<span>®</span>
-    </Link>
-    <nav className="nav">
-      <NavLink className={navClass} to="/apps">
-        Portfolio
-      </NavLink>
-      <NavLink className={navClass} to="/support">
-        Support
-      </NavLink>
-      <NavLink className={navClass} to="/privacy">
-        Privacy
-      </NavLink>
-      <NavLink className={navClass} to="/contact">
-        Contact
-      </NavLink>
-    </nav>
-  </header>
-);
+export const SiteHeader = () => {
+  const { content } = useSiteContent();
+  const links = content.navigation?.headerLinks || [];
+
+  return (
+    <header className="header">
+      <Link className="logo" to="/">
+        <span className="logo-mark" aria-hidden="true"></span>
+        TopDog Labs<span>®</span>
+      </Link>
+      <nav className="nav">
+        {links.map((link) => (
+          <NavLink key={link.label} className={navClass} to={link.href}>
+            {link.label}
+          </NavLink>
+        ))}
+      </nav>
+    </header>
+  );
+};

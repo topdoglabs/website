@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
+import { useSiteContent } from "../hooks/use-site-content.js";
 
 export const PrivacyPage = () => {
   const [policyHtml, setPolicyHtml] = useState("");
   const [hasError, setHasError] = useState(false);
+  const { content } = useSiteContent();
+  const privacy = content.privacy || {};
+  const ui = content.ui || {};
 
   useEffect(() => {
     let isMounted = true;
@@ -37,14 +41,16 @@ export const PrivacyPage = () => {
   return (
     <Layout>
       <section className="hero">
-        <h1>Privacy matters.</h1>
-        <p className="hero-sub">Your data, our promise.</p>
+        {privacy.heroTitle ? <h1>{privacy.heroTitle}</h1> : null}
+        {privacy.heroSubtitle ? (
+          <p className="hero-sub">{privacy.heroSubtitle}</p>
+        ) : null}
         <div className="hero-actions">
           <Link className="button primary" to="/apps">
-            Learn More
+            {privacy.heroPrimaryCta}
           </Link>
-          <Link className="button ghost" to="/contact">
-            Contact
+          <Link className="button ghost" to="/support">
+            {privacy.heroSecondaryCta}
           </Link>
         </div>
       </section>
@@ -52,8 +58,9 @@ export const PrivacyPage = () => {
       <section className="privacy-content">
         <div className="privacy-shell">
           {hasError ? (
-          <div><h2>Privacy policy</h2>
-            <p>We could not load the privacy policy. Please try again.</p>
+            <div>
+              {privacy.sectionTitle ? <h2>{privacy.sectionTitle}</h2> : null}
+              <p>{ui.errorPolicy}</p>
             </div>
           ) : policyHtml ? (
             <div
@@ -61,7 +68,7 @@ export const PrivacyPage = () => {
               dangerouslySetInnerHTML={{ __html: policyHtml }}
             />
           ) : (
-            <p>Loading policy...</p>
+            <p>{ui.loadingPolicy}</p>
           )}
         </div>
       </section>
