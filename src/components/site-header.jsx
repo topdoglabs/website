@@ -10,8 +10,8 @@ export const SiteHeader = () => {
   return (
     <header className="header">
       <Link className="logo" to="/">
-        <span className="logo-mark" aria-hidden="true"></span>
-        TopDog Labs<span>®</span>
+        <img src="/assets/logos/logo-2.svg" alt="TopDog Labs Logo" className="logo-img" />
+        TopDog Labs
       </Link>
       <nav className="nav">
         {links.map((link) => (

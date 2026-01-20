@@ -4,17 +4,13 @@ import { useSiteContent } from "../hooks/use-site-content.js";
 export const SiteFooter = () => {
   const { content } = useSiteContent();
   const columns = content.footerColumns || [];
+  const footerNote = content.footerNote || "";
 
   const isExternal = (href) =>
     href.startsWith("mailto:") || href.startsWith("http");
 
   return (
     <footer className="footer">
-      <div className="footer-top">
-        <Link className="logo" to="/">
-          TopDog Labs<span>®</span>
-        </Link>
-      </div>
       <div className="footer-grid">
         {columns.map((column) => (
           <div key={column.title}>
@@ -33,7 +29,7 @@ export const SiteFooter = () => {
           </div>
         ))}
       </div>
-      <p className="footer-note">© 2024-2026 TopDog Labs. All rights reserved.</p>
+      {footerNote ? <p className="footer-note">{footerNote}</p> : null}
     </footer>
   );
 };

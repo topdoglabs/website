@@ -70,7 +70,9 @@ a {
   letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
+  font-size: 84px;
+  line-height: 1;
 }
 
 .logo span {
@@ -81,12 +83,14 @@ a {
 }
 
 .logo-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: 10px;
-  background: radial-gradient(circle at 30% 30%, #2bd8a1, #0d1a16);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-  display: inline-block;
+  display: none;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin-right: 0;
 }
 
 .nav {
