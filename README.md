@@ -80,7 +80,7 @@ If you need to make changes 6 months from now, here is your quick-start guide:
 ### Change the Logo
 1. Upload the new SVG to `public/assets/logos/`.
 2. Update the filename in `src/components/site-header.jsx` (the `<img>` tag).
-3. If colors need changing, edit the SVG file's `fill` attributes.
+3. If colors or paths need changing, you can edit the SVGs using **[Boxy SVG](https://boxy-svg.com)**.
 
 ## 🤝 Support & Email
 
