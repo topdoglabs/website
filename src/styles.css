@@ -1156,19 +1156,19 @@ a {
   .header {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
   .logo {
-    font-size: 32px;
+    font-size: 55px;
     gap: 16px;
     margin-bottom: 8px;
   }
 
   .logo-img {
-    height: 80px;
+    height: 100px;
   }
 
   .nav {
