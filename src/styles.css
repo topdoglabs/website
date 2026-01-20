@@ -15,6 +15,10 @@
   --white: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -53,6 +57,18 @@ a {
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
   overflow: hidden;
   /* Ensure hero background stays within curves */
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .header {
