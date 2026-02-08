@@ -9,6 +9,12 @@ export const HomePage = () => {
   const [featured] = apps;
   const home = content.home || {};
   const ui = content.ui || {};
+  const isComingSoon = (app) =>
+    app.comingSoon || !app.appStoreUrl || !app.appStoreUrl.trim();
+  const getAppName = (app) => app.name || "Untitled app";
+  const getAppSubline = (app) => app.date || app.category || "Coming soon";
+  const getAppBody = (app) =>
+    app.summary || app.tagline || "Details for this app are coming soon.";
 
   const pillars = home.pillars || [];
 
@@ -75,27 +81,52 @@ export const HomePage = () => {
           ) : error ? (
             <p className="status">{ui.errorApps}</p>
           ) : featured ? (
-            <Link className="app-card wide" to={`/apps/${featured.slug}`}>
-              <div className="app-thumb" aria-hidden="true">
-                {featured.icon ? (
-                  <img
-                    className="app-icon"
-                    src={featured.icon}
-                    alt={`${featured.name} app icon`}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="app-icon placeholder" aria-hidden="true"></div>
-                )}
-              </div>
-              <div className="app-meta">
-                <div>
-                  <h4>{featured.name}</h4>
-                  <span>{featured.date}</span>
+            isComingSoon(featured) ? (
+              <Link className="app-card wide coming-soon" to={`/apps/${featured.slug}`}>
+                <div className="app-thumb" aria-hidden="true">
+                  {featured.icon ? (
+                    <img
+                      className="app-icon"
+                      src={featured.icon}
+                      alt={`${getAppName(featured)} app icon`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="app-icon placeholder" aria-hidden="true"></div>
+                  )}
+                  <span className="coming-soon-badge">Coming<br />Soon</span>
                 </div>
-                <p>{featured.summary}</p>
-              </div>
-            </Link>
+                <div className="app-meta">
+                  <div>
+                    <h4>{getAppName(featured)}</h4>
+                    <span>{getAppSubline(featured)}</span>
+                  </div>
+                  <p>{getAppBody(featured)}</p>
+                </div>
+              </Link>
+            ) : (
+              <Link className="app-card wide" to={`/apps/${featured.slug}`}>
+                <div className="app-thumb" aria-hidden="true">
+                  {featured.icon ? (
+                    <img
+                      className="app-icon"
+                      src={featured.icon}
+                      alt={`${getAppName(featured)} app icon`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="app-icon placeholder" aria-hidden="true"></div>
+                  )}
+                </div>
+                <div className="app-meta">
+                  <div>
+                    <h4>{getAppName(featured)}</h4>
+                    <span>{getAppSubline(featured)}</span>
+                  </div>
+                  <p>{getAppBody(featured)}</p>
+                </div>
+              </Link>
+            )
           ) : null}
         </div>
       </section>

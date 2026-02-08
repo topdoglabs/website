@@ -1,5 +1,63 @@
 [
   {
+    "slug": "the-noise-clock",
+    "comingSoon": false,
+    "name": "The Noise Clock",
+    "tagline": "Bold full-screen clock, calming noise, and reliable alarms in one clean app.",
+    "date": "February 8, 2026",
+    "year": "2026",
+    "category": "Utilities",
+    "version": "1.0",
+    "price": "Free",
+    "platform": "iOS",
+    "rating": "4.9",
+    "icon": "/assets/the-noise-clock/AppIcon.png",
+    "screenshots": [
+      "/assets/the-noise-clock/01-clock-view-portrait.png",
+      "/assets/the-noise-clock/02-clock-view-landscape.png",
+      "/assets/the-noise-clock/03-alarms-view-portrait.png",
+      "/assets/the-noise-clock/04-alarms-view-landscape.png",
+      "/assets/the-noise-clock/05-noise-view-portrait.png",
+      "/assets/the-noise-clock/06-noise-view-landscape.png",
+      "/assets/the-noise-clock/07-clock-settings-portrait.png",
+      "/assets/the-noise-clock/08-clock-settings-landscape.png"
+    ],
+    "summary": "A distraction-free digital clock with full-screen display controls, curated white noise, and dependable alarms for bedtime and focus.",
+    "description": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one clean experience.",
+    "promotionalText": "The Noise Clock combines a bold full-screen clock, calming noise, and reliable alarms in one clean app. Personalize fonts, colors, glow, and schedules for focus or sleep.",
+    "keywords": "clock,alarm,alarms,white noise,ambient,sleep,focus,bedside,digital clock,nightstand,productivity",
+    "highlights": [
+      "Full-screen digital clock optimized for readability",
+      "Calming white, pink, brown, ambient, nature, and mechanical sounds",
+      "Unlimited alarms with labels and repeat schedules",
+      "Per-alarm controls for sound, vibration, volume, and snooze",
+      "AlarmKit-powered alerts with Live Activity countdown support",
+      "Personalized clock style with fonts, colors, glow, and display controls"
+    ],
+    "features": [
+      {
+        "title": "Clock Display",
+        "description": "Use a bold full-screen digital clock with optional seconds, optional AM/PM, 12/24-hour time, fixed-width digits, and optional date and battery overlays. Tune glow, opacity, scale, color, font, weight, and style with live preview."
+      },
+      {
+        "title": "White Noise",
+        "description": "Pick from curated categories including white, pink, brown, ambient, nature, and mechanical soundscapes. Preview instantly, then play seamlessly with background playback support."
+      },
+      {
+        "title": "Reliable Alarms",
+        "description": "Create unlimited alarms with labels and repeat schedules. Configure per-alarm sound, vibration, volume, and snooze settings with dependable add, edit, toggle, duplicate, and delete workflows."
+      },
+      {
+        "title": "Built for Bedside and Focus",
+        "description": "Designed for sleep routines, wind-down environments, focus sessions, and minimalist nightstand setups, with auto-hide controls after inactivity for a cleaner display."
+      }
+    ],
+    "whatsNew": "Initial release featuring a customizable full-screen clock, curated noise playback, AlarmKit-powered alarms, and Live Activity countdown support.",
+    "supportEmail": "info@topdoglabs.com",
+    "website": "https://topdoglabs.com",
+    "appStoreUrl": ""
+  },
+  {
     "slug": "blackjack",
     "comingSoon": false,
     "name": "Blackjack by TopDog",

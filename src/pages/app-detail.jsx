@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
@@ -12,10 +12,15 @@ export const AppDetailPage = () => {
   const ui = content.ui || {};
   const sliderRef = useRef(null);
   const [activeShotIndex, setActiveShotIndex] = useState(null);
+  const [brokenShots, setBrokenShots] = useState(new Set());
   const app = useMemo(
     () => apps.find((item) => item.slug === slug),
     [apps, slug]
   );
+  useEffect(() => {
+    setBrokenShots(new Set());
+    setActiveShotIndex(null);
+  }, [slug]);
 
   if (isLoading) {
     return (
@@ -51,7 +56,13 @@ export const AppDetailPage = () => {
   const highlights = app.highlights || [];
   const features = app.features || [];
   const screenshots = app.screenshots || [];
+  const hasAppStoreUrl = Boolean(app.appStoreUrl && app.appStoreUrl.trim());
   const hasShots = screenshots.length > 0;
+  const appName = app.name || "Untitled app";
+  const description =
+    app.description || "Full app details are coming soon.";
+  const whatsNew = app.whatsNew || "Release notes will be posted soon.";
+  const isBrokenShot = (index) => brokenShots.has(index);
 
   const scrollShots = (direction) => {
     if (!sliderRef.current) {
@@ -72,25 +83,38 @@ export const AppDetailPage = () => {
           <div className="detail-title">
             <div className="detail-icon">
               {app.icon ? (
-                <img src={app.icon} alt={`${app.name} app icon`} loading="lazy" />
+                <img src={app.icon} alt={`${appName} app icon`} loading="lazy" />
               ) : (
                 <div className="app-icon placeholder" aria-hidden="true"></div>
               )}
             </div>
             <div>
-              <h1>{app.name}</h1>
-              <p className="hero-sub">{app.tagline || app.date}</p>
+              <h1>{appName}</h1>
+              <p className="hero-sub">{app.tagline || app.date || "Coming soon"}</p>
             </div>
           </div>
-          <p className="detail-copy left">{app.description}</p>
+          <p className="detail-copy left">{description}</p>
           <div className="hero-actions">
-            {appDetail.primaryCta ? (
-              <button className="button primary" type="button">
-                {appDetail.primaryCta}
+            {hasAppStoreUrl ? (
+              <a
+                className="button primary"
+                href={app.appStoreUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {appDetail.primaryCta || "View on App Store"}
+              </a>
+            ) : null}
+            {!hasAppStoreUrl ? (
+              <button className="button primary" type="button" disabled>
+                {appDetail.primaryCta || "App Store (soon)"}
               </button>
             ) : null}
             {appDetail.secondaryCta ? (
-              <a className="button ghost" href={`mailto:${app.supportEmail}`}>
+              <a
+                className="button ghost"
+                href={`mailto:${app.supportEmail || "info@topdoglabs.com"}`}
+              >
                 {appDetail.secondaryCta}
               </a>
             ) : null}
@@ -98,10 +122,17 @@ export const AppDetailPage = () => {
         </div>
         <div className="app-hero-media">
           <div className="device-mock large" aria-hidden="true">
-            {screenshots[0] ? (
-              <img src={screenshots[0]} alt="" loading="lazy" />
+            {screenshots[0] && !isBrokenShot(0) ? (
+              <img
+                src={screenshots[0]}
+                alt=""
+                loading="lazy"
+                onError={() =>
+                  setBrokenShots((prev) => new Set(prev).add(0))
+                }
+              />
             ) : (
-              <div className="device-screen"></div>
+              <div className="image-fallback">Screenshot Coming Soon</div>
             )}
           </div>
         </div>
@@ -110,23 +141,23 @@ export const AppDetailPage = () => {
       <section className="detail-meta">
         <div>
           <span>Category</span>
-          <strong>{app.category}</strong>
+          <strong>{app.category || "TBD"}</strong>
         </div>
         <div>
           <span>Version</span>
-          <strong>{app.version}</strong>
+          <strong>{app.version || "TBD"}</strong>
         </div>
         <div>
           <span>Rating</span>
-          <strong>{app.rating}</strong>
+          <strong>{app.rating || "TBD"}</strong>
         </div>
         <div>
           <span>Platform</span>
-          <strong>{app.platform}</strong>
+          <strong>{app.platform || "iOS"}</strong>
         </div>
         <div>
           <span>Price</span>
-          <strong>{app.price}</strong>
+          <strong>{app.price || "TBD"}</strong>
         </div>
       </section>
 
@@ -149,11 +180,20 @@ export const AppDetailPage = () => {
                   type="button"
                   onClick={() => setActiveShotIndex(index)}
                 >
-                  <img
-                    src={shot}
-                    alt={`${app.name} screenshot ${index + 1}`}
-                    loading="lazy"
-                  />
+                  {isBrokenShot(index) ? (
+                    <div className="image-fallback small">
+                      Screenshot {index + 1}
+                    </div>
+                  ) : (
+                    <img
+                      src={shot}
+                      alt={`${appName} screenshot ${index + 1}`}
+                      loading="lazy"
+                      onError={() =>
+                        setBrokenShots((prev) => new Set(prev).add(index))
+                      }
+                    />
+                  )}
                 </button>
               ))}
             </div>
@@ -181,7 +221,7 @@ export const AppDetailPage = () => {
             <h2>{appDetail.highlightsTitle}</h2>
           ) : null}
           <ul>
-            {highlights.map((item) => (
+            {(highlights.length > 0 ? highlights : ["More details coming soon."]).map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -189,7 +229,9 @@ export const AppDetailPage = () => {
         <div>
           {appDetail.featuresTitle ? <h2>{appDetail.featuresTitle}</h2> : null}
           <div className="feature-grid">
-            {features.map((feature) => (
+            {(features.length > 0
+              ? features
+              : [{ title: "Features", description: "Feature list coming soon." }]).map((feature) => (
               <article key={feature.title}>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
@@ -201,7 +243,7 @@ export const AppDetailPage = () => {
 
       <section className="detail-update">
         {appDetail.whatsNewTitle ? <h2>{appDetail.whatsNewTitle}</h2> : null}
-        <p>{app.whatsNew}</p>
+        <p>{whatsNew}</p>
       </section>
 
       {activeShotIndex !== null ? (
@@ -231,10 +273,19 @@ export const AppDetailPage = () => {
             >
               ←
             </button>
-            <img
-              src={screenshots[activeShotIndex]}
-              alt={`${app.name} screenshot ${activeShotIndex + 1}`}
-            />
+            {isBrokenShot(activeShotIndex) ? (
+              <div className="image-fallback modal-fallback">
+                Screenshot {activeShotIndex + 1} Coming Soon
+              </div>
+            ) : (
+              <img
+                src={screenshots[activeShotIndex]}
+                alt={`${appName} screenshot ${activeShotIndex + 1}`}
+                onError={() =>
+                  setBrokenShots((prev) => new Set(prev).add(activeShotIndex))
+                }
+              />
+            )}
             <button
               className="modal-nav right"
               type="button"

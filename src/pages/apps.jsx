@@ -12,6 +12,12 @@ export const AppsPage = () => {
   const categories = Array.from(
     new Set(apps.map((app) => app.category).filter(Boolean))
   );
+  const isComingSoon = (app) =>
+    app.comingSoon || !app.appStoreUrl || !app.appStoreUrl.trim();
+  const getAppName = (app) => app.name || "Untitled app";
+  const getAppSubline = (app) => app.date || app.category || "Coming soon";
+  const getAppBody = (app) =>
+    app.summary || app.tagline || "Details for this app are coming soon.";
 
   return (
     <Layout>
@@ -63,54 +69,36 @@ export const AppsPage = () => {
         ) : error ? (
           <p className="status">{ui.errorApps}</p>
         ) : (
-          apps.map((app) =>
-            app.comingSoon ? (
-              <div key={app.slug} className="app-card coming-soon">
+          apps.map((app) => (
+            <Link
+              key={app.slug}
+              className={`app-card${isComingSoon(app) ? " coming-soon" : ""}`}
+              to={`/apps/${app.slug}`}
+            >
                 <div className="app-thumb" aria-hidden="true">
                   {app.icon ? (
                     <img
                       className="app-icon"
                       src={app.icon}
-                      alt={`${app.name} app icon`}
+                      alt={`${getAppName(app)} app icon`}
                       loading="lazy"
                     />
                   ) : (
                     <div className="app-icon placeholder" aria-hidden="true"></div>
                   )}
-                  <span className="coming-soon-badge">Coming<br />Soon</span>
+                  {isComingSoon(app) ? (
+                    <span className="coming-soon-badge">Coming<br />Soon</span>
+                  ) : null}
                 </div>
                 <div className="app-meta">
                   <div>
-                    <h4>{app.name}</h4>
-                    <span>{app.category}</span>
+                    <h4>{getAppName(app)}</h4>
+                    <span>{getAppSubline(app)}</span>
                   </div>
-                  <p>{app.tagline}</p>
+                  <p>{getAppBody(app)}</p>
                 </div>
-              </div>
-            ) : (
-              <Link key={app.slug} className="app-card" to={`/apps/${app.slug}`}>
-                <div className="app-thumb" aria-hidden="true">
-                  {app.icon ? (
-                    <img
-                      className="app-icon"
-                      src={app.icon}
-                      alt={`${app.name} app icon`}
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="app-icon placeholder" aria-hidden="true"></div>
-                  )}
-                </div>
-                <div className="app-meta">
-                  <div>
-                    <h4>{app.name}</h4>
-                    <span>{app.date}</span>
-                  </div>
-                  <p>{app.summary}</p>
-                </div>
-              </Link>
-            )
-          )
+            </Link>
+          ))
         )}
       </section>
     </Layout>
