@@ -649,7 +649,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
-  align-items: center;
+  align-items: start;
   text-align: left;
   margin-top: 20px;
 }
@@ -945,6 +945,54 @@ a {
 .detail-copy.left {
   text-align: left;
   margin: 0;
+}
+
+.detail-copy-block + .detail-copy-block {
+  margin-top: 20px;
+}
+
+.detail-copy-heading {
+  margin: 0 0 10px;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.detail-copy-line {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.detail-copy-line + .detail-copy-line {
+  margin-top: 10px;
+}
+
+.detail-copy-line.lead {
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.detail-copy-list {
+  margin: 8px 0 0;
+  padding-left: 22px;
+  color: var(--ink);
+  display: grid;
+  gap: 8px;
+}
+
+.detail-copy-list li {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.detail-copy-list li::marker {
+  color: var(--highlight);
 }
 
 .highlight-list {

@@ -61,8 +61,86 @@ export const AppDetailPage = () => {
   const appName = app.name || "Untitled app";
   const description =
     app.description || "Full app details are coming soon.";
+  const copy = app.copy || null;
   const whatsNew = app.whatsNew || "Release notes will be posted soon.";
   const isBrokenShot = (index) => brokenShots.has(index);
+
+  const renderDescription = (text) => {
+    const blocks = text
+      .split(/\n\s*\n/)
+      .map((block) => block.trim())
+      .filter(Boolean);
+
+    return blocks.map((block, blockIndex) => {
+      const lines = block
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+      const bulletLines = lines.filter((line) => line.startsWith("- "));
+      const textLines = lines.filter((line) => !line.startsWith("- "));
+      const heading = textLines.length > 0 && textLines[0].endsWith(":")
+        ? textLines[0]
+        : null;
+      const bodyLines = heading ? textLines.slice(1) : textLines;
+      const isLead = blockIndex === 0 && blocks.length > 1;
+
+      return (
+        <section className="detail-copy-block" key={`desc-block-${blockIndex}`}>
+          {heading ? <h3 className="detail-copy-heading">{heading}</h3> : null}
+          {bodyLines.map((line, lineIndex) => (
+            <p
+              className={`detail-copy-line${isLead ? " lead" : ""}`}
+              key={`desc-line-${blockIndex}-${lineIndex}`}
+            >
+              {line}
+            </p>
+          ))}
+          {bulletLines.length > 0 ? (
+            <ul className="detail-copy-list">
+              {bulletLines.map((line, lineIndex) => (
+                <li key={`desc-bullet-${blockIndex}-${lineIndex}`}>
+                  {line.slice(2)}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </section>
+      );
+    });
+  };
+
+  const renderStructuredCopy = (copyContent, showSections = true) => {
+    const sections = Array.isArray(copyContent.sections) ? copyContent.sections : [];
+
+    return (
+      <>
+        {copyContent.lead ? (
+          <section className="detail-copy-block">
+            <p className="detail-copy-line lead">{copyContent.lead}</p>
+          </section>
+        ) : null}
+        {showSections ? sections.map((section, sectionIndex) => (
+          <section className="detail-copy-block" key={`copy-section-${sectionIndex}`}>
+            {section.heading ? (
+              <h3 className="detail-copy-heading">{section.heading}</h3>
+            ) : null}
+            {Array.isArray(section.bullets) && section.bullets.length > 0 ? (
+              <ul className="detail-copy-list">
+                {section.bullets.map((bullet, bulletIndex) => (
+                  <li key={`copy-bullet-${sectionIndex}-${bulletIndex}`}>{bullet}</li>
+                ))}
+              </ul>
+            ) : null}
+          </section>
+        )) : null}
+        {copyContent.closing ? (
+          <section className="detail-copy-block">
+            <p className="detail-copy-line">{copyContent.closing}</p>
+          </section>
+        ) : null}
+      </>
+    );
+  };
 
   const scrollShots = (direction) => {
     if (!sliderRef.current) {
@@ -93,7 +171,11 @@ export const AppDetailPage = () => {
               <p className="hero-sub">{app.tagline || app.date || "Coming soon"}</p>
             </div>
           </div>
-          <p className="detail-copy left">{description}</p>
+          <div className="detail-copy left">
+            {copy
+              ? renderStructuredCopy(copy, highlights.length === 0 && features.length === 0)
+              : renderDescription(description)}
+          </div>
           <div className="hero-actions">
             {hasAppStoreUrl ? (
               <a
