@@ -215,6 +215,14 @@ a {
   width: min(280px, 100%);
 }
 
+.hero-shot-trigger {
+  cursor: pointer;
+  appearance: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+}
+
 .device-mock img {
   width: 100%;
   height: 100%;

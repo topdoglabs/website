@@ -13,11 +13,11 @@
     "rating": "4.9",
     "icon": "/assets/rituals/AppIcon.png",
     "screenshots": [
-      "/assets/rituals/screen-1.png",
-      "/assets/rituals/screen-2.png",
-      "/assets/rituals/screen-3.png",
-      "/assets/rituals/screen-4.png",
-      "/assets/rituals/screen-5.png"
+      "/assets/rituals/01-today-focus-portrait.png",
+      "/assets/rituals/02-ritual-arcs-portrait.png",
+      "/assets/rituals/03-insights-trends-portrait.png",
+      "/assets/rituals/04-history-calendar-portrait.png",
+      "/assets/rituals/05-history-day-detail-portrait.png"
     ],
     "summary": "A private, offline-first habit tracker focused on guided ritual arcs, daily check-ins, and clear progress insights.",
     "description": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.\n\nCreate rituals that match your life:\n- Set a custom duration from 7 to 365 days\n- Organize habits by morning, midday, afternoon, evening, night, or anytime\n- Personalize rituals with themes, icons, categories, and notes\n\nStay on track every day:\n- Check off habits with fast tap-to-complete actions\n- See progress rings and completion summaries at a glance\n- Keep momentum with milestone achievements and streak tracking\n\nUnderstand your patterns:\n- Review daily history in a calendar view with completion detail\n- Track trends with weekly averages, active-day stats, and total check-ins\n- See your best-performing ritual and habit-level completion rates\n\nDesigned for privacy and reliability:\n- Offline-first by default, with no paid backend dependencies\n- Local-first data storage with optional iCloud settings sync\n- Clean, calm interface built for daily focus\n\nWhether you are starting a morning routine, improving productivity, or building mindfulness habits, Rituals gives you a clear structure you can actually sustain.",
@@ -118,11 +118,8 @@
       "/assets/the-noise-clock/01-clock-view-portrait.png",
       "/assets/the-noise-clock/02-clock-view-landscape.png",
       "/assets/the-noise-clock/03-alarms-view-portrait.png",
-      "/assets/the-noise-clock/04-alarms-view-landscape.png",
       "/assets/the-noise-clock/05-noise-view-portrait.png",
-      "/assets/the-noise-clock/06-noise-view-landscape.png",
-      "/assets/the-noise-clock/07-clock-settings-portrait.png",
-      "/assets/the-noise-clock/08-clock-settings-landscape.png"
+      "/assets/the-noise-clock/07-clock-settings-portrait.png"
     ],
     "summary": "A distraction-free digital clock with full-screen display controls, curated white noise, and dependable alarms for bedtime and focus.",
     "description": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one clean experience.",

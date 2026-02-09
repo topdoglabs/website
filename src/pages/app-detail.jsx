@@ -203,20 +203,27 @@ export const AppDetailPage = () => {
           </div>
         </div>
         <div className="app-hero-media">
-          <div className="device-mock large" aria-hidden="true">
-            {screenshots[0] && !isBrokenShot(0) ? (
+          {screenshots[0] && !isBrokenShot(0) ? (
+            <button
+              className="device-mock large hero-shot-trigger"
+              type="button"
+              onClick={() => setActiveShotIndex(0)}
+              aria-label={`Open ${appName} screenshot 1`}
+            >
               <img
                 src={screenshots[0]}
-                alt=""
+                alt={`${appName} screenshot 1`}
                 loading="lazy"
                 onError={() =>
                   setBrokenShots((prev) => new Set(prev).add(0))
                 }
               />
-            ) : (
+            </button>
+          ) : (
+            <div className="device-mock large" aria-hidden="true">
               <div className="image-fallback">Screenshot Coming Soon</div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
