@@ -2,500 +2,839 @@
   {
     "slug": "rituals",
     "comingSoon": true,
-    "name": "Rituals by TopDog",
-    "tagline": "Ritual Arcs for Daily Habits",
-    "date": "February 8, 2026",
-    "category": "Productivity",
-    "version": "1.1.1",
-    "price": "Free",
-    "platform": "iOS",
-    "rating": "4.9",
-    "icon": "/assets/rituals/AppIcon.png",
-    "screenshots": [
-      "/assets/rituals/01-today-focus-portrait.png",
-      "/assets/rituals/02-ritual-arcs-portrait.png",
-      "/assets/rituals/03-insights-trends-portrait.png",
-      "/assets/rituals/04-history-calendar-portrait.png",
-      "/assets/rituals/05-history-day-detail-portrait.png"
-    ],
-    "summary": "A private, offline-first habit tracker focused on guided ritual arcs, daily check-ins, and clear progress insights.",
-    "whatsNew": "Initial release featuring guided ritual arcs, daily check-ins, progress insights, and privacy-first offline tracking.",
-    "supportEmail": "info@topdoglabs.com",
-    "website": "https://topdoglabs.com/apps/rituals",
-    "appStoreUrl": "https://apps.apple.com/app/id6758921353",
-    "copy": {
-      "lead": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.",
-      "sections": [
+    "identity": {
+      "name": "Rituals by TopDog",
+      "tagline": "Ritual Arcs for Daily Habits"
+    },
+    "store": {
+      "category": "Health And Fitness",
+      "version": "1.1.1",
+      "price": "Paid",
+      "rating": "4.9",
+      "platform": "iOS",
+      "releaseDate": "February 8, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6758921353",
+      "website": "https://topdoglabs.com/apps/rituals",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/rituals/AppIcon.png",
+      "screenshots": [
+        "/assets/rituals/01-today-focus-portrait.png",
+        "/assets/rituals/02-ritual-arcs-portrait.png",
+        "/assets/rituals/03-insights-trends-portrait.png",
+        "/assets/rituals/04-history-calendar-portrait.png",
+        "/assets/rituals/05-history-day-detail-portrait.png"
+      ]
+    },
+    "content": {
+      "summary": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.",
+      "description": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.\n\nCreate rituals that match your life:\n- Set a custom duration from 7 to 365 days\n- Organize habits by morning, midday, afternoon, evening, night, or anytime\n- Personalize rituals with themes, icons, categories, and notes\n\nStay on track every day:\n- Check off habits with fast tap-to-complete actions\n- See progress rings and completion summaries at a glance\n- Keep momentum with milestone achievements and streak tracking\n\nUnderstand your patterns:\n- Review daily history in a calendar view with completion detail\n- Track trends with weekly averages, active-day stats, and total check-ins\n- See your best-performing ritual and habit-level completion rates\n\nDesigned for privacy and reliability:\n- Offline-first by default, with no paid backend dependencies\n- Local-first data storage with optional iCloud settings sync\n- Clean, calm interface built for daily focus\n\nWhether you are starting a morning routine, improving productivity, or building mindfulness habits, Rituals gives you a clear structure you can actually sustain.",
+      "whatsNew": "Initial release featuring guided ritual arcs, daily check-ins, progress insights, and privacy-first offline tracking.",
+      "highlights": [
+        "Set a custom duration from 7 to 365 days",
+        "Organize habits by morning, midday, afternoon, evening, night, or anytime",
+        "Personalize rituals with themes, icons, categories, and notes",
+        "Check off habits with fast tap-to-complete actions",
+        "See progress rings and completion summaries at a glance",
+        "Keep momentum with milestone achievements and streak tracking"
+      ],
+      "features": [
         {
-          "heading": "Create rituals that match your life",
-          "bullets": [
-            "Set a custom duration from 7 to 365 days",
-            "Organize habits by morning, midday, afternoon, evening, night, or anytime",
-            "Personalize rituals with themes, icons, categories, and notes"
-          ]
+          "title": "Create rituals that match your life",
+          "description": "Set a custom duration from 7 to 365 days Organize habits by morning, midday, afternoon, evening, night, or anytime Personalize rituals with themes, icons, categories, and notes"
         },
         {
-          "heading": "Stay on track every day",
-          "bullets": [
-            "Check off habits with fast tap-to-complete actions",
-            "See progress rings and completion summaries at a glance",
-            "Keep momentum with milestone achievements and streak tracking"
-          ]
+          "title": "Stay on track every day",
+          "description": "Check off habits with fast tap-to-complete actions See progress rings and completion summaries at a glance Keep momentum with milestone achievements and streak tracking"
         },
         {
-          "heading": "Understand your patterns",
-          "bullets": [
-            "Review daily history in a calendar view with completion detail",
-            "Track trends with weekly averages, active-day stats, and total check-ins",
-            "See your best-performing ritual and habit-level completion rates"
-          ]
+          "title": "Understand your patterns",
+          "description": "Review daily history in a calendar view with completion detail Track trends with weekly averages, active-day stats, and total check-ins See your best-performing ritual and habit-level completion rates"
         },
         {
-          "heading": "Designed for privacy and reliability",
-          "bullets": [
-            "Offline-first by default, with no paid backend dependencies",
-            "Local-first data storage with optional iCloud settings sync",
-            "Clean, calm interface built for daily focus"
-          ]
+          "title": "Designed for privacy and reliability",
+          "description": "Offline-first by default, with no paid backend dependencies Local-first data storage with optional iCloud settings sync Clean, calm interface built for daily focus"
         }
       ],
-      "closing": "Whether you are starting a morning routine, improving productivity, or building mindfulness habits, Rituals gives you a clear structure you can actually sustain."
+      "copy": {
+        "lead": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.",
+        "sections": [
+          {
+            "heading": "Create rituals that match your life",
+            "bullets": [
+              "Set a custom duration from 7 to 365 days",
+              "Organize habits by morning, midday, afternoon, evening, night, or anytime",
+              "Personalize rituals with themes, icons, categories, and notes"
+            ]
+          },
+          {
+            "heading": "Stay on track every day",
+            "bullets": [
+              "Check off habits with fast tap-to-complete actions",
+              "See progress rings and completion summaries at a glance",
+              "Keep momentum with milestone achievements and streak tracking"
+            ]
+          },
+          {
+            "heading": "Understand your patterns",
+            "bullets": [
+              "Review daily history in a calendar view with completion detail",
+              "Track trends with weekly averages, active-day stats, and total check-ins",
+              "See your best-performing ritual and habit-level completion rates"
+            ]
+          },
+          {
+            "heading": "Designed for privacy and reliability",
+            "bullets": [
+              "Offline-first by default, with no paid backend dependencies",
+              "Local-first data storage with optional iCloud settings sync",
+              "Clean, calm interface built for daily focus"
+            ]
+          }
+        ],
+        "closing": "Whether you are starting a morning routine, improving productivity, or building mindfulness habits, Rituals gives you a clear structure you can actually sustain."
+      }
     },
     "appStore": {
       "promotionalText": "Build better habits with guided ritual arcs, daily check-ins, and clear progress insights, all in a private, offline-first tracker designed for focus.",
       "keywords": "habit tracker,rituals,daily routine,streaks,goals,productivity,mindfulness,offline,privacy",
       "description": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.\n\nCreate rituals that match your life:\n- Set a custom duration from 7 to 365 days\n- Organize habits by morning, midday, afternoon, evening, night, or anytime\n- Personalize rituals with themes, icons, categories, and notes\n\nStay on track every day:\n- Check off habits with fast tap-to-complete actions\n- See progress rings and completion summaries at a glance\n- Keep momentum with milestone achievements and streak tracking\n\nUnderstand your patterns:\n- Review daily history in a calendar view with completion detail\n- Track trends with weekly averages, active-day stats, and total check-ins\n- See your best-performing ritual and habit-level completion rates\n\nDesigned for privacy and reliability:\n- Offline-first by default, with no paid backend dependencies\n- Local-first data storage with optional iCloud settings sync\n- Clean, calm interface built for daily focus\n\nWhether you are starting a morning routine, improving productivity, or building mindfulness habits, Rituals gives you a clear structure you can actually sustain."
     },
-    "asc": {
-      "appId": "6758921353",
-      "bundleId": "com.mbrucedogs.Andromida",
-      "primaryLocale": "en-US",
-      "appStoreState": "WAITING_FOR_REVIEW",
-      "versionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2",
-      "syncedAt": "2026-02-10T15:47:40.230Z"
-    },
-    "appStoreInfo": {
-      "supportUrl": "https://topdoglabs.com/support",
-      "privacyPolicyUrl": "https://topdoglabs.com/privacy"
+    "sync": {
+      "asc": {
+        "appId": "6758921353",
+        "bundleId": "com.mbrucedogs.Andromida",
+        "primaryLocale": "en-US",
+        "appStoreState": "WAITING_FOR_REVIEW",
+        "versionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2",
+        "syncedAt": "2026-02-10T20:12:30.762Z",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-02-10T19:27:53.908Z",
+        "draftVersionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2",
+        "publicVersionString": "1.1.1",
+        "draftVersionString": "1.1.1",
+        "isLive": false
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-02-10T20:12:30.763Z"
+      }
     }
   },
   {
     "slug": "the-noise-clock",
     "comingSoon": false,
-    "name": "The Noise Clock by TopDog",
-    "tagline": "Clock, Noise & Alarm Timer",
-    "date": "September 9, 2025",
-    "category": "Utilities",
-    "version": "1.0.1",
-    "price": "Free",
-    "platform": "iOS",
-    "rating": "4.9",
-    "icon": "/assets/the-noise-clock/AppIcon.png",
-    "screenshots": [
-      "/assets/the-noise-clock/01-clock-view-portrait.png",
-      "/assets/the-noise-clock/02-clock-view-landscape.png",
-      "/assets/the-noise-clock/03-alarms-view-portrait.png",
-      "/assets/the-noise-clock/05-noise-view-portrait.png",
-      "/assets/the-noise-clock/07-clock-settings-portrait.png"
-    ],
-    "summary": "A distraction-free digital clock with full-screen display controls, curated white noise, and dependable alarms for bedtime and focus.",
-    "whatsNew": "Initial release featuring a customizable full-screen clock, curated noise playback, AlarmKit-powered alarms, and Live Activity countdown support.",
-    "supportEmail": "info@topdoglabs.com",
-    "website": "https://topdoglabs.com/apps/the-noise-clock",
-    "appStoreUrl": "https://apps.apple.com/app/id6752309205",
-    "copy": {
-      "lead": "A distraction-free digital clock with full-screen display controls, curated white noise, and dependable alarms for bedtime and focus.",
-      "sections": [
+    "identity": {
+      "name": "The Noise Clock by TopDog",
+      "tagline": "Clock, Noise & Alarm Timer"
+    },
+    "store": {
+      "category": "Utilities",
+      "version": "1.0.1",
+      "price": "Paid",
+      "rating": "4.9",
+      "platform": "iOS",
+      "releaseDate": "September 9, 2025"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6752309205",
+      "website": "https://topdoglabs.com/apps/the-noise-clock",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/the-noise-clock/AppIcon.png",
+      "screenshots": [
+        "/assets/the-noise-clock/01-clock-view-portrait.png",
+        "/assets/the-noise-clock/02-clock-view-landscape.png",
+        "/assets/the-noise-clock/03-alarms-view-portrait.png",
+        "/assets/the-noise-clock/05-noise-view-portrait.png",
+        "/assets/the-noise-clock/07-clock-settings-portrait.png"
+      ]
+    },
+    "content": {
+      "summary": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one…",
+      "description": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one clean experience.\n\nCLOCK DISPLAY\n- Full-screen digital clock optimized for readability\n- 12/24-hour time, optional seconds, optional AM/PM\n- Stable fixed-width digits that avoid visual jumping\n- Adjustable glow, opacity, scale, and color\n- Custom fonts, weights, and styles with live preview\n- Optional date and battery overlays\n- Auto-hide interface after inactivity for a cleaner screen\n\nWHITE NOISE\n- Curated categories including white, pink, brown, and ambient sounds\n- Nature and mechanical soundscapes for sleep or concentration\n- Seamless looping with background playback support\n- Quick preview and instant play/stop controls\n\nALARMS\n- Create unlimited alarms with labels and repeat schedules\n- Per-alarm controls for sound, vibration, volume, and snooze\n- AlarmKit-powered alerts designed to cut through silent mode and Focus\n- Live Activity countdown support before an alarm fires\n- Reliable add, edit, toggle, duplicate, and delete workflows\n\nWHY PEOPLE USE THE NOISE CLOCK\n- Bedside clock replacement\n- Focus and work sessions\n- Sleep routines and wind-down environments\n- Minimal, customizable display without clutter\n\nThe Noise Clock is designed to be simple at a glance and powerful when you need control.",
+      "whatsNew": "Initial release featuring a customizable full-screen clock, curated noise playback, AlarmKit-powered alarms, and Live Activity countdown support.",
+      "highlights": [
+        "Full-screen digital clock optimized for readability",
+        "12/24-hour time, optional seconds, optional AM/PM",
+        "Stable fixed-width digits that avoid visual jumping",
+        "Adjustable glow, opacity, scale, and color",
+        "Custom fonts, weights, and styles with live preview",
+        "Optional date and battery overlays"
+      ],
+      "features": [
         {
-          "heading": "Highlights",
-          "bullets": [
-            "Full-screen digital clock optimized for readability",
-            "Calming white, pink, brown, ambient, nature, and mechanical sounds",
-            "Unlimited alarms with labels and repeat schedules",
-            "Per-alarm controls for sound, vibration, volume, and snooze",
-            "AlarmKit-powered alerts with Live Activity countdown support",
-            "Personalized clock style with fonts, colors, glow, and display controls"
-          ]
+          "title": "Clock Display",
+          "description": "Full-screen digital clock optimized for readability 12/24-hour time, optional seconds, optional AM/PM Stable fixed-width digits that avoid visual jumping Adjustable glow, opacity, scale, and color Custom fonts, weights, and styles with live preview Optional date and battery overlays Auto-hide interface after inactivity for a cleaner screen"
         },
         {
-          "heading": "Clock Display",
-          "bullets": [
-            "Use a bold full-screen digital clock with optional seconds, optional AM/PM, 12/24-hour time, fixed-width digits, and optional date and battery overlays. Tune glow, opacity, scale, color, font, weight, and style with live preview."
-          ]
+          "title": "White Noise",
+          "description": "Curated categories including white, pink, brown, and ambient sounds Nature and mechanical soundscapes for sleep or concentration Seamless looping with background playback support Quick preview and instant play/stop controls"
         },
         {
-          "heading": "White Noise",
-          "bullets": [
-            "Pick from curated categories including white, pink, brown, ambient, nature, and mechanical soundscapes. Preview instantly, then play seamlessly with background playback support."
-          ]
+          "title": "Alarms",
+          "description": "Create unlimited alarms with labels and repeat schedules Per-alarm controls for sound, vibration, volume, and snooze AlarmKit-powered alerts designed to cut through silent mode and Focus Live Activity countdown support before an alarm fires Reliable add, edit, toggle, duplicate, and delete workflows"
         },
         {
-          "heading": "Reliable Alarms",
-          "bullets": [
-            "Create unlimited alarms with labels and repeat schedules. Configure per-alarm sound, vibration, volume, and snooze settings with dependable add, edit, toggle, duplicate, and delete workflows."
-          ]
-        },
-        {
-          "heading": "Built for Bedside and Focus",
-          "bullets": [
-            "Designed for sleep routines, wind-down environments, focus sessions, and minimalist nightstand setups, with auto-hide controls after inactivity for a cleaner display."
-          ]
+          "title": "Why People Use The Noise Clock",
+          "description": "Bedside clock replacement Focus and work sessions Sleep routines and wind-down environments Minimal, customizable display without clutter"
         }
       ],
-      "closing": "Bold full-screen clock, calming noise, and reliable alarms in one clean app."
+      "copy": {
+        "lead": "A distraction-free digital clock with full-screen display controls, curated white noise, and dependable alarms for bedtime and focus.",
+        "sections": [
+          {
+            "heading": "Highlights",
+            "bullets": [
+              "Full-screen digital clock optimized for readability",
+              "Calming white, pink, brown, ambient, nature, and mechanical sounds",
+              "Unlimited alarms with labels and repeat schedules",
+              "Per-alarm controls for sound, vibration, volume, and snooze",
+              "AlarmKit-powered alerts with Live Activity countdown support",
+              "Personalized clock style with fonts, colors, glow, and display controls"
+            ]
+          },
+          {
+            "heading": "Clock Display",
+            "bullets": [
+              "Use a bold full-screen digital clock with optional seconds, optional AM/PM, 12/24-hour time, fixed-width digits, and optional date and battery overlays. Tune glow, opacity, scale, color, font, weight, and style with live preview."
+            ]
+          },
+          {
+            "heading": "White Noise",
+            "bullets": [
+              "Pick from curated categories including white, pink, brown, ambient, nature, and mechanical soundscapes. Preview instantly, then play seamlessly with background playback support."
+            ]
+          },
+          {
+            "heading": "Reliable Alarms",
+            "bullets": [
+              "Create unlimited alarms with labels and repeat schedules. Configure per-alarm sound, vibration, volume, and snooze settings with dependable add, edit, toggle, duplicate, and delete workflows."
+            ]
+          },
+          {
+            "heading": "Built for Bedside and Focus",
+            "bullets": [
+              "Designed for sleep routines, wind-down environments, focus sessions, and minimalist nightstand setups, with auto-hide controls after inactivity for a cleaner display."
+            ]
+          }
+        ],
+        "closing": "Bold full-screen clock, calming noise, and reliable alarms in one clean app."
+      }
     },
     "appStore": {
       "promotionalText": "The Noise Clock combines a bold full-screen clock, calming noise, and reliable alarms in one clean app. Personalize fonts, colors, glow, and schedules for focus or sleep.",
       "keywords": "clock,alarm,alarms,white noise,ambient,sleep,focus,bedside,digital clock,nightstand,productivity",
       "description": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one clean experience.\n\nCLOCK DISPLAY\n- Full-screen digital clock optimized for readability\n- 12/24-hour time, optional seconds, optional AM/PM\n- Stable fixed-width digits that avoid visual jumping\n- Adjustable glow, opacity, scale, and color\n- Custom fonts, weights, and styles with live preview\n- Optional date and battery overlays\n- Auto-hide interface after inactivity for a cleaner screen\n\nWHITE NOISE\n- Curated categories including white, pink, brown, and ambient sounds\n- Nature and mechanical soundscapes for sleep or concentration\n- Seamless looping with background playback support\n- Quick preview and instant play/stop controls\n\nALARMS\n- Create unlimited alarms with labels and repeat schedules\n- Per-alarm controls for sound, vibration, volume, and snooze\n- AlarmKit-powered alerts designed to cut through silent mode and Focus\n- Live Activity countdown support before an alarm fires\n- Reliable add, edit, toggle, duplicate, and delete workflows\n\nWHY PEOPLE USE THE NOISE CLOCK\n- Bedside clock replacement\n- Focus and work sessions\n- Sleep routines and wind-down environments\n- Minimal, customizable display without clutter\n\nThe Noise Clock is designed to be simple at a glance and powerful when you need control.\n"
     },
-    "asc": {
-      "appId": "6752309205",
-      "bundleId": "com.mbrucedogs.TheNoiseClock",
-      "primaryLocale": "en-US",
-      "appStoreState": "WAITING_FOR_REVIEW",
-      "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
-      "syncedAt": "2026-02-10T15:47:41.351Z"
-    },
-    "appStoreInfo": {
-      "supportUrl": "https://topdoglabs.com/support",
-      "privacyPolicyUrl": "https://topdoglabs.com/privacy"
+    "sync": {
+      "asc": {
+        "appId": "6752309205",
+        "bundleId": "com.mbrucedogs.TheNoiseClock",
+        "primaryLocale": "en-US",
+        "appStoreState": "WAITING_FOR_REVIEW",
+        "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
+        "syncedAt": "2026-02-10T20:12:31.999Z",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-02-10T19:27:57.686Z",
+        "draftVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
+        "publicVersionString": "1.0.1",
+        "draftVersionString": "1.0.1",
+        "isLive": false
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-02-10T20:12:31.999Z"
+      }
     }
   },
   {
     "slug": "blackjack",
     "comingSoon": false,
-    "name": "Blackjack by TopDog",
-    "tagline": "Classic Strategy Card Game",
-    "date": "December 31, 2025",
-    "category": "Casino",
-    "version": "1.9.1",
-    "price": "Free",
-    "platform": "iOS",
-    "rating": "4.8",
-    "icon": "/assets/blackjack/AppIcon.png",
-    "screenshots": [
-      "/assets/blackjack/screen-1.png",
-      "/assets/blackjack/screen-2.png",
-      "/assets/blackjack/screen-3.png",
-      "/assets/blackjack/screen-4.png",
-      "/assets/blackjack/screen-5.png",
-      "/assets/blackjack/screen-6.png",
-      "/assets/blackjack/screen-7.png"
-    ],
-    "summary": "Authentic multi-deck blackjack with pro strategy hints, Hi-Lo card counting trainer, side bets, session stats, and iCloud sync — all offline and ad-free.",
-    "whatsNew": "Initial release featuring authentic multi-deck blackjack, basic strategy hints, Hi-Lo card counting trainer, side bets, detailed stats, and iCloud sync.",
-    "supportEmail": "info@topdoglabs.com",
-    "website": "https://www.topdoglabs.com/apps/blackjack",
-    "appStoreUrl": "https://apps.apple.com/app/id6757250589",
-    "copy": {
-      "lead": "Authentic multi-deck blackjack with pro strategy hints, Hi-Lo card counting trainer, side bets, session stats, and iCloud sync — all offline and ad-free.",
-      "sections": [
+    "identity": {
+      "name": "Blackjack by TopDog",
+      "tagline": "Classic Strategy Card Game"
+    },
+    "store": {
+      "category": "Games",
+      "version": "1.9.1",
+      "price": "Paid",
+      "rating": "4.8",
+      "platform": "iOS",
+      "releaseDate": "December 31, 2025"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6757250589",
+      "website": "https://www.topdoglabs.com/apps/blackjack",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://www.topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/blackjack/AppIcon.png",
+      "screenshots": [
+        "/assets/blackjack/screen-1.png",
+        "/assets/blackjack/screen-2.png",
+        "/assets/blackjack/screen-3.png",
+        "/assets/blackjack/screen-4.png",
+        "/assets/blackjack/screen-5.png",
+        "/assets/blackjack/screen-6.png",
+        "/assets/blackjack/screen-7.png"
+      ]
+    },
+    "content": {
+      "summary": "Play Blackjack 21 with authentic casino rules, polished SwiftUI visuals, and no real-money risk.",
+      "description": "Play Blackjack 21 with authentic casino rules, polished SwiftUI visuals, and no real-money risk.\n\nAUTHENTIC BLACKJACK GAMEPLAY\n• Full action set: Hit, Stand, Double Down, Split, and Surrender\n• Insurance support when the dealer shows an Ace\n• Realistic multi-deck shoe with configurable penetration\n• Cut card reshuffle behavior with in-game notifications\n\nRULE VARIATIONS YOU CONTROL\n• Vegas Strip, Atlantic City, and European presets\n• Custom rules for a table that matches your preference\n• Rule-aware gameplay and strategy guidance\n\nSIDE BETS FOR EXTRA ACTION\n• Perfect Pairs: Mixed, Colored, and Perfect payouts\n• 21+3: Flush, Straight, Trips, Straight Flush, and Suited Trips\n\nLEARN AND IMPROVE\n• Real-time basic strategy hints for every hand\n• Guidance adapts to your selected rules\n• Built-in Hi-Lo card counting trainer\n• Running Count, True Count, betting hints, and Illustrious 18 deviations\n\nSESSION STATS THAT MATTER\n• Live current-session tracking\n• Global lifetime statistics\n• Session history with detailed performance breakdowns\n• Hands played, win rate, net result, blackjacks, busts, doubles, splits, and bet metrics\n\nSYNCED AND ACCESSIBLE\n• iCloud sync for balance, settings, and statistics across devices\n• Dynamic Type and VoiceOver-friendly interface\n• Smooth dealing animations with sound and haptics\n\nNEW TO THE TABLE?\n• First-launch welcome sheet and guided spotlight walkthrough\n• Skippable onboarding shown only once\n\nThis app is for entertainment only and does not offer real-money gambling.",
+      "whatsNew": "Initial release featuring authentic multi-deck blackjack, basic strategy hints, Hi-Lo card counting trainer, side bets, detailed stats, and iCloud sync.",
+      "highlights": [
+        "Full action set: Hit, Stand, Double Down, Split, and Surrender",
+        "Insurance support when the dealer shows an Ace",
+        "Realistic multi-deck shoe with configurable penetration",
+        "Cut card reshuffle behavior with in-game notifications",
+        "Vegas Strip, Atlantic City, and European presets",
+        "Custom rules for a table that matches your preference"
+      ],
+      "features": [
         {
-          "heading": "Highlights",
-          "bullets": [
-            "Real-time basic strategy suggestions",
-            "Professional Hi-Lo card counting trainer",
-            "Multiple rule sets + full custom configuration",
-            "Perfect Pairs & 21+3 side bets",
-            "Detailed session stats & iCloud sync",
-            "Beautiful SwiftUI design with animations & haptics"
-          ]
+          "title": "Authentic Blackjack Gameplay",
+          "description": "Full action set: Hit, Stand, Double Down, Split, and Surrender Insurance support when the dealer shows an Ace Realistic multi-deck shoe with configurable penetration Cut card reshuffle behavior with in-game notifications"
         },
         {
-          "heading": "Authentic Gameplay",
-          "bullets": [
-            "Hit, Stand, Double, Split, Surrender, Insurance, multi-deck shoe, reshuffle alerts, realistic animations and sound effects."
-          ]
+          "title": "Rule Variations You Control",
+          "description": "Vegas Strip, Atlantic City, and European presets Custom rules for a table that matches your preference Rule-aware gameplay and strategy guidance"
         },
         {
-          "heading": "Strategy & Counting Tools",
-          "bullets": [
-            "Real-time basic strategy hints, Hi-Lo card counting (running/true count, bet recommendations, Illustrious 18 deviations)."
-          ]
+          "title": "Side Bets For Extra Action",
+          "description": "Perfect Pairs: Mixed, Colored, and Perfect payouts 21+3: Flush, Straight, Trips, Straight Flush, and Suited Trips"
         },
         {
-          "heading": "Side Bets & Variations",
-          "bullets": [
-            "Perfect Pairs (6:1–25:1) and 21+3 (5:1–100:1). Play Vegas Strip, Atlantic City, European, or fully custom rules."
-          ]
+          "title": "Learn And Improve",
+          "description": "Real-time basic strategy hints for every hand Guidance adapts to your selected rules Built-in Hi-Lo card counting trainer Running Count, True Count, betting hints, and Illustrious 18 deviations"
         },
         {
-          "heading": "Session Tracking",
-          "bullets": [
-            "Live and lifetime stats, win/loss breakdowns, hand history, session management — all synced via iCloud."
-          ]
-        },
-        {
-          "heading": "First-Time Experience",
-          "bullets": [
-            "Interactive welcome sheet and spotlight-guided onboarding — skippable and shown only once."
-          ]
+          "title": "Session Stats That Matter",
+          "description": "Live current-session tracking Global lifetime statistics Session history with detailed performance breakdowns Hands played, win rate, net result, blackjacks, busts, doubles, splits, and bet metrics"
         }
       ],
-      "closing": "Master strategy, count cards, and play like a pro — no real money at stake."
+      "copy": {
+        "lead": "Authentic multi-deck blackjack with pro strategy hints, Hi-Lo card counting trainer, side bets, session stats, and iCloud sync — all offline and ad-free.",
+        "sections": [
+          {
+            "heading": "Highlights",
+            "bullets": [
+              "Real-time basic strategy suggestions",
+              "Professional Hi-Lo card counting trainer",
+              "Multiple rule sets + full custom configuration",
+              "Perfect Pairs & 21+3 side bets",
+              "Detailed session stats & iCloud sync",
+              "Beautiful SwiftUI design with animations & haptics"
+            ]
+          },
+          {
+            "heading": "Authentic Gameplay",
+            "bullets": [
+              "Hit, Stand, Double, Split, Surrender, Insurance, multi-deck shoe, reshuffle alerts, realistic animations and sound effects."
+            ]
+          },
+          {
+            "heading": "Strategy & Counting Tools",
+            "bullets": [
+              "Real-time basic strategy hints, Hi-Lo card counting (running/true count, bet recommendations, Illustrious 18 deviations)."
+            ]
+          },
+          {
+            "heading": "Side Bets & Variations",
+            "bullets": [
+              "Perfect Pairs (6:1–25:1) and 21+3 (5:1–100:1). Play Vegas Strip, Atlantic City, European, or fully custom rules."
+            ]
+          },
+          {
+            "heading": "Session Tracking",
+            "bullets": [
+              "Live and lifetime stats, win/loss breakdowns, hand history, session management — all synced via iCloud."
+            ]
+          },
+          {
+            "heading": "First-Time Experience",
+            "bullets": [
+              "Interactive welcome sheet and spotlight-guided onboarding — skippable and shown only once."
+            ]
+          }
+        ],
+        "closing": "Master strategy, count cards, and play like a pro — no real money at stake."
+      }
     },
     "appStore": {
-      "promotionalText": "Master Blackjack with pro strategy hints, Hi-Lo card counting trainer, realistic Vegas rules, and side bets. Play like a pro — no real money needed!",
-      "keywords": "blackjack,21,casino,strategy,basic strategy,card counting,hi-lo,side bets,perfect pairs,21+3",
-      "description": "Blackjack by TopDog – The ultimate classic casino card game with pro tools to master strategy.\nLearn real-time basic strategy, practice Hi-Lo card counting, and enjoy authentic multi-deck gameplay — all without risking real money.\nKey Features:\n\nFull Blackjack rules: Hit, Stand, Double Down, Split, Surrender, Insurance\nMultiple styles: Vegas Strip, Atlantic City, European + fully customizable rules\nReal-time strategy hints & professional card counting trainer (running/true count, bet hints, Illustrious 18 deviations)\nExciting side bets: Perfect Pairs (6:1–25:1) and 21+3 (5:1–100:1)\nDetailed session statistics, global tracking, and iCloud sync across devices\nBeautiful SwiftUI design with realistic animations, sound effects, and haptic feedback\nFirst-time user onboarding: interactive welcome sheet + guided spotlight tour\n\nPerfect for beginners learning strategy and pros sharpening card counting skills.\nPlay offline, no ads during gameplay, and enjoy a polished, ad-free casino experience."
+      "promotionalText": "Play authentic Blackjack with strategy hints, card counting tools, and full rule customization. Track sessions, sync stats with iCloud, and practice risk-free.",
+      "keywords": "blackjack,21,casino cards,basic strategy,card counting,hi lo,side bets,perfect pairs,21+3,offline",
+      "description": "Play Blackjack 21 with authentic casino rules, polished SwiftUI visuals, and no real-money risk.\n\nAUTHENTIC BLACKJACK GAMEPLAY\n• Full action set: Hit, Stand, Double Down, Split, and Surrender\n• Insurance support when the dealer shows an Ace\n• Realistic multi-deck shoe with configurable penetration\n• Cut card reshuffle behavior with in-game notifications\n\nRULE VARIATIONS YOU CONTROL\n• Vegas Strip, Atlantic City, and European presets\n• Custom rules for a table that matches your preference\n• Rule-aware gameplay and strategy guidance\n\nSIDE BETS FOR EXTRA ACTION\n• Perfect Pairs: Mixed, Colored, and Perfect payouts\n• 21+3: Flush, Straight, Trips, Straight Flush, and Suited Trips\n\nLEARN AND IMPROVE\n• Real-time basic strategy hints for every hand\n• Guidance adapts to your selected rules\n• Built-in Hi-Lo card counting trainer\n• Running Count, True Count, betting hints, and Illustrious 18 deviations\n\nSESSION STATS THAT MATTER\n• Live current-session tracking\n• Global lifetime statistics\n• Session history with detailed performance breakdowns\n• Hands played, win rate, net result, blackjacks, busts, doubles, splits, and bet metrics\n\nSYNCED AND ACCESSIBLE\n• iCloud sync for balance, settings, and statistics across devices\n• Dynamic Type and VoiceOver-friendly interface\n• Smooth dealing animations with sound and haptics\n\nNEW TO THE TABLE?\n• First-launch welcome sheet and guided spotlight walkthrough\n• Skippable onboarding shown only once\n\nThis app is for entertainment only and does not offer real-money gambling."
     },
-    "asc": {
-      "appId": "6757250589",
-      "bundleId": "com.mbrucedogs.Blackjack",
-      "primaryLocale": "en-US",
-      "appStoreState": "REJECTED",
-      "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
-      "syncedAt": "2026-02-10T15:47:42.360Z"
-    },
-    "appStoreInfo": {
-      "supportUrl": "https://www.topdoglabs.com/support",
-      "privacyPolicyUrl": "https://topdoglabs.com/privacy"
+    "sync": {
+      "asc": {
+        "appId": "6757250589",
+        "bundleId": "com.mbrucedogs.Blackjack",
+        "primaryLocale": "en-US",
+        "appStoreState": "REJECTED",
+        "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
+        "syncedAt": "2026-02-10T20:12:33.108Z",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-02-10T19:28:04.464Z",
+        "draftVersionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
+        "publicVersionString": "1.9.1",
+        "draftVersionString": "1.9.1",
+        "isLive": false
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-02-10T20:12:33.108Z"
+      }
     }
   },
   {
     "slug": "baccarat",
     "comingSoon": true,
-    "name": "Baccarat by TopDog",
-    "tagline": "Authentic Punto Banco with side bets & road maps.",
-    "date": "December 31, 2025",
-    "category": "Casino",
-    "version": "1.0",
-    "price": "Free",
-    "platform": "iOS",
-    "rating": "4.7",
-    "icon": "/assets/baccarat/AppIcon.png",
-    "screenshots": [
-      "/assets/baccarat/screen-1.png",
-      "/assets/baccarat/screen-2.png",
-      "/assets/baccarat/screen-3.png"
-    ],
-    "summary": "Classic Baccarat (Punto Banco) with realistic table play, side bets, Big Road history, and iCloud sync — no real money at stake.",
-    "whatsNew": "Initial release featuring authentic Punto Banco gameplay, side bets, Big Road history, multiple table limits, and iCloud sync.",
-    "supportEmail": "info@topdoglabs.com",
-    "website": "https://topdoglabs.com",
-    "appStoreUrl": "https://apps.apple.com/app/id6757249709",
-    "copy": {
-      "lead": "Classic Baccarat (Punto Banco) with realistic table play, side bets, Big Road history, and iCloud sync — no real money at stake.",
-      "sections": [
+    "identity": {
+      "name": "Baccarat by TopDog",
+      "tagline": "Authentic Punto Banco with side bets & road maps."
+    },
+    "store": {
+      "category": "Casino",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "4.7",
+      "platform": "iOS",
+      "releaseDate": "December 31, 2025"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6757249709",
+      "website": "https://topdoglabs.com",
+      "supportEmail": "info@topdoglabs.com",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/baccarat/AppIcon.png",
+      "screenshots": [
+        "/assets/baccarat/screen-1.png",
+        "/assets/baccarat/screen-2.png",
+        "/assets/baccarat/screen-3.png"
+      ]
+    },
+    "content": {
+      "summary": "Play Baccarat (Punto Banco) with authentic casino rules, polished SwiftUI visuals, and no real-money risk.",
+      "description": "Play Baccarat (Punto Banco) with authentic casino rules, polished SwiftUI visuals, and no real-money risk.\n\nAUTHENTIC BACCARAT, MODERN EXPERIENCE\n• Automatic third-card logic for Player and Banker\n• Natural hand detection (8 or 9)\n• Multi-deck shoe support (1, 6, or 8 decks)\n• Automatic reshuffle and burn card behavior\n\nBETTING OPTIONS\n• Main bets: Player, Banker, and Tie\n• Side bets: Player Pair, Banker Pair, and Dragon Bonus\n• Clear payouts and session tracking to help you learn patterns over time\n\nROAD MAP HISTORY\n• Big Road-style result display\n• Color-coded outcomes for Player, Banker, and Tie\n• Pair and Natural markers for quick visual scanning\n• Scrollable history for longer sessions\n\nCUSTOMIZE YOUR TABLE\n• Toggle dealing animations and adjust dealing speed\n• Choose reveal style: Auto, Tap, or Squeeze\n• Select table limits from Casual to VIP ranges\n\nSYNCED AND ACCESSIBLE\n• iCloud sync for balance, statistics, and settings across devices\n• Dynamic Type and VoiceOver-friendly interface\n• Smooth haptics and sound-enhanced dealing\n\nNEW TO BACCARAT?\n• First-launch welcome sheet and guided spotlight walkthrough\n• Skippable onboarding that appears only once\n\nThis app is for entertainment only and does not offer real-money gambling.",
+      "whatsNew": "Initial release featuring authentic Punto Banco gameplay, side bets, Big Road history, multiple table limits, and iCloud sync.",
+      "highlights": [
+        "Automatic third-card logic for Player and Banker",
+        "Natural hand detection (8 or 9)",
+        "Multi-deck shoe support (1, 6, or 8 decks)",
+        "Automatic reshuffle and burn card behavior",
+        "Main bets: Player, Banker, and Tie",
+        "Side bets: Player Pair, Banker Pair, and Dragon Bonus"
+      ],
+      "features": [
         {
-          "heading": "Highlights",
-          "bullets": [
-            "Authentic Punto Banco rules with automatic third-card logic",
-            "Side bets: Player/Banker Pair (11:1), Dragon Bonus (up to 30:1)",
-            "Visual Big Road history with pair & natural markers",
-            "Configurable table limits from Casual to VIP",
-            "iCloud sync for balance, stats, and settings",
-            "Guided onboarding with welcome sheet & spotlight tour"
-          ]
+          "title": "Features",
+          "description": "Automatic third-card logic for Player and Banker Natural hand detection (8 or 9) Multi-deck shoe support (1, 6, or 8 decks) Automatic reshuffle and burn card behavior"
         },
         {
-          "heading": "Complete Baccarat Gameplay",
-          "bullets": [
-            "Player/Banker/Tie bets, automatic third-card rules, natural wins, multi-deck shoe with reshuffle and burn card."
-          ]
+          "title": "Betting Options",
+          "description": "Main bets: Player, Banker, and Tie Side bets: Player Pair, Banker Pair, and Dragon Bonus Clear payouts and session tracking to help you learn patterns over time"
         },
         {
-          "heading": "Side Bets",
-          "bullets": [
-            "Player Pair and Banker Pair (11:1), Dragon Bonus (1:1 to 30:1 based on win margin)."
-          ]
+          "title": "Road Map History",
+          "description": "Big Road-style result display Color-coded outcomes for Player, Banker, and Tie Pair and Natural markers for quick visual scanning Scrollable history for longer sessions"
         },
         {
-          "heading": "Road Map History",
-          "bullets": [
-            "Big Road style display — scrollable, color-coded results, pair dots, natural stars."
-          ]
+          "title": "Customize Your Table",
+          "description": "Toggle dealing animations and adjust dealing speed Choose reveal style: Auto, Tap, or Squeeze Select table limits from Casual to VIP ranges"
         },
         {
-          "heading": "Flexible Table Limits",
-          "bullets": [
-            "Casual ($5–$500) up to VIP ($500–$50,000) betting levels."
-          ]
-        },
-        {
-          "heading": "First-Time Experience",
-          "bullets": [
-            "Interactive welcome sheet and spotlight-guided tour — skippable and shown only once."
-          ]
-        },
-        {
-          "heading": "iCloud Sync & Stats",
-          "bullets": [
-            "Balance, statistics, and settings sync across devices with automatic conflict resolution."
-          ]
+          "title": "Synced And Accessible",
+          "description": "iCloud sync for balance, statistics, and settings across devices Dynamic Type and VoiceOver-friendly interface Smooth haptics and sound-enhanced dealing"
         }
       ],
-      "closing": "Authentic Punto Banco with side bets & road maps."
+      "copy": {
+        "lead": "Classic Baccarat (Punto Banco) with realistic table play, side bets, Big Road history, and iCloud sync — no real money at stake.",
+        "sections": [
+          {
+            "heading": "Highlights",
+            "bullets": [
+              "Authentic Punto Banco rules with automatic third-card logic",
+              "Side bets: Player/Banker Pair (11:1), Dragon Bonus (up to 30:1)",
+              "Visual Big Road history with pair & natural markers",
+              "Configurable table limits from Casual to VIP",
+              "iCloud sync for balance, stats, and settings",
+              "Guided onboarding with welcome sheet & spotlight tour"
+            ]
+          },
+          {
+            "heading": "Complete Baccarat Gameplay",
+            "bullets": [
+              "Player/Banker/Tie bets, automatic third-card rules, natural wins, multi-deck shoe with reshuffle and burn card."
+            ]
+          },
+          {
+            "heading": "Side Bets",
+            "bullets": [
+              "Player Pair and Banker Pair (11:1), Dragon Bonus (1:1 to 30:1 based on win margin)."
+            ]
+          },
+          {
+            "heading": "Road Map History",
+            "bullets": [
+              "Big Road style display — scrollable, color-coded results, pair dots, natural stars."
+            ]
+          },
+          {
+            "heading": "Flexible Table Limits",
+            "bullets": [
+              "Casual ($5–$500) up to VIP ($500–$50,000) betting levels."
+            ]
+          },
+          {
+            "heading": "First-Time Experience",
+            "bullets": [
+              "Interactive welcome sheet and spotlight-guided tour — skippable and shown only once."
+            ]
+          },
+          {
+            "heading": "iCloud Sync & Stats",
+            "bullets": [
+              "Balance, statistics, and settings sync across devices with automatic conflict resolution."
+            ]
+          }
+        ],
+        "closing": "Authentic Punto Banco with side bets & road maps."
+      }
     },
     "appStore": {
       "promotionalText": "Master authentic Baccarat with side bets, road map history, and iCloud-synced stats. Enjoy smooth animations, haptics, and full table customization in every session.",
       "keywords": "baccarat,punto banco,casino cards,card game,side bets,road map,banker player,tie bet,odds,offline",
       "description": "Play Baccarat (Punto Banco) with authentic casino rules, polished SwiftUI visuals, and no real-money risk.\n\nAUTHENTIC BACCARAT, MODERN EXPERIENCE\n• Automatic third-card logic for Player and Banker\n• Natural hand detection (8 or 9)\n• Multi-deck shoe support (1, 6, or 8 decks)\n• Automatic reshuffle and burn card behavior\n\nBETTING OPTIONS\n• Main bets: Player, Banker, and Tie\n• Side bets: Player Pair, Banker Pair, and Dragon Bonus\n• Clear payouts and session tracking to help you learn patterns over time\n\nROAD MAP HISTORY\n• Big Road-style result display\n• Color-coded outcomes for Player, Banker, and Tie\n• Pair and Natural markers for quick visual scanning\n• Scrollable history for longer sessions\n\nCUSTOMIZE YOUR TABLE\n• Toggle dealing animations and adjust dealing speed\n• Choose reveal style: Auto, Tap, or Squeeze\n• Select table limits from Casual to VIP ranges\n\nSYNCED AND ACCESSIBLE\n• iCloud sync for balance, statistics, and settings across devices\n• Dynamic Type and VoiceOver-friendly interface\n• Smooth haptics and sound-enhanced dealing\n\nNEW TO BACCARAT?\n• First-launch welcome sheet and guided spotlight walkthrough\n• Skippable onboarding that appears only once\n\nThis app is for entertainment only and does not offer real-money gambling."
     },
-    "asc": {
-      "appId": "6757249709",
-      "bundleId": "com.mbrucedogs.Baccarat",
-      "primaryLocale": "en-US",
-      "appStoreState": "PREPARE_FOR_SUBMISSION",
-      "versionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
-      "syncedAt": "2026-02-10T19:09:38.838Z"
-    },
-    "appStoreInfo": {}
+    "sync": {
+      "asc": {
+        "appId": "6757249709",
+        "bundleId": "com.mbrucedogs.Baccarat",
+        "primaryLocale": "en-US",
+        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "versionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
+        "syncedAt": "2026-02-10T20:12:34.147Z",
+        "draftVersionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": false
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-02-10T20:12:34.147Z"
+      }
+    }
   },
   {
     "slug": "selfiecam",
     "comingSoon": true,
-    "name": "Selfie Cam by Topdog",
-    "tagline": "Pro Selfie Camera & Ring Light",
-    "date": "February 3, 2026",
-    "category": "Photo & Video",
-    "version": "1.2.1",
-    "price": "Free",
-    "platform": "iOS",
-    "rating": "4.9",
-    "icon": "/assets/selfie-cam/AppIcon.png",
-    "screenshots": [
-      "/assets/selfie-cam/01-launch-screen.png",
-      "/assets/selfie-cam/02-camera-ring-light.png",
-      "/assets/selfie-cam/03-settings-popup.png"
-    ],
-    "summary": "Modern selfie camera with screen-based ring light, premium controls, flash sync, and iCloud sync — perfect for low-light photos and content creation.",
-    "whatsNew": "Initial release with customizable ring light, pro camera controls, premium features, iCloud sync, and full accessibility support.",
-    "supportEmail": "info@topdoglabs.com",
-    "website": "https://topdoglabs.com/apps/selfiecam",
-    "appStoreUrl": "https://apps.apple.com/app/id6758676824",
-    "copy": {
-      "lead": "SelfieCam is a professional selfie camera built for better lighting and cleaner results.",
-      "sections": [
+    "identity": {
+      "name": "Selfie Cam by Topdog",
+      "tagline": "Pro Selfie Camera & Ring Light"
+    },
+    "store": {
+      "category": "Photo And Video",
+      "version": "1.2.1",
+      "price": "Free",
+      "rating": "4.9",
+      "platform": "iOS",
+      "releaseDate": "February 3, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6758676824",
+      "website": "https://topdoglabs.com/apps/selfiecam",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/selfie-cam/AppIcon.png",
+      "screenshots": [
+        "/assets/selfie-cam/01-launch-screen.png",
+        "/assets/selfie-cam/02-camera-ring-light.png",
+        "/assets/selfie-cam/03-settings-popup.png"
+      ]
+    },
+    "content": {
+      "summary": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.",
+      "description": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.\n\nPerfect for creators, makeup artists, video calls, and anyone who wants more flattering selfies in any environment.\n\nCore features:\n- Customizable screen ring light with adjustable size, color, and brightness\n- Front/back camera switching with smooth full-screen preview\n- Flash controls (Off, On, Auto) plus front flash support\n- Self-timer options with visual countdown\n- Pinch-to-zoom and optional composition grid\n- Post-capture preview with quick sharing\n\nPro features:\n- Premium lighting presets and custom ring light colors\n- HDR mode and higher photo quality options\n- True Mirror mode\n- Skin smoothing and advanced capture controls\n- Extended timer options\n- Built with accessibility in mind:\n\nBuilt with accessibility in mind:\n- VoiceOver-friendly controls and labels\n- Dynamic Type support for readable text\n\nSelfie Cam also supports iCloud settings sync, so your preferences stay consistent across devices.\n\nDownload Selfie Cam and get studio-style selfie lighting straight from your screen.",
+      "whatsNew": "Initial release with customizable ring light, pro camera controls, premium features, iCloud sync, and full accessibility support.",
+      "highlights": [
+        "Customizable screen ring light with adjustable size, color, and brightness",
+        "Front/back camera switching with smooth full-screen preview",
+        "Flash controls (Off, On, Auto) plus front flash support",
+        "Self-timer options with visual countdown",
+        "Pinch-to-zoom and optional composition grid",
+        "Post-capture preview with quick sharing"
+      ],
+      "features": [
         {
-          "heading": "Highlights",
-          "bullets": [
-            "Customizable screen ring light with adjustable size, color, and brightness",
-            "Front/back camera switching with smooth full-screen preview",
-            "Flash controls (Off, On, Auto) plus front flash support",
-            "Self-timer options with visual countdown",
-            "Pinch-to-zoom and optional composition grid",
-            "Post-capture preview with quick sharing"
-          ]
+          "title": "Core features",
+          "description": "Customizable screen ring light with adjustable size, color, and brightness Front/back camera switching with smooth full-screen preview Flash controls (Off, On, Auto) plus front flash support Self-timer options with visual countdown Pinch-to-zoom and optional composition grid Post-capture preview with quick sharing"
         },
         {
-          "heading": "Pro features",
-          "bullets": [
-            "Premium lighting presets and custom ring light colors",
-            "HDR mode and higher photo quality options",
-            "True Mirror mode",
-            "Skin smoothing and advanced capture controls",
-            "Extended timer options"
-          ]
+          "title": "Pro features",
+          "description": "Premium lighting presets and custom ring light colors HDR mode and higher photo quality options True Mirror mode Skin smoothing and advanced capture controls Extended timer options Built with accessibility in mind:"
         },
         {
-          "heading": "Built with accessibility in mind",
-          "bullets": [
-            "VoiceOver-friendly controls and labels",
-            "Dynamic Type support for readable text"
-          ]
-        },
-        {
-          "heading": "iCloud settings sync",
-          "bullets": [
-            "Your preferences stay consistent across devices."
-          ]
+          "title": "Built with accessibility in mind",
+          "description": "VoiceOver-friendly controls and labels Dynamic Type support for readable text"
         }
       ],
-      "closing": "Download SelfieCam and get studio-style selfie lighting straight from your screen."
+      "copy": {
+        "lead": "SelfieCam is a professional selfie camera built for better lighting and cleaner results.",
+        "sections": [
+          {
+            "heading": "Highlights",
+            "bullets": [
+              "Customizable screen ring light with adjustable size, color, and brightness",
+              "Front/back camera switching with smooth full-screen preview",
+              "Flash controls (Off, On, Auto) plus front flash support",
+              "Self-timer options with visual countdown",
+              "Pinch-to-zoom and optional composition grid",
+              "Post-capture preview with quick sharing"
+            ]
+          },
+          {
+            "heading": "Pro features",
+            "bullets": [
+              "Premium lighting presets and custom ring light colors",
+              "HDR mode and higher photo quality options",
+              "True Mirror mode",
+              "Skin smoothing and advanced capture controls",
+              "Extended timer options"
+            ]
+          },
+          {
+            "heading": "Built with accessibility in mind",
+            "bullets": [
+              "VoiceOver-friendly controls and labels",
+              "Dynamic Type support for readable text"
+            ]
+          },
+          {
+            "heading": "iCloud settings sync",
+            "bullets": [
+              "Your preferences stay consistent across devices."
+            ]
+          }
+        ],
+        "closing": "Download SelfieCam and get studio-style selfie lighting straight from your screen."
+      }
     },
     "appStore": {
       "promotionalText": "Take better selfies in any light with a customizable screen ring light, pro camera controls, and quick timer capture.",
       "keywords": "selfie,camera,ring light,portrait,beauty,low light,timer,flash,creator,mirror,grid,hdr,photo editor",
       "description": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.\n\nPerfect for creators, makeup artists, video calls, and anyone who wants more flattering selfies in any environment.\n\nCore features:\n- Customizable screen ring light with adjustable size, color, and brightness\n- Front/back camera switching with smooth full-screen preview\n- Flash controls (Off, On, Auto) plus front flash support\n- Self-timer options with visual countdown\n- Pinch-to-zoom and optional composition grid\n- Post-capture preview with quick sharing\n\nPro features:\n- Premium lighting presets and custom ring light colors\n- HDR mode and higher photo quality options\n- True Mirror mode\n- Skin smoothing and advanced capture controls\n- Extended timer options\n- Built with accessibility in mind:\n\nBuilt with accessibility in mind:\n- VoiceOver-friendly controls and labels\n- Dynamic Type support for readable text\n\nSelfie Cam also supports iCloud settings sync, so your preferences stay consistent across devices.\n\nDownload Selfie Cam and get studio-style selfie lighting straight from your screen.\n\n"
     },
-    "asc": {
-      "appId": "6758676824",
-      "bundleId": "com.mbrucedogs.SelfieCam",
-      "primaryLocale": "en-US",
-      "appStoreState": "WAITING_FOR_REVIEW",
-      "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
-      "syncedAt": "2026-02-10T15:47:43.398Z"
-    },
-    "appStoreInfo": {
-      "supportUrl": "https://topdoglabs.com/support",
-      "privacyPolicyUrl": "https://topdoglabs.com/privacy"
+    "sync": {
+      "asc": {
+        "appId": "6758676824",
+        "bundleId": "com.mbrucedogs.SelfieCam",
+        "primaryLocale": "en-US",
+        "appStoreState": "WAITING_FOR_REVIEW",
+        "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
+        "syncedAt": "2026-02-10T20:12:35.151Z",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-02-10T19:28:07.086Z",
+        "draftVersionId": "529bd58c-cfc5-485c-a872-a7778284879f",
+        "publicVersionString": "1.2.1",
+        "draftVersionString": "1.2.1",
+        "isLive": false
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-02-10T20:12:35.151Z"
+      }
     }
   },
   {
     "slug": "businesscard",
     "comingSoon": true,
-    "name": "BusinessCard by TopDog",
-    "tagline": "Create, share, and track digital business cards with QR codes.",
-    "date": "January 19, 2026",
-    "category": "Productivity",
-    "version": "1.0",
-    "price": "Free",
-    "platform": "iOS + watchOS",
-    "rating": "4.9",
-    "icon": "/assets/business-cards/AppIcon.png",
-    "screenshots": [
-      "/assets/business-cards/screen-1.png",
-      "/assets/business-cards/screen-2.png",
-      "/assets/business-cards/screen-3.png"
-    ],
-    "summary": "Digital business cards with QR codes, rich profiles, dynamic contact fields, quick sharing, and iCloud sync — works on iPhone and Apple Watch.",
-    "whatsNew": "Initial release featuring customizable digital business cards, QR code sharing, dynamic contact fields, share tracking, and full iPhone + Apple Watch support with iCloud sync.",
-    "supportEmail": "info@topdoglabs.com",
-    "website": "https://topdoglabs.com",
-    "appStoreUrl": "",
-    "copy": {
-      "lead": "Digital business cards with QR codes, rich profiles, dynamic contact fields, quick sharing, and iCloud sync — works on iPhone and Apple Watch.",
-      "sections": [
+    "identity": {
+      "name": "Business Card by TopDog",
+      "tagline": "Create, share, and track digital business cards with QR codes."
+    },
+    "store": {
+      "category": "Productivity",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "4.9",
+      "platform": "iOS + watchOS",
+      "releaseDate": "February 10, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6759007469",
+      "website": "https://topdoglabs.com",
+      "supportEmail": "info@topdoglabs.com",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/businesscard/AppIcon.png",
+      "screenshots": [
+        "/assets/businesscard/screen-1.png",
+        "/assets/businesscard/screen-2.png",
+        "/assets/businesscard/screen-3.png"
+      ]
+    },
+    "content": {
+      "summary": "BusinessCard helps you create modern digital business cards and share them in seconds.",
+      "description": "BusinessCard helps you create modern digital business cards and share them in seconds.\n\nBuild a card that fits your personal brand:\n- Add profile, cover, and company logo images\n- Choose from multiple header layouts\n- Customize themes and card details\n- Add unlimited contact fields, social profiles, and links\n\nShare your card anywhere:\n- Show a QR code for instant scanning\n- Share by text, email, WhatsApp, LinkedIn, and more\n- Choose a default card to share quickly\n- Enable offline sharing when needed\n\nStay on top of your network:\n- Track who received your card and when\n- Save contacts manually or by scanning QR codes\n- Add notes, tags, reminder dates, and where you met\n- Search contacts fast across names, companies, tags, and notes\n\nWorks across your Apple devices:\n- iCloud sync keeps cards and contacts up to date on iPhone and iPad\n- Apple Watch companion displays your default card QR code for quick sharing\n\nDesigned for professionals who want faster follow-up and better relationship tracking after every introduction.",
+      "whatsNew": "Initial release featuring customizable digital business cards, QR code sharing, dynamic contact fields, share tracking, and full iPhone + Apple Watch support with iCloud sync.",
+      "highlights": [
+        "Add profile, cover, and company logo images",
+        "Choose from multiple header layouts",
+        "Customize themes and card details",
+        "Add unlimited contact fields, social profiles, and links",
+        "Show a QR code for instant scanning",
+        "Share by text, email, WhatsApp, LinkedIn, and more"
+      ],
+      "features": [
         {
-          "heading": "Highlights",
-          "bullets": [
-            "Multiple header layouts with smart suggestions",
-            "Unlimited dynamic contact fields (social, developer, payment, scheduling, custom)",
-            "QR code + one-tap sharing (SMS, email, WhatsApp, LinkedIn, etc.)",
-            "Share tracking and offline mode",
-            "iCloud sync across iPhone and Apple Watch",
-            "Guided onboarding with welcome sheet & spotlight tour"
-          ]
+          "title": "Build a card that fits your personal brand",
+          "description": "Add profile, cover, and company logo images Choose from multiple header layouts Customize themes and card details Add unlimited contact fields, social profiles, and links"
         },
         {
-          "heading": "Custom Card Design",
-          "bullets": [
-            "Choose from multiple header layouts (Profile Banner, Cover + Avatar, Centered Logo, Logo Badge, Side by Side), add cover/profile/company photos with crop/zoom editor, and pick from modern color themes."
-          ]
+          "title": "Share your card anywhere",
+          "description": "Show a QR code for instant scanning Share by text, email, WhatsApp, LinkedIn, and more Choose a default card to share quickly Enable offline sharing when needed"
         },
         {
-          "heading": "Rich Profiles & Fields",
-          "bullets": [
-            "Full name details (prefix, maiden, preferred, pronouns), headline, bio, accreditations, plus unlimited contact fields (email, phone, social media, developer links, payment apps, Calendly, custom URLs)."
-          ]
+          "title": "Stay on top of your network",
+          "description": "Track who received your card and when Save contacts manually or by scanning QR codes Add notes, tags, reminder dates, and where you met Search contacts fast across names, companies, tags, and notes"
         },
         {
-          "heading": "Quick & Trackable Sharing",
-          "bullets": [
-            "Floating share button, dark-themed QR code sheet, offline sharing toggle, track shares (who and when), support for Apple Wallet and NFC (stubs)."
-          ]
-        },
-        {
-          "heading": "Cross-Device Sync",
-          "bullets": [
-            "iCloud sync for cards, settings, and contact tracking — works on iPhone and Apple Watch."
-          ]
-        },
-        {
-          "heading": "First-Time Experience",
-          "bullets": [
-            "Interactive welcome sheet and spotlight-guided tour — skippable and shown only once."
-          ]
+          "title": "Works across your Apple devices",
+          "description": "iCloud sync keeps cards and contacts up to date on iPhone and iPad Apple Watch companion displays your default card QR code for quick sharing"
         }
       ],
-      "closing": "Create, share, and track digital business cards with QR codes."
+      "copy": {
+        "lead": "Digital business cards with QR codes, rich profiles, dynamic contact fields, quick sharing, and iCloud sync — works on iPhone and Apple Watch.",
+        "sections": [
+          {
+            "heading": "Highlights",
+            "bullets": [
+              "Multiple header layouts with smart suggestions",
+              "Unlimited dynamic contact fields (social, developer, payment, scheduling, custom)",
+              "QR code + one-tap sharing (SMS, email, WhatsApp, LinkedIn, etc.)",
+              "Share tracking and offline mode",
+              "iCloud sync across iPhone and Apple Watch",
+              "Guided onboarding with welcome sheet & spotlight tour"
+            ]
+          },
+          {
+            "heading": "Custom Card Design",
+            "bullets": [
+              "Choose from multiple header layouts (Profile Banner, Cover + Avatar, Centered Logo, Logo Badge, Side by Side), add cover/profile/company photos with crop/zoom editor, and pick from modern color themes."
+            ]
+          },
+          {
+            "heading": "Rich Profiles & Fields",
+            "bullets": [
+              "Full name details (prefix, maiden, preferred, pronouns), headline, bio, accreditations, plus unlimited contact fields (email, phone, social media, developer links, payment apps, Calendly, custom URLs)."
+            ]
+          },
+          {
+            "heading": "Quick & Trackable Sharing",
+            "bullets": [
+              "Floating share button, dark-themed QR code sheet, offline sharing toggle, track shares (who and when), support for Apple Wallet and NFC (stubs)."
+            ]
+          },
+          {
+            "heading": "Cross-Device Sync",
+            "bullets": [
+              "iCloud sync for cards, settings, and contact tracking — works on iPhone and Apple Watch."
+            ]
+          },
+          {
+            "heading": "First-Time Experience",
+            "bullets": [
+              "Interactive welcome sheet and spotlight-guided tour — skippable and shown only once."
+            ]
+          }
+        ],
+        "closing": "Create, share, and track digital business cards with QR codes."
+      }
     },
     "appStore": {
-      "promotionalText": "",
-      "keywords": "",
-      "description": "BusinessCard by TopDog lets you design and share professional digital business cards instantly. Customize layouts (header styles, cover/logo/profile photos), add unlimited contact fields (email, phone, social, developer links, payment, scheduling, custom URLs), and share via QR code, link, SMS, email, WhatsApp, LinkedIn, and more. Track who received your card and when. Full-screen card viewer, dark-themed share sheet, offline sharing toggle, and iCloud sync across iPhone and Apple Watch. Built with SwiftUI, SwiftData, and CloudKit — no ads, no tracking, beautiful and private."
+      "promotionalText": "Create polished digital business cards, share instantly with QR codes, and track every connection. Sync cards to Apple Watch and keep contacts organized with notes.",
+      "keywords": "business card,digital card,qr code,networking,contact manager,vcard,apple watch,lead tracking",
+      "description": "BusinessCard helps you create modern digital business cards and share them in seconds.\n\nBuild a card that fits your personal brand:\n- Add profile, cover, and company logo images\n- Choose from multiple header layouts\n- Customize themes and card details\n- Add unlimited contact fields, social profiles, and links\n\nShare your card anywhere:\n- Show a QR code for instant scanning\n- Share by text, email, WhatsApp, LinkedIn, and more\n- Choose a default card to share quickly\n- Enable offline sharing when needed\n\nStay on top of your network:\n- Track who received your card and when\n- Save contacts manually or by scanning QR codes\n- Add notes, tags, reminder dates, and where you met\n- Search contacts fast across names, companies, tags, and notes\n\nWorks across your Apple devices:\n- iCloud sync keeps cards and contacts up to date on iPhone and iPad\n- Apple Watch companion displays your default card QR code for quick sharing\n\nDesigned for professionals who want faster follow-up and better relationship tracking after every introduction."
+    },
+    "sync": {
+      "asc": {
+        "appId": "6759007469",
+        "bundleId": "com.mbrucedogs.BusinessCard",
+        "primaryLocale": "en-US",
+        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
+        "syncedAt": "2026-02-10T20:12:35.943Z",
+        "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": false
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-02-10T20:12:35.943Z"
+      }
     }
   }
 ]

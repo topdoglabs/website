@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
 import { useSiteContent } from "../hooks/use-site-content.js";
+import {
+  getAppBody,
+  getAppIcon,
+  getAppName,
+  getAppSubline,
+  isAppComingSoon,
+} from "../lib/app-model.js";
 
 export const AppsPage = () => {
   const { apps, isLoading, error } = useApps();
@@ -10,14 +17,8 @@ export const AppsPage = () => {
   const ui = content.ui || {};
   const appCount = apps.length;
   const categories = Array.from(
-    new Set(apps.map((app) => app.category).filter(Boolean))
+    new Set(apps.map((app) => app.store?.category).filter(Boolean))
   );
-  const isComingSoon = (app) =>
-    app.comingSoon || !app.appStoreUrl || !app.appStoreUrl.trim();
-  const getAppName = (app) => app.name || "Untitled app";
-  const getAppSubline = (app) => app.date || app.category || "Coming soon";
-  const getAppBody = (app) =>
-    app.summary || app.tagline || "Details for this app are coming soon.";
 
   return (
     <Layout>
@@ -72,21 +73,21 @@ export const AppsPage = () => {
           apps.map((app) => (
             <Link
               key={app.slug}
-              className={`app-card${isComingSoon(app) ? " coming-soon" : ""}`}
+              className={`app-card${isAppComingSoon(app) ? " coming-soon" : ""}`}
               to={`/apps/${app.slug}`}
             >
                 <div className="app-thumb" aria-hidden="true">
-                  {app.icon ? (
+                  {getAppIcon(app) ? (
                     <img
                       className="app-icon"
-                      src={app.icon}
+                      src={getAppIcon(app)}
                       alt={`${getAppName(app)} app icon`}
                       loading="lazy"
                     />
                   ) : (
                     <div className="app-icon placeholder" aria-hidden="true"></div>
                   )}
-                  {isComingSoon(app) ? (
+                  {isAppComingSoon(app) ? (
                     <span className="coming-soon-badge">Coming<br />Soon</span>
                   ) : null}
                 </div>

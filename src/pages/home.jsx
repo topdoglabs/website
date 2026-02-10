@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
 import { useSiteContent } from "../hooks/use-site-content.js";
+import {
+  getAppBody,
+  getAppIcon,
+  getAppName,
+  getAppSubline,
+  isAppComingSoon,
+} from "../lib/app-model.js";
 
 export const HomePage = () => {
   const { apps, isLoading, error } = useApps();
@@ -9,12 +16,6 @@ export const HomePage = () => {
   const [featured] = apps;
   const home = content.home || {};
   const ui = content.ui || {};
-  const isComingSoon = (app) =>
-    app.comingSoon || !app.appStoreUrl || !app.appStoreUrl.trim();
-  const getAppName = (app) => app.name || "Untitled app";
-  const getAppSubline = (app) => app.date || app.category || "Coming soon";
-  const getAppBody = (app) =>
-    app.summary || app.tagline || "Details for this app are coming soon.";
 
   const pillars = home.pillars || [];
 
@@ -81,13 +82,13 @@ export const HomePage = () => {
           ) : error ? (
             <p className="status">{ui.errorApps}</p>
           ) : featured ? (
-            isComingSoon(featured) ? (
+            isAppComingSoon(featured) ? (
               <Link className="app-card wide coming-soon" to={`/apps/${featured.slug}`}>
                 <div className="app-thumb" aria-hidden="true">
-                  {featured.icon ? (
+                  {getAppIcon(featured) ? (
                     <img
                       className="app-icon"
-                      src={featured.icon}
+                      src={getAppIcon(featured)}
                       alt={`${getAppName(featured)} app icon`}
                       loading="lazy"
                     />
@@ -107,10 +108,10 @@ export const HomePage = () => {
             ) : (
               <Link className="app-card wide" to={`/apps/${featured.slug}`}>
                 <div className="app-thumb" aria-hidden="true">
-                  {featured.icon ? (
+                  {getAppIcon(featured) ? (
                     <img
                       className="app-icon"
-                      src={featured.icon}
+                      src={getAppIcon(featured)}
                       alt={`${getAppName(featured)} app icon`}
                       loading="lazy"
                     />

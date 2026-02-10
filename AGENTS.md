@@ -23,6 +23,7 @@
 src/
 ├── components/       # Reusable UI components (Layout, Header, Footer)
 ├── hooks/            # Custom React hooks for data fetching
+├── lib/              # Data selectors/normalizers (app-model)
 ├── pages/            # Route-level page components
 ├── styles.css        # Global styles with CSS custom properties
 └── App.jsx           # Router configuration
@@ -43,13 +44,22 @@ public/
 
 ## Content Architecture
 - Site content is externalized to JSON files for easy updates
-- `apps.json`: Array of app objects with metadata + two copy blocks:
-  - `copy` for website rendering (`lead`, `sections`, `closing`)
-  - `appStore` for App Store Connect metadata/history
+- `apps.json`: Array of nested app objects:
+  - `identity`: `name`, `tagline`
+  - `store`: `category`, `version`, `price`, `rating`, `platform`, `releaseDate`
+  - `distribution`: links and support fields
+  - `presentation`: `icon`, `screenshots`
+  - `content`: website-facing summary/detail copy plus structured `copy`
+  - `appStore`: synced ASC copy (`promotionalText`, `keywords`, `description`)
+  - `sync`: sync metadata and fallback markers (`sync.asc`, `sync.fallback`)
 - `site.json`: Navigation, page content, UI strings, footer configuration
 - Components access content via custom hooks (`useSiteContent`, `useApps`)
+- Use `src/lib/app-model.js` selectors in pages instead of ad-hoc field access.
 
 ## Development Commands
 - **Development:** `npm run dev`
 - **Production Build:** `npm run build`
 - **Preview Build:** `npm run preview`
+- **Sync ASC metadata:** `npm run sync:appstore`
+- **Sync ASC screenshots/icons:** `npm run sync:screenshots -- --replace-json`
+- **Validate apps schema:** `npm run validate:apps`

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { normalizeApps } from "../lib/app-model.js";
 
 const emptyApps = [];
 
@@ -18,7 +19,7 @@ export const useApps = () => {
         }
         const data = await response.json();
         if (isMounted) {
-          setApps(Array.isArray(data) ? data : emptyApps);
+          setApps(normalizeApps(data));
           setError(null);
         }
       } catch (err) {

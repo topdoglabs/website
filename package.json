@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sync:appstore": "node scripts/sync-appstore-metadata.mjs"
+    "sync:appstore": "node scripts/sync-appstore-metadata.mjs",
+    "sync:screenshots": "node scripts/sync-appstore-screenshots.mjs",
+    "validate:apps": "node scripts/validate-apps-schema.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

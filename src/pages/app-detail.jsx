@@ -3,6 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
 import { useSiteContent } from "../hooks/use-site-content.js";
+import {
+  getAppIcon,
+  getAppName,
+  getAppScreenshots,
+  getAppStoreUrl,
+  isAppComingSoon,
+} from "../lib/app-model.js";
 
 export const AppDetailPage = () => {
   const { slug } = useParams();
@@ -53,15 +60,18 @@ export const AppDetailPage = () => {
     );
   }
 
-  const screenshots = app.screenshots || [];
-  const hasAppStoreUrl = Boolean(app.appStoreUrl && app.appStoreUrl.trim());
+  const screenshots = getAppScreenshots(app);
+  const appStoreUrl = getAppStoreUrl(app);
+  const hasAppStoreUrl = Boolean(appStoreUrl && appStoreUrl.trim());
+  const isComingSoon = isAppComingSoon(app);
+  const canOpenStore = hasAppStoreUrl && !isComingSoon;
   const hasShots = screenshots.length > 0;
-  const appName = app.name || "Untitled app";
+  const appName = getAppName(app);
   const description =
-    app.description ||
+    app.content?.description ||
     app.appStore?.description ||
     "Full app details are coming soon.";
-  const copy = app.copy || null;
+  const copy = app.content?.copy || null;
   const copySections = Array.isArray(copy?.sections)
     ? copy.sections.filter(
         (section) =>
@@ -92,10 +102,10 @@ export const AppDetailPage = () => {
       : "",
   }));
   const highlights =
-    highlightsFromCopy.length > 0 ? highlightsFromCopy : app.highlights || [];
+    highlightsFromCopy.length > 0 ? highlightsFromCopy : app.content?.highlights || [];
   const features =
-    featuresFromCopy.length > 0 ? featuresFromCopy : app.features || [];
-  const whatsNew = app.whatsNew || "Release notes will be posted soon.";
+    featuresFromCopy.length > 0 ? featuresFromCopy : app.content?.features || [];
+  const whatsNew = app.content?.whatsNew || "Release notes will be posted soon.";
   const isBrokenShot = (index) => brokenShots.has(index);
 
   const renderDescription = (text) => {
@@ -193,15 +203,15 @@ export const AppDetailPage = () => {
         <div className="app-hero-copy">
           <div className="detail-title">
             <div className="detail-icon">
-              {app.icon ? (
-                <img src={app.icon} alt={`${appName} app icon`} loading="lazy" />
+              {getAppIcon(app) ? (
+                <img src={getAppIcon(app)} alt={`${appName} app icon`} loading="lazy" />
               ) : (
                 <div className="app-icon placeholder" aria-hidden="true"></div>
               )}
             </div>
             <div>
               <h1>{appName}</h1>
-              <p className="hero-sub">{app.tagline || app.date || "Coming soon"}</p>
+              <p className="hero-sub">{app.identity?.tagline || app.store?.releaseDate || "Coming soon"}</p>
             </div>
           </div>
           <div className="detail-copy left">
@@ -213,17 +223,17 @@ export const AppDetailPage = () => {
               : renderDescription(description)}
           </div>
           <div className="hero-actions">
-            {hasAppStoreUrl ? (
+            {canOpenStore ? (
               <a
                 className="button primary"
-                href={app.appStoreUrl}
+                href={appStoreUrl}
                 target="_blank"
                 rel="noreferrer"
               >
                 {appDetail.primaryCta || "View on App Store"}
               </a>
             ) : null}
-            {!hasAppStoreUrl ? (
+            {!canOpenStore ? (
               <button className="button primary" type="button" disabled>
                 {appDetail.primaryCta || "App Store (soon)"}
               </button>
@@ -231,7 +241,7 @@ export const AppDetailPage = () => {
             {appDetail.secondaryCta ? (
               <a
                 className="button ghost"
-                href={`mailto:${app.supportEmail || "info@topdoglabs.com"}`}
+                href={`mailto:${app.distribution?.supportEmail || "info@topdoglabs.com"}`}
               >
                 {appDetail.secondaryCta}
               </a>
@@ -266,23 +276,23 @@ export const AppDetailPage = () => {
       <section className="detail-meta">
         <div>
           <span>Category</span>
-          <strong>{app.category || "TBD"}</strong>
+          <strong>{app.store?.category || "TBD"}</strong>
         </div>
         <div>
           <span>Version</span>
-          <strong>{app.version || "TBD"}</strong>
+          <strong>{app.store?.version || "TBD"}</strong>
         </div>
         <div>
           <span>Rating</span>
-          <strong>{app.rating || "TBD"}</strong>
+          <strong>{app.store?.rating || "TBD"}</strong>
         </div>
         <div>
           <span>Platform</span>
-          <strong>{app.platform || "iOS"}</strong>
+          <strong>{app.store?.platform || "iOS"}</strong>
         </div>
         <div>
           <span>Price</span>
-          <strong>{app.price || "TBD"}</strong>
+          <strong>{app.store?.price || "TBD"}</strong>
         </div>
       </section>
 

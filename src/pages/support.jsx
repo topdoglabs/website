@@ -10,7 +10,7 @@ export const SupportPage = () => {
   const support = content.support || {};
   const subjects = [
     ...(support.subjectOptions || []),
-    ...apps.map((app) => app.name),
+    ...apps.map((app) => app.identity?.name).filter(Boolean),
   ];
 
   const [formData, setFormData] = useState({

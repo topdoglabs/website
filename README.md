@@ -53,11 +53,38 @@ This website is designed to be **data-driven**. Most of the copy and content is 
   - **Footer**: Branding note and copyright text.
 - **`public/apps.json`**: The database for TopDog apps.
   - Add a new object here to automatically generate a new app detail page.
-  - Use `copy` as the single source of website marketing copy:
-    - `copy.lead`, `copy.sections[]`, `copy.closing`
-  - Use `appStore` for App Store Connect metadata/history:
-    - `appStore.promotionalText`, `appStore.keywords`, `appStore.description`
-  - Keep app metadata fields (`slug`, `name`, `tagline`, `screenshots`, etc.) at the top level.
+  - Uses a nested schema:
+    - `identity` (`name`, `tagline`)
+    - `store` (`category`, `version`, `price`, `rating`, `platform`, `releaseDate`)
+    - `distribution` (`appStoreUrl`, `website`, `supportEmail`, `supportUrl`, `privacyPolicyUrl`)
+    - `presentation` (`icon`, `screenshots`)
+    - `content` (`summary`, `description`, `whatsNew`, `highlights`, `features`, `copy`)
+    - `appStore` (`promotionalText`, `keywords`, `description`)
+    - `sync` (`asc`, `fallback`)
+
+## App Store Sync Workflow
+
+Use this flow when refreshing app content:
+
+1. Sync metadata from App Store Connect:
+   ```bash
+   npm run sync:appstore -- --dry-run --verbose
+   npm run sync:appstore
+   ```
+
+2. Optional screenshot/icon sync (if needed):
+   ```bash
+   npm run sync:screenshots -- --dry-run --replace-json
+   npm run sync:screenshots -- --replace-json
+   ```
+
+3. Regenerate UI-facing fields from synced metadata:
+   - Ask the `appstore-ui-content` skill to overwrite/fill from `appStore` + `sync`.
+
+4. Validate the schema before commit/deploy:
+   ```bash
+   npm run validate:apps
+   ```
 
 ### 🎨 Styling & Branding
 
