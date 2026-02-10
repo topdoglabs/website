@@ -43,7 +43,9 @@ public/
 
 ## Content Architecture
 - Site content is externalized to JSON files for easy updates
-- `apps.json`: Array of app objects with slug, name, screenshots, features, etc.
+- `apps.json`: Array of app objects with metadata + two copy blocks:
+  - `copy` for website rendering (`lead`, `sections`, `closing`)
+  - `appStore` for App Store Connect metadata/history
 - `site.json`: Navigation, page content, UI strings, footer configuration
 - Components access content via custom hooks (`useSiteContent`, `useApps`)
 

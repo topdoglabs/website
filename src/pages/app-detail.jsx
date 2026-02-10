@@ -53,15 +53,48 @@ export const AppDetailPage = () => {
     );
   }
 
-  const highlights = app.highlights || [];
-  const features = app.features || [];
   const screenshots = app.screenshots || [];
   const hasAppStoreUrl = Boolean(app.appStoreUrl && app.appStoreUrl.trim());
   const hasShots = screenshots.length > 0;
   const appName = app.name || "Untitled app";
   const description =
-    app.description || "Full app details are coming soon.";
+    app.description ||
+    app.appStore?.description ||
+    "Full app details are coming soon.";
   const copy = app.copy || null;
+  const copySections = Array.isArray(copy?.sections)
+    ? copy.sections.filter(
+        (section) =>
+          Array.isArray(section?.bullets) && section.bullets.length > 0
+      )
+    : [];
+  const isHighlightsSection = (section) =>
+    typeof section?.heading === "string" &&
+    section.heading.trim().toLowerCase() === "highlights";
+  const hasNamedHighlights = copySections.some((section) =>
+    isHighlightsSection(section)
+  );
+  const highlightSection = hasNamedHighlights
+    ? copySections.find((section) => isHighlightsSection(section))
+    : copySections[0];
+  const highlightsFromCopy =
+    Array.isArray(highlightSection?.bullets) ? highlightSection.bullets : [];
+  const featureSections = copySections.filter((section, index) => {
+    if (hasNamedHighlights) {
+      return !isHighlightsSection(section);
+    }
+    return index > 0;
+  });
+  const featuresFromCopy = featureSections.map((section, index) => ({
+    title: section.heading || `Feature ${index + 1}`,
+    description: Array.isArray(section.bullets)
+      ? section.bullets.join(" ")
+      : "",
+  }));
+  const highlights =
+    highlightsFromCopy.length > 0 ? highlightsFromCopy : app.highlights || [];
+  const features =
+    featuresFromCopy.length > 0 ? featuresFromCopy : app.features || [];
   const whatsNew = app.whatsNew || "Release notes will be posted soon.";
   const isBrokenShot = (index) => brokenShots.has(index);
 
@@ -109,7 +142,7 @@ export const AppDetailPage = () => {
     });
   };
 
-  const renderStructuredCopy = (copyContent, showSections = true) => {
+  const renderStructuredCopy = (copyContent, showSections = false) => {
     const sections = Array.isArray(copyContent.sections) ? copyContent.sections : [];
 
     return (
@@ -173,7 +206,10 @@ export const AppDetailPage = () => {
           </div>
           <div className="detail-copy left">
             {copy
-              ? renderStructuredCopy(copy, highlights.length === 0 && features.length === 0)
+              ? renderStructuredCopy(
+                  copy,
+                  !copy.lead && !copy.closing && copySections.length > 0
+                )
               : renderDescription(description)}
           </div>
           <div className="hero-actions">

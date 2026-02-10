@@ -6,8 +6,9 @@
 - App Store metadata and website marketing copy are mixed together.
 
 ## Target Data Model (`public/apps.json`)
-- Keep existing fields for backward compatibility.
-- Add a structured block for display copy and App Store copy.
+- Keep metadata fields at top level (`slug`, `name`, `tagline`, screenshots, etc.).
+- Use `copy` as the single website copy source.
+- Keep `appStore` as App Store Connect metadata/history.
 
 ```json
 {
@@ -39,14 +40,14 @@
 - `copy.sections[].heading`: section heading style.
 - `copy.sections[].bullets`: native `<ul><li>` rendering.
 - `copy.closing`: normal paragraph style.
+- Derive highlights/features from `copy.sections`.
 - Fallback to legacy `description` only if `copy` is missing.
 
 ## Migration Plan
-1. Add new optional fields (`copy`, `appStore`) to all apps.
-2. Keep `description` unchanged during migration.
-3. Update `app-detail.jsx` to prefer `copy` over parsed `description`.
+1. Ensure each app has `copy` and `appStore`.
+2. Remove duplicate top-level marketing fields (`description`, `highlights`, `features`, `promotionalText`, `keywords`).
+3. Update `app-detail.jsx` to derive highlights/features from `copy.sections`.
 4. Validate with a script that each app has required `copy` keys.
-5. Remove string parsing heuristics after all apps migrate.
 
 ## Skill Plan: `app-copy-normalizer`
 - Purpose: Convert raw App Store text into the structured `copy` + `appStore` schema.

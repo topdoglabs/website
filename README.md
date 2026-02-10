@@ -53,7 +53,11 @@ This website is designed to be **data-driven**. Most of the copy and content is 
   - **Footer**: Branding note and copyright text.
 - **`public/apps.json`**: The database for TopDog apps.
   - Add a new object here to automatically generate a new app detail page.
-  - Define slugs, names, taglines, features, and screenshots.
+  - Use `copy` as the single source of website marketing copy:
+    - `copy.lead`, `copy.sections[]`, `copy.closing`
+  - Use `appStore` for App Store Connect metadata/history:
+    - `appStore.promotionalText`, `appStore.keywords`, `appStore.description`
+  - Keep app metadata fields (`slug`, `name`, `tagline`, `screenshots`, etc.) at the top level.
 
 ### 🎨 Styling & Branding
 
