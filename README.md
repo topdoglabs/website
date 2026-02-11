@@ -41,6 +41,19 @@ The website is hosted on **Vercel**.
 - **Production URL**: [topdoglabs.com](https://topdoglabs.com)
 - **Automatic Deploys**: Any push to the `develop` branch triggers a new production build on Vercel.
 
+### App Clip Web Infrastructure
+
+This site also hosts the App Clip association and fallback route for BusinessCard:
+
+- `public/.well-known/apple-app-site-association` (AASA file for Apple verification)
+- `public/appclip.html` (fallback web page for `/appclip/businesscard?id=...`)
+- `vercel.json` includes explicit handling for:
+  - `/.well-known/apple-app-site-association`
+  - `/appclip/businesscard` (primary namespaced path)
+  - `/appclip` (legacy compatibility)
+  - `/api/*`
+  - SPA fallback to `/index.html`
+
 ## 🏗 Architecture & Content Management
 
 This website is designed to be **data-driven**. Most of the copy and content is stored in JSON files in the `public/` directory, allowing you to update the site without touching the React code.
