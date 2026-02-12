@@ -63,3 +63,12 @@ public/
 - **Sync ASC metadata:** `npm run sync:appstore`
 - **Sync ASC screenshots/icons:** `npm run sync:screenshots -- --replace-json`
 - **Validate apps schema:** `npm run validate:apps`
+
+## Support URL Compliance Rule
+- Keep `public/support.html` up to date whenever support content changes in `public/site.json`, `public/apps.json`, or related routes.
+- `public/support.html` must remain directly readable without JavaScript and include:
+  - Support email as a visible `mailto:` link
+  - Expected support response time
+  - Supported app names
+  - Privacy policy link (`/privacy`)
+- If a support contact detail (email, owner/contact name, location, response window) changes anywhere in the site, update `public/support.html` in the same change.

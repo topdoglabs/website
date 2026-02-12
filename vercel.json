@@ -1,8 +1,16 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "rewrites": [
+    {
+      "source": "/support",
+      "destination": "/support.html"
+    },
+    {
+      "source": "/support/",
+      "destination": "/support.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

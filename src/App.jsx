@@ -16,6 +16,7 @@ export const App = () => {
         <Route path="/apps" element={<AppsPage />} />
         <Route path="/apps/:slug" element={<AppDetailPage />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/support-form" element={<SupportPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/about" element={<StaticPage slug="about" />} />
         <Route path="/faq" element={<StaticPage slug="faq" />} />
