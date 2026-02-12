@@ -1,7 +1,7 @@
 [
   {
     "slug": "rituals",
-    "comingSoon": true,
+    "comingSoon": false,
     "identity": {
       "name": "Rituals by TopDog",
       "tagline": "Ritual Arcs for Daily Habits"
@@ -113,7 +113,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "READY_FOR_SALE",
         "versionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2",
-        "syncedAt": "2026-02-12T04:21:40.063Z",
+        "syncedAt": "2026-02-12T04:58:53.797Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:27:53.908Z",
@@ -131,7 +131,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:21:40.063Z"
+        "updatedAt": "2026-02-12T04:58:53.798Z"
       }
     }
   },
@@ -252,7 +252,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "READY_FOR_SALE",
         "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
-        "syncedAt": "2026-02-12T04:21:41.353Z",
+        "syncedAt": "2026-02-12T04:58:54.927Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:27:57.686Z",
@@ -270,7 +270,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:21:41.353Z"
+        "updatedAt": "2026-02-12T04:58:54.927Z"
       }
     }
   },
@@ -403,7 +403,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "REJECTED",
         "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
-        "syncedAt": "2026-02-12T04:21:42.386Z",
+        "syncedAt": "2026-02-12T04:58:55.951Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:28:04.464Z",
@@ -420,7 +420,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:21:42.386Z"
+        "updatedAt": "2026-02-12T04:58:55.951Z"
       }
     }
   },
@@ -553,7 +553,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "PREPARE_FOR_SUBMISSION",
         "versionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
-        "syncedAt": "2026-02-12T04:21:43.194Z",
+        "syncedAt": "2026-02-12T04:58:56.677Z",
         "draftVersionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
         "publicVersionString": "1.0",
         "draftVersionString": "1.0",
@@ -567,7 +567,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:21:43.194Z"
+        "updatedAt": "2026-02-12T04:58:56.677Z"
       }
     }
   },
@@ -681,7 +681,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "REJECTED",
         "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
-        "syncedAt": "2026-02-12T04:21:44.203Z",
+        "syncedAt": "2026-02-12T04:58:57.666Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:28:07.086Z",
@@ -698,7 +698,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:21:44.203Z"
+        "updatedAt": "2026-02-12T04:58:57.666Z"
       }
     }
   },
@@ -821,7 +821,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "PREPARE_FOR_SUBMISSION",
         "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "syncedAt": "2026-02-12T04:21:45.091Z",
+        "syncedAt": "2026-02-12T04:58:58.402Z",
         "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
         "publicVersionString": "1.0",
         "draftVersionString": "1.0",
@@ -835,7 +835,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:21:45.091Z"
+        "updatedAt": "2026-02-12T04:58:58.402Z"
       }
     }
   }

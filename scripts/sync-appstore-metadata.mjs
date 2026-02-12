@@ -249,6 +249,7 @@ function buildUpdatedApp({
   automaticPrices,
 }) {
   const fallback = {};
+  const isLive = Boolean(liveVersion);
 
   const categoryFromAsc = extractPrimaryCategory(appInfoDetails);
   const lookupName = valueOr(lookup?.trackName, "");
@@ -266,6 +267,7 @@ function buildUpdatedApp({
 
   const next = {
     ...app,
+    comingSoon: isLive ? false : Boolean(app.comingSoon),
     identity: {
       ...app.identity,
       name: preferValue(
@@ -319,7 +321,7 @@ function buildUpdatedApp({
         appInfoLocalization?.attributes?.privacyPolicyUrl,
         app.distribution.privacyPolicyUrl
       ),
-      isLive: Boolean(liveVersion),
+      isLive,
     },
     appStore: {
       ...app.appStore,
@@ -349,7 +351,7 @@ function buildUpdatedApp({
           version?.attributes?.versionString,
           app.sync.asc?.draftVersionString
         ),
-        isLive: Boolean(liveVersion),
+        isLive,
         syncedAt: new Date().toISOString(),
       },
       fallback: {
