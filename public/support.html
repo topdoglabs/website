@@ -6,17 +6,23 @@
     <title>TopDog Labs Support</title>
     <meta
       name="description"
-      content="Direct support for TopDog Labs iOS apps, including contact details, response times, and privacy links."
+      content="TopDog Labs support with direct contact details, app support info, and a contact form."
     />
     <style>
       :root {
         color-scheme: light;
-        --bg: #f6f8fb;
-        --surface: #ffffff;
-        --text: #121826;
-        --muted: #44506a;
-        --border: #d9e0eb;
-        --accent: #1f5eff;
+        --font-sans: "Sora", "Segoe UI", sans-serif;
+        --font-serif: var(--font-sans);
+        --bg: #0b0d12;
+        --ink: #f3f5f7;
+        --muted: #a6acb5;
+        --line: rgba(255, 255, 255, 0.08);
+        --card: #131722;
+        --panel: #0f131c;
+        --surface: #141924;
+        --accent: #46d1a1;
+        --accent-soft: rgba(70, 209, 161, 0.15);
+        --highlight: #46d1a1;
       }
 
       * {
@@ -25,123 +31,524 @@
 
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color: var(--text);
-        background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 160px);
-      }
-
-      main {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 32px 20px 56px;
-      }
-
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 24px;
-      }
-
-      h1 {
-        margin: 0 0 12px;
-        line-height: 1.1;
-      }
-
-      h2 {
-        margin: 0 0 10px;
-      }
-
-      p {
-        margin: 0 0 12px;
-        line-height: 1.55;
-        color: var(--muted);
-      }
-
-      ul {
-        margin: 10px 0 18px 20px;
-        color: var(--muted);
-      }
-
-      li {
-        margin: 4px 0;
+        font-family: var(--font-sans);
+        background: var(--bg);
+        color: var(--ink);
       }
 
       a {
-        color: var(--accent);
+        color: inherit;
+        text-decoration: none;
       }
 
-      .grid {
-        display: grid;
-        gap: 16px;
-      }
-
-      .quick-links {
+      .page {
+        min-height: 100vh;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 28px 18px 48px;
+      }
+
+      .header {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 6px 24px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .logo {
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 84px;
+        line-height: 1;
+      }
+
+      .logo-img {
+        height: 100px;
+        width: auto;
+        display: block;
+      }
+
+      .nav {
+        display: flex;
+        gap: 28px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .nav a.active {
+        color: var(--ink);
+        position: relative;
+      }
+
+      .nav a.active::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 18px;
+        height: 2px;
+        background: var(--highlight);
+        border-radius: 999px;
+      }
+
+      .content {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 0 32px 96px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        background: linear-gradient(180deg, #171c27 0%, #10141d 100%);
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+        overflow: hidden;
+      }
+
+      .hero {
+        padding: 60px 24px;
+        text-align: center;
+        position: relative;
+      }
+
+      .hero-bg {
+        background: radial-gradient(circle at 50% -20%, rgba(70, 209, 161, 0.12) 0%, transparent 70%),
+          linear-gradient(180deg, rgba(23, 28, 39, 0.5) 0%, transparent 100%);
+      }
+
+      .hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(32px, 6vw, 48px);
+        margin: 0 0 6px;
+      }
+
+      .hero-sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .hero-actions {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
         gap: 12px;
       }
 
-      @media (max-width: 640px) {
-        main {
-          padding: 20px 14px 40px;
+      .button {
+        border: 1px solid var(--line);
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #0c1512;
+        border-color: var(--accent);
+        box-shadow: 0 10px 30px rgba(70, 209, 161, 0.35);
+      }
+
+      .support-merge {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        align-items: start;
+        background: var(--surface);
+        border-radius: 24px;
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .support-copy h2 {
+        margin: 0 0 10px;
+        font-family: var(--font-sans);
+      }
+
+      .support-copy p {
+        margin: 0 0 12px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .muted-list {
+        margin: 8px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .muted-list li::marker {
+        color: var(--highlight);
+      }
+
+      .form {
+        max-width: 420px;
+        margin: 0 auto;
+        display: grid;
+        gap: 14px;
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      }
+
+      .form.wide {
+        max-width: 560px;
+        width: 100%;
+        margin: 0;
+      }
+
+      .form label {
+        display: grid;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--muted);
+        text-align: left;
+      }
+
+      .form input,
+      .form textarea,
+      .form select {
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        font-family: var(--font-sans);
+        background: #0c1017;
+        color: var(--ink);
+      }
+
+      .form-status {
+        margin: 0;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .form-status.error {
+        color: #ff8484;
+      }
+
+      .form-status.success {
+        color: var(--accent);
+      }
+
+      .page-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        border-top: 1px solid var(--line);
+        padding-top: 32px;
+        background: var(--surface);
+        border-radius: 28px;
+        padding: 32px;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+      }
+
+      .page-section {
+        background: var(--panel);
+        border-radius: 20px;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .page-section h3 {
+        margin: 0;
+        font-size: 18px;
+        color: var(--ink);
+      }
+
+      .page-section p,
+      .page-section li {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .page-section ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .footer {
+        margin-top: auto;
+        border-top: 1px solid var(--line);
+        padding: 32px 0 60px;
+      }
+
+      .footer-grid {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .footer-grid h4 {
+        margin: 0 0 8px;
+        color: var(--ink);
+        font-size: 13px;
+      }
+
+      .footer-grid a {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .footer-note {
+        width: min(1100px, 100%);
+        margin: 24px auto 0;
+        padding: 0 24px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 720px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+          text-align: left;
+          padding-top: 20px;
+          padding-bottom: 20px;
         }
-        .card {
-          padding: 18px;
+
+        .logo {
+          font-size: 55px;
+          gap: 16px;
+          margin-bottom: 8px;
+        }
+
+        .logo-img {
+          height: 100px;
+        }
+
+        .nav {
+          justify-content: center;
+          flex-wrap: wrap;
+          row-gap: 12px;
+          column-gap: 20px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-grid {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .page {
+          padding: 16px 12px 32px;
+        }
+
+        .content {
+          padding: 20px 20px 64px;
+          border-radius: 24px;
+        }
+
+        .support-merge,
+        .page-sections {
+          padding: 20px;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <section class="card">
-        <h1>TopDog Labs Support</h1>
-        <p>
-          Need help with a TopDog Labs app? Contact us directly by email and include your app name,
-          device model, and iOS version for the fastest response.
-        </p>
-        <p>
-          Support email:
-          <a href="mailto:info@topdoglabs.com">info@topdoglabs.com</a>
-        </p>
-        <p>Response time: We typically reply within 1-2 business days.</p>
-      </section>
+    <div class="page">
+      <header class="header">
+        <a class="logo" href="/">
+          <img src="/assets/logos/logo-2.svg" alt="TopDog Labs Logo" class="logo-img" />
+          TopDog Labs
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="/apps">Apps</a>
+          <a href="/support" class="active">Support</a>
+          <a href="/about">About</a>
+        </nav>
+      </header>
 
-      <section class="card">
-        <h2>Contact Information</h2>
-        <p><strong>Studio:</strong> TopDog Labs</p>
-        <p><strong>Contact:</strong> Matt Bruce</p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:info@topdoglabs.com">info@topdoglabs.com</a>
-        </p>
-        <p><strong>Location:</strong> Frisco, Texas, United States</p>
-        <p><strong>Support availability:</strong> 24/7 email intake</p>
-        <p><strong>Typical response window:</strong> 1-2 business days</p>
-      </section>
+      <main class="content">
+        <section class="hero hero-bg">
+          <h1>Support Center.</h1>
+          <p class="hero-sub">Find help for TopDog apps.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:info@topdoglabs.com">Email Support</a>
+          </div>
+        </section>
 
-      <section class="card grid">
-        <div>
-          <h2>Supported Apps</h2>
-          <ul>
-            <li>Rituals by TopDog</li>
-            <li>The Noise Clock by TopDog</li>
-            <li>Blackjack by TopDog</li>
-            <li>Baccarat by TopDog</li>
-            <li>Selfie Cam by Topdog</li>
-            <li>Business Card by TopDog</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Helpful Links</h2>
-          <div class="quick-links">
-            <a href="/support-form">Support Form</a>
+        <section class="support-merge" aria-label="Support form and contact summary">
+          <div class="support-copy">
+            <h2>Welcome to TopDog Labs Support.</h2>
+            <p>
+              We help you get the most out of our iOS apps and upcoming releases. Send your request
+              below and we will respond quickly.
+            </p>
+            <p><strong>Support email:</strong> <a href="mailto:info@topdoglabs.com">info@topdoglabs.com</a></p>
+            <p><strong>Typical response time:</strong> Within 1-2 business days.</p>
+            <p><strong>Privacy policy:</strong> <a href="/privacy">/privacy</a></p>
+          </div>
+
+          <form
+            class="form wide"
+            id="support-form-static"
+          >
+            <label>
+              Subject
+              <select name="subject" required>
+                <option value="General Support">General Support</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Rituals by TopDog">Rituals by TopDog</option>
+                <option value="The Noise Clock by TopDog">The Noise Clock by TopDog</option>
+                <option value="Blackjack by TopDog">Blackjack by TopDog</option>
+                <option value="Baccarat by TopDog">Baccarat by TopDog</option>
+                <option value="Selfie Cam by Topdog">Selfie Cam by Topdog</option>
+                <option value="Business Card by TopDog">Business Card by TopDog</option>
+              </select>
+            </label>
+            <label>
+              Name
+              <input name="name" type="text" required placeholder="Jane Smith" />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" required placeholder="Your message..." rows="4"></textarea>
+            </label>
+            <button class="button primary" type="submit" id="support-submit">Submit</button>
+            <p class="form-status" id="form-status" aria-live="polite">
+              Send your request and we will reply by email.
+            </p>
+          </form>
+        </section>
+
+        <section class="page-sections" aria-label="Additional support information">
+          <article class="page-section">
+            <h3>Contact Information</h3>
+            <p><strong>Studio:</strong> TopDog Labs</p>
+            <p><strong>Contact:</strong> Matt Bruce</p>
+            <p><strong>Email:</strong> <a href="mailto:info@topdoglabs.com">info@topdoglabs.com</a></p>
+            <p><strong>Location:</strong> Frisco, Texas, United States</p>
+            <p><strong>Support Availability:</strong> 24/7 email intake</p>
+          </article>
+
+          <article class="page-section">
+            <h3>Before You Contact Us</h3>
+            <ul>
+              <li>Include app name, iOS version, and device model.</li>
+              <li>For bugs, share exact steps and screenshots when possible.</li>
+              <li>For account/purchase issues, include your App Store receipt date.</li>
+              <li>For policy details, see <a href="/privacy">Privacy Policy</a>.</li>
+            </ul>
+          </article>
+
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-grid">
+          <div>
+            <h4>Navigation</h4>
+            <a href="/apps">Apps</a>
+            <a href="/about">About</a>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <a href="mailto:info@topdoglabs.com">Email</a>
+            <a href="/support">Support</a>
+            <a href="/faq">FAQ</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
             <a href="/privacy">Privacy Policy</a>
-            <a href="/apps">App Portfolio</a>
-            <a href="/">TopDog Labs Home</a>
+            <a href="/terms">Terms</a>
+            <a href="/cookies">Cookies</a>
           </div>
         </div>
-      </section>
-    </main>
+        <p class="footer-note">© 2026 TopDog Labs. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const form = document.getElementById("support-form-static");
+        const button = document.getElementById("support-submit");
+        const status = document.getElementById("form-status");
+
+        if (!form || !button || !status) {
+          return;
+        }
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const originalLabel = button.textContent;
+          button.textContent = "Sending...";
+          status.className = "form-status";
+          status.textContent = "";
+          button.disabled = true;
+
+          const formData = new FormData(form);
+          const payload = {
+            subject: formData.get("subject") || "General Support",
+            name: formData.get("name") || "",
+            email: formData.get("email") || "",
+            message: formData.get("message") || "",
+          };
+
+          try {
+            const response = await fetch("/api/send-email", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+
+            let result = {};
+            try {
+              result = await response.json();
+            } catch (parseError) {
+              result = {};
+            }
+
+            if (response.ok) {
+              status.textContent = "Your message has been sent. We'll get back to you soon.";
+              status.className = "form-status success";
+              form.reset();
+            } else {
+              status.textContent = result.error || "Failed to send email";
+              status.className = "form-status error";
+            }
+          } catch (error) {
+            status.textContent = "Network error. Please try again.";
+            status.className = "form-status error";
+          } finally {
+            button.textContent = originalLabel;
+            button.disabled = false;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
