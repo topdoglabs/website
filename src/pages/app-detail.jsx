@@ -65,8 +65,6 @@ export const AppDetailPage = () => {
   const hasAppStoreUrl = Boolean(appStoreUrl && appStoreUrl.trim());
   const isComingSoon = isAppComingSoon(app);
   const canOpenStore = hasAppStoreUrl && !isComingSoon;
-  const livePrimaryCta = appDetail.livePrimaryCta || "View on App Store";
-  const comingSoonPrimaryCta = appDetail.comingSoonPrimaryCta || appDetail.primaryCta || "App Store (soon)";
   const hasShots = screenshots.length > 0;
   const appName = getAppName(app);
   const description =
@@ -232,12 +230,12 @@ export const AppDetailPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {livePrimaryCta}
+                {appDetail.primaryCta || "View on App Store"}
               </a>
             ) : null}
             {!canOpenStore ? (
               <button className="button primary" type="button" disabled>
-                {comingSoonPrimaryCta}
+                {appDetail.primaryCta || "App Store (soon)"}
               </button>
             ) : null}
             {appDetail.secondaryCta ? (

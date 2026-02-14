@@ -80,10 +80,6 @@ export const getAppIcon = (app) => app.presentation?.icon || "";
 export const getAppScreenshots = (app) => toArray(app.presentation?.screenshots);
 export const getAppStoreUrl = (app) => app.distribution?.appStoreUrl || "";
 export const isAppLive = (app) => {
-  if (app.distribution?.isLive === true || app.sync?.asc?.isLive === true) {
-    return true;
-  }
-
   if (app.comingSoon) {
     return false;
   }

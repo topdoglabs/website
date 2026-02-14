@@ -1,7 +1,7 @@
 [
   {
     "slug": "rituals",
-    "comingSoon": false,
+    "comingSoon": true,
     "identity": {
       "name": "Rituals by TopDog",
       "tagline": "Ritual Arcs for Daily Habits"
@@ -9,18 +9,18 @@
     "store": {
       "category": "Health And Fitness",
       "version": "1.1.1",
-      "price": "$5.99",
-      "rating": "0.0",
+      "price": "Paid",
+      "rating": "4.9",
       "platform": "iOS",
       "releaseDate": "February 8, 2026"
     },
     "distribution": {
-      "appStoreUrl": "https://apps.apple.com/us/app/rituals-by-topdog/id6758921353?uo=4",
+      "appStoreUrl": "https://apps.apple.com/app/id6758921353",
       "website": "https://topdoglabs.com/apps/rituals",
       "supportEmail": "info@topdoglabs.com",
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
-      "isLive": true
+      "isLive": false
     },
     "presentation": {
       "icon": "/assets/rituals/AppIcon.png",
@@ -111,17 +111,16 @@
         "appId": "6758921353",
         "bundleId": "com.mbrucedogs.Andromida",
         "primaryLocale": "en-US",
-        "appStoreState": "READY_FOR_SALE",
+        "appStoreState": "WAITING_FOR_REVIEW",
         "versionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2",
-        "syncedAt": "2026-02-12T04:58:53.797Z",
+        "syncedAt": "2026-02-10T20:12:30.762Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:27:53.908Z",
         "draftVersionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2",
         "publicVersionString": "1.1.1",
         "draftVersionString": "1.1.1",
-        "isLive": true,
-        "liveVersionId": "70982488-cd0a-4788-bb87-e6ea371e5cf2"
+        "isLive": false
       },
       "fallback": {
         "name": false,
@@ -131,7 +130,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:58:53.798Z"
+        "updatedAt": "2026-02-10T20:12:30.763Z"
       }
     }
   },
@@ -145,18 +144,18 @@
     "store": {
       "category": "Utilities",
       "version": "1.0.1",
-      "price": "$2.99",
-      "rating": "0.0",
+      "price": "Paid",
+      "rating": "4.9",
       "platform": "iOS",
       "releaseDate": "September 9, 2025"
     },
     "distribution": {
-      "appStoreUrl": "https://apps.apple.com/us/app/the-noise-clock-by-topdog/id6752309205?uo=4",
+      "appStoreUrl": "https://apps.apple.com/app/id6752309205",
       "website": "https://topdoglabs.com/apps/the-noise-clock",
       "supportEmail": "info@topdoglabs.com",
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
-      "isLive": true
+      "isLive": false
     },
     "presentation": {
       "icon": "/assets/the-noise-clock/AppIcon.png",
@@ -250,17 +249,16 @@
         "appId": "6752309205",
         "bundleId": "com.mbrucedogs.TheNoiseClock",
         "primaryLocale": "en-US",
-        "appStoreState": "READY_FOR_SALE",
+        "appStoreState": "WAITING_FOR_REVIEW",
         "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
-        "syncedAt": "2026-02-12T04:58:54.927Z",
+        "syncedAt": "2026-02-10T20:12:31.999Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:27:57.686Z",
         "draftVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
         "publicVersionString": "1.0.1",
         "draftVersionString": "1.0.1",
-        "isLive": true,
-        "liveVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e"
+        "isLive": false
       },
       "fallback": {
         "name": false,
@@ -270,7 +268,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:58:54.927Z"
+        "updatedAt": "2026-02-10T20:12:31.999Z"
       }
     }
   },
@@ -403,7 +401,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "REJECTED",
         "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
-        "syncedAt": "2026-02-12T04:58:55.951Z",
+        "syncedAt": "2026-02-10T20:12:33.108Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:28:04.464Z",
@@ -420,7 +418,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:58:55.951Z"
+        "updatedAt": "2026-02-10T20:12:33.108Z"
       }
     }
   },
@@ -553,7 +551,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "PREPARE_FOR_SUBMISSION",
         "versionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
-        "syncedAt": "2026-02-12T04:58:56.677Z",
+        "syncedAt": "2026-02-10T20:12:34.147Z",
         "draftVersionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
         "publicVersionString": "1.0",
         "draftVersionString": "1.0",
@@ -567,7 +565,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:58:56.677Z"
+        "updatedAt": "2026-02-10T20:12:34.147Z"
       }
     }
   },
@@ -679,9 +677,9 @@
         "appId": "6758676824",
         "bundleId": "com.mbrucedogs.SelfieCam",
         "primaryLocale": "en-US",
-        "appStoreState": "REJECTED",
+        "appStoreState": "WAITING_FOR_REVIEW",
         "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
-        "syncedAt": "2026-02-12T04:58:57.666Z",
+        "syncedAt": "2026-02-10T20:12:35.151Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:28:07.086Z",
@@ -698,7 +696,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:58:57.666Z"
+        "updatedAt": "2026-02-10T20:12:35.151Z"
       }
     }
   },
@@ -821,7 +819,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "PREPARE_FOR_SUBMISSION",
         "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "syncedAt": "2026-02-12T04:58:58.402Z",
+        "syncedAt": "2026-02-10T20:12:35.943Z",
         "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
         "publicVersionString": "1.0",
         "draftVersionString": "1.0",
@@ -835,7 +833,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-12T04:58:58.402Z"
+        "updatedAt": "2026-02-10T20:12:35.943Z"
       }
     }
   }

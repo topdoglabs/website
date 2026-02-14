@@ -21,23 +21,19 @@
     },
     {
       "source": "/appclip/businesscard",
-      "destination": "/appclip.html"
+      "destination": "/appclip-businesscard.html"
     },
     {
       "source": "/appclip",
-      "destination": "/appclip.html"
+      "destination": "/appclip-businesscard.html"
+    },
+    {
+      "source": "/bc",
+      "destination": "/appclip-businesscard.html"
     },
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
-    },
-    {
-      "source": "/support",
-      "destination": "/support.html"
-    },
-    {
-      "source": "/support/",
-      "destination": "/support.html"
     },
     {
       "source": "/(.*)",

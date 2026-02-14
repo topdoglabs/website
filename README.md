@@ -46,7 +46,7 @@ The website is hosted on **Vercel**.
 This site also hosts the App Clip association and fallback route for BusinessCard:
 
 - `public/.well-known/apple-app-site-association` (AASA file for Apple verification)
-- `public/appclip.html` (fallback web page for `/appclip/businesscard?id=...`)
+- `public/appclip-businesscard.html` (fallback web page for `/appclip/businesscard`, `/bc`, etc.)
 - `vercel.json` includes explicit handling for:
   - `/.well-known/apple-app-site-association`
   - `/appclip/businesscard` (primary namespaced path)

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ScrollToTop } from "./components/scroll-to-top.jsx";
 import { AppDetailPage } from "./pages/app-detail.jsx";
@@ -8,14 +7,6 @@ import { PrivacyPage } from "./pages/privacy.jsx";
 import { StaticPage } from "./pages/static-page.jsx";
 import { SupportPage } from "./pages/support.jsx";
 
-const SupportStaticRedirect = () => {
-  useEffect(() => {
-    window.location.assign("/support.html");
-  }, []);
-
-  return null;
-};
-
 export const App = () => {
   return (
     <>
@@ -24,8 +15,7 @@ export const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/apps" element={<AppsPage />} />
         <Route path="/apps/:slug" element={<AppDetailPage />} />
-        <Route path="/support" element={<SupportStaticRedirect />} />
-        <Route path="/support-form" element={<SupportPage />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/about" element={<StaticPage slug="about" />} />
         <Route path="/faq" element={<StaticPage slug="faq" />} />
