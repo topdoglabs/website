@@ -32,6 +32,14 @@
       "destination": "/appclip-businesscard.html"
     },
     {
+      "source": "/support",
+      "destination": "/support.html"
+    },
+    {
+      "source": "/support/",
+      "destination": "/support.html"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
