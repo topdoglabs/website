@@ -9,7 +9,7 @@
     "store": {
       "category": "Health And Fitness",
       "version": "1.4.1",
-      "price": "$5.99",
+      "price": "$7.99",
       "rating": "0.0",
       "platform": "iOS",
       "releaseDate": "February 16, 2026"
@@ -113,7 +113,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "READY_FOR_SALE",
         "versionId": "633294f0-f417-4917-ac7a-0bcf68865676",
-        "syncedAt": "2026-02-17T14:15:35.988Z",
+        "syncedAt": "2026-03-31T13:05:16.268Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:27:53.908Z",
@@ -131,7 +131,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-17T14:15:35.989Z"
+        "updatedAt": "2026-03-31T13:05:16.269Z"
       }
     }
   },
@@ -145,7 +145,7 @@
     "store": {
       "category": "Utilities",
       "version": "1.0.1",
-      "price": "$2.99",
+      "price": "$3.99",
       "rating": "0.0",
       "platform": "iOS",
       "releaseDate": "September 9, 2025"
@@ -252,7 +252,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "READY_FOR_SALE",
         "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
-        "syncedAt": "2026-02-17T14:15:37.212Z",
+        "syncedAt": "2026-03-31T13:05:17.493Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:27:57.686Z",
@@ -270,7 +270,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-17T14:15:37.212Z"
+        "updatedAt": "2026-03-31T13:05:17.493Z"
       }
     }
   },
@@ -403,7 +403,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "REJECTED",
         "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
-        "syncedAt": "2026-02-17T14:15:38.167Z",
+        "syncedAt": "2026-03-31T13:05:18.603Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:28:04.464Z",
@@ -420,7 +420,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-17T14:15:38.167Z"
+        "updatedAt": "2026-03-31T13:05:18.603Z"
       }
     }
   },
@@ -553,7 +553,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "PREPARE_FOR_SUBMISSION",
         "versionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
-        "syncedAt": "2026-02-17T14:15:38.831Z",
+        "syncedAt": "2026-03-31T13:05:19.408Z",
         "draftVersionId": "c3e503e2-fc5f-4688-a4f0-66bcaaa7285a",
         "publicVersionString": "1.0",
         "draftVersionString": "1.0",
@@ -567,13 +567,13 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-17T14:15:38.831Z"
+        "updatedAt": "2026-03-31T13:05:19.408Z"
       }
     }
   },
   {
     "slug": "selfiecam",
-    "comingSoon": true,
+    "comingSoon": false,
     "identity": {
       "name": "Selfie Cam by Topdog",
       "tagline": "Pro Selfie Camera & Ring Light"
@@ -592,7 +592,7 @@
       "supportEmail": "info@topdoglabs.com",
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
-      "isLive": false
+      "isLive": true
     },
     "presentation": {
       "icon": "/assets/selfie-cam/AppIcon.png",
@@ -672,23 +672,24 @@
     "appStore": {
       "promotionalText": "Take better selfies in any light with a customizable screen ring light, pro camera controls, and quick timer capture.",
       "keywords": "selfie,camera,ring light,portrait,beauty,low light,timer,flash,creator,mirror,grid,hdr,photo editor",
-      "description": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.\n\nPerfect for creators, makeup artists, video calls, and anyone who wants more flattering selfies in any environment.\n\nCore features:\n- Customizable screen ring light with adjustable size, color, and brightness\n- Front/back camera switching with smooth full-screen preview\n- Flash controls (Off, On, Auto) plus front flash support\n- Self-timer options with visual countdown\n- Pinch-to-zoom and optional composition grid\n- Post-capture preview with quick sharing\n\nPro features:\n- Premium lighting presets and custom ring light colors\n- HDR mode and higher photo quality options\n- True Mirror mode\n- Skin smoothing and advanced capture controls\n- Extended timer options\n- Built with accessibility in mind:\n\nBuilt with accessibility in mind:\n- VoiceOver-friendly controls and labels\n- Dynamic Type support for readable text\n\nSelfie Cam also supports iCloud settings sync, so your preferences stay consistent across devices.\n\nDownload Selfie Cam and get studio-style selfie lighting straight from your screen.\n\n"
+      "description": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.\n\nPerfect for creators, makeup artists, video calls, and anyone who wants more flattering selfies in any environment.\n\nCore features:\n- Customizable screen ring light with adjustable size, color, and brightness\n- Front/back camera switching with smooth full-screen preview\n- Flash controls (Off, On, Auto) plus front flash support\n- Self-timer options with visual countdown\n- Pinch-to-zoom and optional composition grid\n- Post-capture preview with quick sharing\n\nPro features:\n- Premium lighting presets and custom ring light colors\n- HDR mode and higher photo quality options\n- True Mirror mode\n- Skin smoothing and advanced capture controls\n- Extended timer options\n\nBuilt with accessibility in mind:\n- VoiceOver-friendly controls and labels\n- Dynamic Type support for readable text\n\nSelfie Cam also supports iCloud settings sync, so your preferences stay consistent across devices.\n\nDownload Selfie Cam and get studio-style selfie lighting straight from your screen.\n\nTerms of Use: https://topdoglabs.com/terms"
     },
     "sync": {
       "asc": {
         "appId": "6758676824",
         "bundleId": "com.mbrucedogs.SelfieCam",
         "primaryLocale": "en-US",
-        "appStoreState": "WAITING_FOR_REVIEW",
+        "appStoreState": "READY_FOR_SALE",
         "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
-        "syncedAt": "2026-02-17T14:15:39.788Z",
+        "syncedAt": "2026-03-31T13:05:20.465Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
         "screenshotSyncedAt": "2026-02-10T19:28:07.086Z",
         "draftVersionId": "529bd58c-cfc5-485c-a872-a7778284879f",
         "publicVersionString": "1.3.2",
         "draftVersionString": "1.3.2",
-        "isLive": false
+        "isLive": true,
+        "liveVersionId": "529bd58c-cfc5-485c-a872-a7778284879f"
       },
       "fallback": {
         "name": false,
@@ -698,7 +699,7 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-17T14:15:39.788Z"
+        "updatedAt": "2026-03-31T13:05:20.465Z"
       }
     }
   },
@@ -821,7 +822,7 @@
         "primaryLocale": "en-US",
         "appStoreState": "PREPARE_FOR_SUBMISSION",
         "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "syncedAt": "2026-02-17T14:15:40.641Z",
+        "syncedAt": "2026-03-31T13:05:21.287Z",
         "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
         "publicVersionString": "1.1.1",
         "draftVersionString": "1.1.1",
@@ -835,7 +836,90 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-02-17T14:15:40.641Z"
+        "updatedAt": "2026-03-31T13:05:21.287Z"
+      }
+    }
+  },
+  {
+    "slug": "word-rush",
+    "comingSoon": true,
+    "identity": {
+      "name": "Word Rush by TopDog",
+      "tagline": "Metadata pending"
+    },
+    "store": {
+      "category": "Uncategorized",
+      "version": "1.0",
+      "price": "Price pending",
+      "rating": "Not yet rated",
+      "platform": "iOS",
+      "releaseDate": "March 28, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6761315998",
+      "website": "https://topdoglabs.com/apps/word-rush",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "presentation": {
+      "icon": "/assets/logos/logo.svg",
+      "screenshots": []
+    },
+    "content": {
+      "summary": "Word Rush by TopDog is an upcoming iOS app with App Store metadata still pending in App Store Connect.",
+      "description": "Word Rush by TopDog is an upcoming iOS app. Full App Store copy, screenshots, and icon assets have not been populated in App Store Connect yet, so this site entry is using placeholders until the launch metadata is available.",
+      "whatsNew": "Initial site sync placeholder. App Store metadata pending.",
+      "highlights": [
+        "App Store metadata pending"
+      ],
+      "features": [
+        {
+          "title": "Coming Soon",
+          "description": "This app has been added to the site data from App Store Connect, but its App Store metadata and visual assets are not available yet."
+        }
+      ],
+      "copy": {
+        "lead": "Word Rush by TopDog is an upcoming iOS app with metadata still pending in App Store Connect.",
+        "sections": [
+          {
+            "heading": "Coming Soon",
+            "bullets": [
+              "App Store description, keywords, screenshots, and icon assets have not been published yet."
+            ]
+          }
+        ],
+        "closing": "Update this entry after the App Store listing is fully populated."
+      }
+    },
+    "appStore": {
+      "promotionalText": "Metadata pending in App Store Connect.",
+      "keywords": "metadata pending",
+      "description": "Metadata pending in App Store Connect."
+    },
+    "sync": {
+      "asc": {
+        "appId": "6761315998",
+        "bundleId": "com.topdoglabs.WordRush",
+        "primaryLocale": "en-US",
+        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "draftVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
+        "draftVersionString": "1.0",
+        "isLive": false,
+        "versionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
+        "publicVersionString": "1.0",
+        "syncedAt": "2026-03-31T13:05:22.005Z"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-03-31T13:05:22.005Z"
       }
     }
   }
