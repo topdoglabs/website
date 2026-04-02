@@ -705,31 +705,34 @@
   },
   {
     "slug": "businesscard",
-    "comingSoon": true,
+    "comingSoon": false,
     "identity": {
       "name": "Business Card by TopDog",
-      "tagline": "Create, share, and track digital business cards with QR codes."
+      "tagline": "Digital Cards and QR Sharing"
     },
     "store": {
-      "category": "Productivity",
-      "version": "1.1.1",
-      "price": "Free",
-      "rating": "4.9",
+      "category": "Business",
+      "version": "1.1.2",
+      "price": "$2.99",
+      "rating": "0.0",
       "platform": "iOS + watchOS",
       "releaseDate": "February 10, 2026"
     },
     "distribution": {
-      "appStoreUrl": "https://apps.apple.com/app/id6759007469",
-      "website": "https://topdoglabs.com",
+      "appStoreUrl": "https://apps.apple.com/us/app/business-card-by-topdog/id6759007469?uo=4",
+      "website": "https://topdoglabs.com/apps/businesscard",
       "supportEmail": "info@topdoglabs.com",
-      "isLive": false
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": true
     },
     "presentation": {
-      "icon": "/assets/businesscard/AppIcon.png",
+      "icon": "/assets/businesscard/asc-icon.jpg",
       "screenshots": [
-        "/assets/businesscard/screen-1.png",
-        "/assets/businesscard/screen-2.png",
-        "/assets/businesscard/screen-3.png"
+        "/assets/businesscard/asc-01.png",
+        "/assets/businesscard/asc-02.png",
+        "/assets/businesscard/asc-03.png",
+        "/assets/businesscard/asc-04.png"
       ]
     },
     "content": {
@@ -811,8 +814,8 @@
       }
     },
     "appStore": {
-      "promotionalText": "Create polished digital business cards, share instantly with QR codes, and track every connection. Sync cards to Apple Watch and keep contacts organized with notes.",
-      "keywords": "business card,digital card,qr code,networking,contact manager,vcard,apple watch,lead tracking",
+      "promotionalText": "Create polished digital business cards, share instantly with QR codes, and track follow-up with contacts, notes, and Apple Watch access.",
+      "keywords": "business card,qr code,networking,contact manager,contacts,vcard,apple watch,follow up",
       "description": "BusinessCard helps you create modern digital business cards and share them in seconds.\n\nBuild a card that fits your personal brand:\n- Add profile, cover, and company logo images\n- Choose from multiple header layouts\n- Customize themes and card details\n- Add unlimited contact fields, social profiles, and links\n\nShare your card anywhere:\n- Show a QR code for instant scanning\n- Share by text, email, WhatsApp, LinkedIn, and more\n- Choose a default card to share quickly\n- Enable offline sharing when needed\n\nStay on top of your network:\n- Track who received your card and when\n- Save contacts manually or by scanning QR codes\n- Add notes, tags, reminder dates, and where you met\n- Search contacts fast across names, companies, tags, and notes\n\nWorks across your Apple devices:\n- iCloud sync keeps cards and contacts up to date on iPhone and iPad\n- Apple Watch companion displays your default card QR code for quick sharing\n\nDesigned for professionals who want faster follow-up and better relationship tracking after every introduction."
     },
     "sync": {
@@ -820,106 +823,165 @@
         "appId": "6759007469",
         "bundleId": "com.mbrucedogs.BusinessCard",
         "primaryLocale": "en-US",
-        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "appStoreState": "READY_FOR_SALE",
         "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "syncedAt": "2026-03-31T13:05:21.287Z",
+        "syncedAt": "2026-04-02T20:49:44.970Z",
         "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "publicVersionString": "1.1.1",
-        "draftVersionString": "1.1.1",
-        "isLive": false
+        "publicVersionString": "1.1.2",
+        "draftVersionString": "1.1.2",
+        "isLive": true,
+        "iconSyncedAt": "2026-04-02T20:49:21.511Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fb/fb/dc/fbfbdc96-9561-8efa-354b-c85b7f591f2c/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-02T20:49:25.619Z",
+        "liveVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155"
       },
       "fallback": {
         "name": false,
         "tagline": false,
         "platform": false,
         "category": false,
-        "price": false,
-        "rating": false,
         "version": false,
-        "updatedAt": "2026-03-31T13:05:21.287Z"
+        "rating": false,
+        "price": false,
+        "updatedAt": "2026-04-02T20:49:44.971Z"
       }
     }
   },
   {
     "slug": "word-rush",
-    "comingSoon": true,
+    "comingSoon": false,
     "identity": {
       "name": "Word Rush by TopDog",
-      "tagline": "Metadata pending"
+      "tagline": "Daily Word Puzzle Sprint"
     },
     "store": {
-      "category": "Uncategorized",
+      "category": "Games",
       "version": "1.0",
-      "price": "Price pending",
-      "rating": "Not yet rated",
+      "price": "Free",
+      "rating": "0.0",
       "platform": "iOS",
       "releaseDate": "March 28, 2026"
     },
     "distribution": {
-      "appStoreUrl": "https://apps.apple.com/app/id6761315998",
+      "appStoreUrl": "https://apps.apple.com/us/app/word-rush-by-topdog/id6761315998?uo=4",
       "website": "https://topdoglabs.com/apps/word-rush",
       "supportEmail": "info@topdoglabs.com",
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
-      "isLive": false
+      "isLive": true
     },
     "presentation": {
-      "icon": "/assets/logos/logo.svg",
-      "screenshots": []
+      "icon": "/assets/word-rush/asc-icon.jpg",
+      "screenshots": [
+        "/assets/word-rush/asc-01.png",
+        "/assets/word-rush/asc-02.png",
+        "/assets/word-rush/asc-03.png",
+        "/assets/word-rush/asc-04.png",
+        "/assets/word-rush/asc-05.png",
+        "/assets/word-rush/asc-06.png"
+      ]
     },
     "content": {
-      "summary": "Word Rush by TopDog is an upcoming iOS app with App Store metadata still pending in App Store Connect.",
-      "description": "Word Rush by TopDog is an upcoming iOS app. Full App Store copy, screenshots, and icon assets have not been populated in App Store Connect yet, so this site entry is using placeholders until the launch metadata is available.",
-      "whatsNew": "Initial site sync placeholder. App Store metadata pending.",
+      "summary": "Word Rush is a fast, replayable word game with Quick Play, a daily challenge, and a handcrafted campaign built for quick sessions and longer streaks.",
+      "description": "Word Rush is a fast, replayable word game built for quick sessions and longer streaks. Build words from a rotating letter bank, chase score, and clear every main target before the timer runs out.\n\nFREE TO PLAY\n- Quick Play with a clean starter preset and repeatable runs\n- A fresh Daily Challenge every day\n- Chapter 1 of the handcrafted campaign\n- Optional rewarded boosts and free-user ad-supported Quick Play\n\nPREMIUM UNLOCK\n- Full campaign access beyond Chapter 1\n- 14-Day Archive for replaying recent daily puzzles\n- Advanced stats, streak tracking, and chapter completion progress\n- Boss Gauntlet premium challenge mode\n- No rewarded prompts or Quick Play interstitials\n\nFEATURES\n- Timed word-building rounds with flexible difficulty tuning\n- Daily puzzles that stay deterministic for each date\n- Campaign progression with stars, bosses, and chapter maps\n- Coins, boosts, and tile skins to customize your run\n- iPhone and iPad support\n\nWhether you want a quick vocabulary sprint or a longer progression chase, Word Rush gives you a sharp daily word puzzle loop without unnecessary friction.",
+      "whatsNew": "Initial App Store release with Quick Play, a daily challenge, a handcrafted campaign, premium archive access, advanced stats, and Boss Gauntlet.",
       "highlights": [
-        "App Store metadata pending"
+        "Quick Play with repeatable word-building runs",
+        "A fresh Daily Challenge every day",
+        "Handcrafted campaign progression with stars, bosses, and chapter maps",
+        "Premium unlock with archive access, advanced stats, and Boss Gauntlet",
+        "Coins, boosts, and tile skins to customize each run",
+        "Built for both iPhone and iPad"
       ],
       "features": [
         {
-          "title": "Coming Soon",
-          "description": "This app has been added to the site data from App Store Connect, but its App Store metadata and visual assets are not available yet."
+          "title": "Free To Play",
+          "description": "Jump into Quick Play, take on a fresh Daily Challenge every day, start Chapter 1 of the handcrafted campaign, and use optional rewarded boosts in ad-supported runs."
+        },
+        {
+          "title": "Premium Unlock",
+          "description": "Unlock the full campaign beyond Chapter 1, replay recent daily puzzles with the 14-Day Archive, track advanced stats and streaks, and access Boss Gauntlet without rewarded prompts or Quick Play interstitials."
+        },
+        {
+          "title": "Flexible Word Rounds",
+          "description": "Build words from a rotating letter bank in timed rounds with flexible difficulty tuning, deterministic daily puzzles, and a clean loop designed for both short sessions and longer streaks."
+        },
+        {
+          "title": "Progression And Customization",
+          "description": "Advance through chapter maps, earn stars, take on bosses, and spend coins on boosts and tile skins while playing on iPhone or iPad."
         }
       ],
       "copy": {
-        "lead": "Word Rush by TopDog is an upcoming iOS app with metadata still pending in App Store Connect.",
+        "lead": "Word Rush is a fast word puzzle with Quick Play, a daily challenge, a handcrafted campaign, and a premium upgrade for archive access, stats, and Boss Gauntlet.",
         "sections": [
           {
-            "heading": "Coming Soon",
+            "heading": "Highlights",
             "bullets": [
-              "App Store description, keywords, screenshots, and icon assets have not been published yet."
+              "Quick Play for repeatable word-building runs",
+              "A fresh Daily Challenge every day",
+              "Handcrafted campaign progression with stars, bosses, and chapter maps",
+              "Premium unlock with archive access, advanced stats, and Boss Gauntlet",
+              "Coins, boosts, and tile skins to customize your run",
+              "Built for iPhone and iPad"
+            ]
+          },
+          {
+            "heading": "Free To Play",
+            "bullets": [
+              "Start with Quick Play, a fresh Daily Challenge every day, Chapter 1 of the handcrafted campaign, and optional rewarded boosts in ad-supported runs."
+            ]
+          },
+          {
+            "heading": "Premium Unlock",
+            "bullets": [
+              "Get the full campaign beyond Chapter 1, a 14-Day Archive for recent daily puzzles, advanced stats, streak tracking, chapter completion progress, and Boss Gauntlet."
+            ]
+          },
+          {
+            "heading": "Built For Replayability",
+            "bullets": [
+              "Timed rounds, flexible difficulty tuning, deterministic daily puzzles, and progression systems built for both quick vocabulary sprints and longer sessions."
             ]
           }
         ],
-        "closing": "Update this entry after the App Store listing is fully populated."
+        "closing": "Word Rush gives you a sharp daily word puzzle loop without unnecessary friction."
       }
     },
     "appStore": {
-      "promotionalText": "Metadata pending in App Store Connect.",
-      "keywords": "metadata pending",
-      "description": "Metadata pending in App Store Connect."
+      "promotionalText": "Word Rush is a fast word puzzle with Quick Play, a daily challenge, a handcrafted campaign, and a premium upgrade for archive access, stats, and Boss Gauntlet.",
+      "keywords": "word puzzle,anagram,daily puzzle,brain game,vocabulary,spelling,letters,offline,campaign",
+      "description": "Word Rush is a fast, replayable word game built for quick sessions and longer streaks. Build words from a rotating letter bank, chase score, and clear every main target before the timer runs out.\n\nFREE TO PLAY\n• Quick Play with a clean starter preset and repeatable runs\n• A fresh Daily Challenge every day\n• Chapter 1 of the handcrafted campaign\n• Optional rewarded boosts and free-user ad-supported Quick Play\n\nPREMIUM UNLOCK\n• Full campaign access beyond Chapter 1\n• 14-Day Archive for replaying recent daily puzzles\n• Advanced stats, streak tracking, and chapter completion progress\n• Boss Gauntlet premium challenge mode\n• No rewarded prompts or Quick Play interstitials\n\nFEATURES\n• Timed word-building rounds with flexible difficulty tuning\n• Daily puzzles that stay deterministic for each date\n• Campaign progression with stars, bosses, and chapter maps\n• Coins, boosts, and tile skins to customize your run\n• iPhone and iPad support\n\nWhether you want a quick vocabulary sprint or a longer progression chase, Word Rush gives you a sharp daily word puzzle loop without unnecessary friction."
     },
     "sync": {
       "asc": {
         "appId": "6761315998",
         "bundleId": "com.topdoglabs.WordRush",
         "primaryLocale": "en-US",
-        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "appStoreState": "READY_FOR_SALE",
         "draftVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
         "draftVersionString": "1.0",
-        "isLive": false,
+        "isLive": true,
         "versionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
         "publicVersionString": "1.0",
-        "syncedAt": "2026-03-31T13:05:22.005Z"
+        "syncedAt": "2026-04-02T20:49:45.970Z",
+        "iconSyncedAt": "2026-04-02T20:49:26.986Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/cd/d2/bbcdd207-e08d-cbfe-9a5b-c4ab4e5279c8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "screenshotDisplayType": "APP_IPHONE_65",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-02T20:49:30.974Z",
+        "liveVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f"
       },
       "fallback": {
         "name": false,
         "tagline": false,
         "platform": false,
         "category": false,
-        "price": false,
-        "rating": false,
         "version": false,
-        "updatedAt": "2026-03-31T13:05:22.005Z"
+        "rating": false,
+        "price": false,
+        "updatedAt": "2026-04-02T20:49:45.970Z"
       }
     }
   }

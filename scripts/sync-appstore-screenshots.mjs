@@ -109,7 +109,7 @@ async function main() {
     }
 
     const screenshotSets = await ascJson(
-      ["assets", "screenshots", "list", "--version-localization", localization.id],
+      ["screenshots", "list", "--version-localization", localization.id],
       args.profile
     );
     const chosenSet = chooseScreenshotSet(asArray(screenshotSets?.sets), args.displayType);

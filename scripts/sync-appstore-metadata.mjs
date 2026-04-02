@@ -154,7 +154,7 @@ async function main() {
     throw new Error(errors.join("\n"));
   }
 
-  const updatedApps = apps.map((app, index) => updates.get(index)?.app ?? app);
+  const updatedApps = parsedApps.map((app, index) => updates.get(index)?.app ?? app);
 
   const changedApps = apps
     .map((app, index) => ({ app, update: updates.get(index) }))
