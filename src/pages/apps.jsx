@@ -6,6 +6,7 @@ import {
   getAppBody,
   getAppIcon,
   getAppName,
+  getAppsSortedByReleaseDate,
   getAppSubline,
   isAppComingSoon,
 } from "../lib/app-model.js";
@@ -15,9 +16,10 @@ export const AppsPage = () => {
   const { content } = useSiteContent();
   const appsPage = content.appsPage || {};
   const ui = content.ui || {};
-  const appCount = apps.length;
+  const sortedApps = getAppsSortedByReleaseDate(apps);
+  const appCount = sortedApps.length;
   const categories = Array.from(
-    new Set(apps.map((app) => app.store?.category).filter(Boolean))
+    new Set(sortedApps.map((app) => app.store?.category).filter(Boolean))
   );
 
   return (
@@ -70,7 +72,7 @@ export const AppsPage = () => {
         ) : error ? (
           <p className="status">{ui.errorApps}</p>
         ) : (
-          apps.map((app) => (
+          sortedApps.map((app) => (
             <Link
               key={app.slug}
               className={`app-card${isAppComingSoon(app) ? " coming-soon" : ""}`}

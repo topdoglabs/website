@@ -12,6 +12,37 @@ const valueOr = (primary, fallback) => {
 
 const toArray = (value) => (Array.isArray(value) ? value : EMPTY_ARRAY);
 const LIVE_STATES = new Set(["READY_FOR_SALE"]);
+const parseReleaseTimestamp = (value) => {
+  if (typeof value !== "string" || value.trim() === "") {
+    return null;
+  }
+
+  const timestamp = Date.parse(value);
+  return Number.isNaN(timestamp) ? null : timestamp;
+};
+const sortNormalizedAppsByReleaseDate = (apps) =>
+  apps
+    .map((app, index) => ({
+      app,
+      index,
+      timestamp: parseReleaseTimestamp(app.store?.releaseDate),
+    }))
+    .sort((left, right) => {
+      if (left.timestamp === right.timestamp) {
+        return left.index - right.index;
+      }
+
+      if (left.timestamp === null) {
+        return 1;
+      }
+
+      if (right.timestamp === null) {
+        return -1;
+      }
+
+      return right.timestamp - left.timestamp;
+    })
+    .map(({ app }) => app);
 
 export const normalizeApp = (raw) => {
   const app = raw && typeof raw === "object" ? raw : {};
@@ -105,3 +136,15 @@ export const isAppLive = (app) => {
 };
 
 export const isAppComingSoon = (app) => !isAppLive(app);
+export const getAppsSortedByReleaseDate = (apps) =>
+  sortNormalizedAppsByReleaseDate(normalizeApps(apps));
+export const getLatestReleasedApp = (apps) => {
+  const normalizedApps = normalizeApps(apps);
+  const liveApps = normalizedApps.filter(isAppLive);
+
+  if (liveApps.length === 0) {
+    return normalizedApps[0] || null;
+  }
+
+  return sortNormalizedAppsByReleaseDate(liveApps)[0] || liveApps[0];
+};

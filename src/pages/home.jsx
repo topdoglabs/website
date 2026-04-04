@@ -6,6 +6,7 @@ import {
   getAppBody,
   getAppIcon,
   getAppName,
+  getLatestReleasedApp,
   getAppSubline,
   isAppComingSoon,
 } from "../lib/app-model.js";
@@ -13,7 +14,7 @@ import {
 export const HomePage = () => {
   const { apps, isLoading, error } = useApps();
   const { content } = useSiteContent();
-  const [featured] = apps;
+  const featured = getLatestReleasedApp(apps);
   const home = content.home || {};
   const ui = content.ui || {};
 
