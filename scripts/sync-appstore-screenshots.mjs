@@ -45,8 +45,9 @@ async function main() {
 
   const changed = [];
   const warnings = [];
+  const updates = new Map();
 
-  for (const app of apps) {
+  for (const [index, app] of apps.entries()) {
     if (slugFilter && !slugFilter.has(app.slug)) {
       continue;
     }
@@ -158,6 +159,7 @@ async function main() {
 
     if (appChanged) {
       changed.push(slug);
+      updates.set(index, app);
     }
   }
 
@@ -178,7 +180,8 @@ async function main() {
     return;
   }
 
-  await fs.writeFile(appsFilePath, `${JSON.stringify(apps, null, 2)}\n`, "utf8");
+  const updatedApps = parsedApps.map((app, index) => updates.get(index) ?? app);
+  await fs.writeFile(appsFilePath, `${JSON.stringify(updatedApps, null, 2)}\n`, "utf8");
   console.log(`Updated ${appsFilePath}`);
 }
 
@@ -197,6 +200,7 @@ function normalizeAppShape(rawApp) {
     },
     sync: {
       asc: isObject(app.sync?.asc) ? app.sync.asc : (isObject(app.asc) ? app.asc : {}),
+      fallback: isObject(app.sync?.fallback) ? app.sync.fallback : {},
     },
     store: isObject(app.store) ? app.store : {},
     distribution: isObject(app.distribution) ? app.distribution : {},

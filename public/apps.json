@@ -984,5 +984,103 @@
         "updatedAt": "2026-04-02T20:49:45.970Z"
       }
     }
+  },
+  {
+    "slug": "breakvibe",
+    "comingSoon": true,
+    "identity": {
+      "name": "BreakVibe by TopDog",
+      "tagline": "Smash combos. Own the run."
+    },
+    "presentation": {
+      "icon": "/assets/breakvibe/AppIcon.png",
+      "screenshots": [
+        "/assets/breakvibe/asc-01.png",
+        "/assets/breakvibe/asc-02.png",
+        "/assets/breakvibe/asc-03.png",
+        "/assets/breakvibe/asc-04.png",
+        "/assets/breakvibe/asc-05.png"
+      ]
+    },
+    "sync": {
+      "asc": {
+        "appId": "6761667256",
+        "bundleId": "com.topdoglabs.breakvibe",
+        "primaryLocale": "en-US",
+        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "versionId": "a3f1fca0-f006-40da-b79b-d21949139354",
+        "draftVersionId": "a3f1fca0-f006-40da-b79b-d21949139354",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": false,
+        "syncedAt": "2026-04-04T19:49:11.731Z",
+        "screenshotDisplayType": "APP_IPHONE_65",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-04T19:56:07.447Z"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-04-04T19:49:11.732Z"
+      }
+    },
+    "store": {
+      "category": "Games",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "Not yet rated",
+      "platform": "iOS",
+      "releaseDate": "April 4, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6761667256",
+      "website": "https://topdoglabs.com/games/breakvibe",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "content": {
+      "summary": "BreakVibe is a modern brick breaker with 240 handcrafted Classic levels, daily challenges, Endless Rush, and long-term progression through coins, cosmetics, and achievements.",
+      "description": "BreakVibe is a modern brick breaker built for fast restarts, satisfying combos, and steady progression. Jump into classic boards, today's daily challenge, or an endless run that keeps the pressure climbing while you chase higher scores, bigger streaks, and more rewards.\n\nFeatures:\n- 240 handcrafted Classic levels with evolving board patterns and guaranteed power-up drops\n- Endless Rush with escalating speed, combo pressure, and score chasing that never settles\n- Daily Challenge boards with seeded layouts, special modifiers, and score rewards\n- Power-ups including multi-ball, laser, slow-mo, shield, rocket, and magnet effects\n- Coins, cosmetics, achievements, and a season track that keep every run feeding long-term progress\n- Game Center leaderboards for Classic, Daily, Endless, and Bonus Boards\n\nPlay Your Way:\nBreakVibe keeps the controls simple while letting you tune haptics, audio, control style, and color-blind support. Spend coins on new balls, paddles, trails, and backgrounds, then load into the next run with a sharper look and a better plan.\n\nFree To Start:\nBreakVibe is free to download. Free players can use rewarded ads for specific run boosts, and a one-time premium unlock removes ads while opening Bonus Boards, premium season rewards, and extra cosmetics.\n\nWhether you want a quick arcade run or a longer score chase, BreakVibe keeps the board moving.",
+      "whatsNew": "Initial App Store listing for BreakVibe 1.0 with Classic boards, Endless Rush, Daily Challenge runs, power-ups, cosmetics, achievements, and Game Center leaderboards.",
+      "highlights": [
+        "240 handcrafted Classic levels with evolving board patterns",
+        "Endless Rush with escalating speed, combo pressure, and score chasing",
+        "Daily Challenge boards with seeded layouts and special modifiers",
+        "Power-ups including multi-ball, laser, slow-mo, shield, rocket, and magnet",
+        "Coins, cosmetics, achievements, and a season track for long-term progression",
+        "Game Center leaderboards for Classic, Daily, Endless, and Bonus Boards"
+      ],
+      "features": [
+        {
+          "title": "Classic, Daily, And Endless Modes",
+          "description": "Jump between 240 handcrafted Classic levels, a seeded Daily Challenge, and Endless Rush runs that keep increasing the pressure while you chase bigger streaks and higher scores."
+        },
+        {
+          "title": "Power-Ups And Combo Flow",
+          "description": "Use multi-ball, laser, slow-mo, shield, rocket, and magnet effects to extend runs, stabilize dangerous boards, and keep combo chains alive."
+        },
+        {
+          "title": "Progression That Carries Forward",
+          "description": "Earn coins, unlock cosmetics, complete achievements, and move through a season track so each run feeds broader progress beyond a single score attempt."
+        },
+        {
+          "title": "Customize The Experience",
+          "description": "Tune haptics, audio, control style, and color-blind support, then spend coins on new balls, paddles, trails, and backgrounds before the next run."
+        }
+      ],
+      "copy": null
+    },
+    "appStore": {
+      "promotionalText": "Smash through 240 handcrafted boards, daily challenges, and endless runs while chaining power-ups, earning coins, and building your collection.",
+      "keywords": "breakout,brick breaker,arcade,combo,daily challenge,endless,classic,bricks,paddle,power-up",
+      "description": "BreakVibe is a modern brick breaker built for fast restarts, satisfying combos, and steady progression. Jump into classic boards, today's daily challenge, or an endless run that keeps the pressure climbing while you chase higher scores, bigger streaks, and more rewards.\n\nFEATURES\n- 240 handcrafted Classic levels with evolving board patterns and guaranteed power-up drops\n- Endless Rush with escalating speed, combo pressure, and score chasing that never settles\n- Daily Challenge boards with seeded layouts, special modifiers, and score rewards\n- Power-ups including multi-ball, laser, slow-mo, shield, rocket, and magnet effects\n- Coins, cosmetics, achievements, and a season track that keep every run feeding long-term progress\n- Game Center leaderboards for Classic, Daily, Endless, and Bonus Boards\n\nPLAY YOUR WAY\nBreakVibe keeps the controls simple while letting you tune haptics, audio, control style, and color-blind support. Spend coins on new balls, paddles, trails, and backgrounds, then load into the next run with a sharper look and a better plan.\n\nFREE TO START\nBreakVibe is free to download. Free players can use rewarded ads for specific run boosts, and a one-time premium unlock removes ads while opening Bonus Boards, premium season rewards, and extra cosmetics.\n\nWhether you want a quick arcade run or a longer score chase, BreakVibe keeps the board moving."
+    }
   }
 ]
