@@ -1059,7 +1059,8 @@ a {
 .detail-update {
   border-top: 1px solid var(--line);
   padding-top: 32px;
-  text-align: center;
+  max-width: 720px;
+  text-align: left;
 }
 
 .detail-update h2 {
