@@ -6,6 +6,46 @@
       "name": "Rituals by TopDog",
       "tagline": "Ritual Arcs for Daily Habits"
     },
+    "presentation": {
+      "icon": "/assets/rituals/asc-icon.jpg",
+      "screenshots": [
+        "/assets/rituals/asc-01.png",
+        "/assets/rituals/asc-02.png",
+        "/assets/rituals/asc-03.png",
+        "/assets/rituals/asc-04.png",
+        "/assets/rituals/asc-05.png"
+      ]
+    },
+    "sync": {
+      "asc": {
+        "appId": "6758921353",
+        "bundleId": "com.mbrucedogs.Andromida",
+        "primaryLocale": "en-US",
+        "appStoreState": "READY_FOR_SALE",
+        "versionId": "633294f0-f417-4917-ac7a-0bcf68865676",
+        "syncedAt": "2026-03-31T13:05:16.268Z",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-08T14:43:21.293Z",
+        "draftVersionId": "633294f0-f417-4917-ac7a-0bcf68865676",
+        "publicVersionString": "1.4.1",
+        "draftVersionString": "1.4.1",
+        "isLive": true,
+        "liveVersionId": "633294f0-f417-4917-ac7a-0bcf68865676",
+        "iconSyncedAt": "2026-04-08T14:43:17.033Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2b/fb/53/2bfb531e-914e-7d76-c11f-0d315454f525/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-03-31T13:05:16.269Z"
+      }
+    },
     "store": {
       "category": "Health And Fitness",
       "version": "1.4.1",
@@ -21,16 +61,6 @@
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
       "isLive": true
-    },
-    "presentation": {
-      "icon": "/assets/rituals/AppIcon.png",
-      "screenshots": [
-        "/assets/rituals/01-today-focus-portrait.png",
-        "/assets/rituals/02-ritual-arcs-portrait.png",
-        "/assets/rituals/03-insights-trends-portrait.png",
-        "/assets/rituals/04-history-calendar-portrait.png",
-        "/assets/rituals/05-history-day-detail-portrait.png"
-      ]
     },
     "content": {
       "summary": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.",
@@ -105,23 +135,42 @@
       "promotionalText": "Build better habits with guided ritual arcs, daily check-ins, and clear progress insights, all in a private, offline-first tracker designed for focus.",
       "keywords": "habit tracker,rituals,daily routine,streaks,goals,productivity,mindfulness,offline,privacy",
       "description": "Rituals helps you build consistent habits through focused, time-bound ritual arcs instead of endless streak pressure.\n\nCreate rituals that match your life:\n- Set a custom duration from 7 to 365 days\n- Organize habits by morning, midday, afternoon, evening, night, or anytime\n- Personalize rituals with themes, icons, categories, and notes\n\nStay on track every day:\n- Check off habits with fast tap-to-complete actions\n- See progress rings and completion summaries at a glance\n- Keep momentum with milestone achievements and streak tracking\n\nUnderstand your patterns:\n- Review daily history in a calendar view with completion detail\n- Track trends with weekly averages, active-day stats, and total check-ins\n- See your best-performing ritual and habit-level completion rates\n\nDesigned for privacy and reliability:\n- Offline-first by default, with no paid backend dependencies\n- Local-first data storage with optional iCloud settings sync\n- Clean, calm interface built for daily focus\n\nWhether you are starting a morning routine, improving productivity, or building mindfulness habits, Rituals gives you a clear structure you can actually sustain."
+    }
+  },
+  {
+    "slug": "the-noise-clock",
+    "comingSoon": false,
+    "identity": {
+      "name": "The Noise Clock by TopDog",
+      "tagline": "Clock, Noise & Alarm Timer"
+    },
+    "presentation": {
+      "icon": "/assets/the-noise-clock/asc-icon.jpg",
+      "screenshots": [
+        "/assets/the-noise-clock/asc-01.png",
+        "/assets/the-noise-clock/asc-02.png",
+        "/assets/the-noise-clock/asc-03.png",
+        "/assets/the-noise-clock/asc-04.png"
+      ]
     },
     "sync": {
       "asc": {
-        "appId": "6758921353",
-        "bundleId": "com.mbrucedogs.Andromida",
+        "appId": "6752309205",
+        "bundleId": "com.mbrucedogs.TheNoiseClock",
         "primaryLocale": "en-US",
         "appStoreState": "READY_FOR_SALE",
-        "versionId": "633294f0-f417-4917-ac7a-0bcf68865676",
-        "syncedAt": "2026-03-31T13:05:16.268Z",
+        "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
+        "syncedAt": "2026-03-31T13:05:17.493Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-02-10T19:27:53.908Z",
-        "draftVersionId": "633294f0-f417-4917-ac7a-0bcf68865676",
-        "publicVersionString": "1.4.1",
-        "draftVersionString": "1.4.1",
+        "screenshotSyncedAt": "2026-04-08T14:43:25.520Z",
+        "draftVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
+        "publicVersionString": "1.0.1",
+        "draftVersionString": "1.0.1",
         "isLive": true,
-        "liveVersionId": "633294f0-f417-4917-ac7a-0bcf68865676"
+        "liveVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
+        "iconSyncedAt": "2026-04-08T14:43:22.416Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/93/4f/4a934f5b-91ec-b042-6dad-292d373b52e4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
       },
       "fallback": {
         "name": false,
@@ -131,16 +180,8 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-03-31T13:05:16.269Z"
+        "updatedAt": "2026-03-31T13:05:17.493Z"
       }
-    }
-  },
-  {
-    "slug": "the-noise-clock",
-    "comingSoon": false,
-    "identity": {
-      "name": "The Noise Clock by TopDog",
-      "tagline": "Clock, Noise & Alarm Timer"
     },
     "store": {
       "category": "Utilities",
@@ -157,16 +198,6 @@
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
       "isLive": true
-    },
-    "presentation": {
-      "icon": "/assets/the-noise-clock/AppIcon.png",
-      "screenshots": [
-        "/assets/the-noise-clock/01-clock-view-portrait.png",
-        "/assets/the-noise-clock/02-clock-view-landscape.png",
-        "/assets/the-noise-clock/03-alarms-view-portrait.png",
-        "/assets/the-noise-clock/05-noise-view-portrait.png",
-        "/assets/the-noise-clock/07-clock-settings-portrait.png"
-      ]
     },
     "content": {
       "summary": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one…",
@@ -244,23 +275,41 @@
       "promotionalText": "The Noise Clock combines a bold full-screen clock, calming noise, and reliable alarms in one clean app. Personalize fonts, colors, glow, and schedules for focus or sleep.",
       "keywords": "clock,alarm,alarms,white noise,ambient,sleep,focus,bedside,digital clock,nightstand,productivity",
       "description": "The Noise Clock is a distraction-free digital clock built for bedside use, deep focus, and calmer nights. It combines a full-screen clock, curated noise playback, and a powerful alarm system in one clean experience.\n\nCLOCK DISPLAY\n- Full-screen digital clock optimized for readability\n- 12/24-hour time, optional seconds, optional AM/PM\n- Stable fixed-width digits that avoid visual jumping\n- Adjustable glow, opacity, scale, and color\n- Custom fonts, weights, and styles with live preview\n- Optional date and battery overlays\n- Auto-hide interface after inactivity for a cleaner screen\n\nWHITE NOISE\n- Curated categories including white, pink, brown, and ambient sounds\n- Nature and mechanical soundscapes for sleep or concentration\n- Seamless looping with background playback support\n- Quick preview and instant play/stop controls\n\nALARMS\n- Create unlimited alarms with labels and repeat schedules\n- Per-alarm controls for sound, vibration, volume, and snooze\n- AlarmKit-powered alerts designed to cut through silent mode and Focus\n- Live Activity countdown support before an alarm fires\n- Reliable add, edit, toggle, duplicate, and delete workflows\n\nWHY PEOPLE USE THE NOISE CLOCK\n- Bedside clock replacement\n- Focus and work sessions\n- Sleep routines and wind-down environments\n- Minimal, customizable display without clutter\n\nThe Noise Clock is designed to be simple at a glance and powerful when you need control.\n"
+    }
+  },
+  {
+    "slug": "blackjack",
+    "comingSoon": false,
+    "identity": {
+      "name": "Blackjack by TopDog",
+      "tagline": "Classic Strategy Card Game"
+    },
+    "presentation": {
+      "icon": "/assets/blackjack/AppIcon.png",
+      "screenshots": [
+        "/assets/blackjack/asc-01.png",
+        "/assets/blackjack/asc-02.png",
+        "/assets/blackjack/asc-03.png",
+        "/assets/blackjack/asc-04.png",
+        "/assets/blackjack/asc-05.png",
+        "/assets/blackjack/asc-06.png"
+      ]
     },
     "sync": {
       "asc": {
-        "appId": "6752309205",
-        "bundleId": "com.mbrucedogs.TheNoiseClock",
+        "appId": "6757250589",
+        "bundleId": "com.mbrucedogs.Blackjack",
         "primaryLocale": "en-US",
-        "appStoreState": "READY_FOR_SALE",
-        "versionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
-        "syncedAt": "2026-03-31T13:05:17.493Z",
+        "appStoreState": "REJECTED",
+        "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
+        "syncedAt": "2026-03-31T13:05:18.603Z",
         "screenshotDisplayType": "APP_IPHONE_67",
         "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-02-10T19:27:57.686Z",
-        "draftVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e",
-        "publicVersionString": "1.0.1",
-        "draftVersionString": "1.0.1",
-        "isLive": true,
-        "liveVersionId": "38075ed2-e562-411e-9e76-8a29d7304b1e"
+        "screenshotSyncedAt": "2026-04-08T14:43:31.051Z",
+        "draftVersionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
+        "publicVersionString": "1.9.1",
+        "draftVersionString": "1.9.1",
+        "isLive": false
       },
       "fallback": {
         "name": false,
@@ -270,16 +319,8 @@
         "price": false,
         "rating": false,
         "version": false,
-        "updatedAt": "2026-03-31T13:05:17.493Z"
+        "updatedAt": "2026-03-31T13:05:18.603Z"
       }
-    }
-  },
-  {
-    "slug": "blackjack",
-    "comingSoon": false,
-    "identity": {
-      "name": "Blackjack by TopDog",
-      "tagline": "Classic Strategy Card Game"
     },
     "store": {
       "category": "Games",
@@ -296,18 +337,6 @@
       "supportUrl": "https://www.topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
       "isLive": false
-    },
-    "presentation": {
-      "icon": "/assets/blackjack/AppIcon.png",
-      "screenshots": [
-        "/assets/blackjack/screen-1.png",
-        "/assets/blackjack/screen-2.png",
-        "/assets/blackjack/screen-3.png",
-        "/assets/blackjack/screen-4.png",
-        "/assets/blackjack/screen-5.png",
-        "/assets/blackjack/screen-6.png",
-        "/assets/blackjack/screen-7.png"
-      ]
     },
     "content": {
       "summary": "Play Blackjack 21 with authentic casino rules, polished SwiftUI visuals, and no real-money risk.",
@@ -395,33 +424,6 @@
       "promotionalText": "Play authentic Blackjack with strategy hints, card counting tools, and full rule customization. Track sessions, sync stats with iCloud, and practice risk-free.",
       "keywords": "blackjack,21,casino cards,basic strategy,card counting,hi lo,side bets,perfect pairs,21+3,offline",
       "description": "Play Blackjack 21 with authentic casino rules, polished SwiftUI visuals, and no real-money risk.\n\nAUTHENTIC BLACKJACK GAMEPLAY\n• Full action set: Hit, Stand, Double Down, Split, and Surrender\n• Insurance support when the dealer shows an Ace\n• Realistic multi-deck shoe with configurable penetration\n• Cut card reshuffle behavior with in-game notifications\n\nRULE VARIATIONS YOU CONTROL\n• Vegas Strip, Atlantic City, and European presets\n• Custom rules for a table that matches your preference\n• Rule-aware gameplay and strategy guidance\n\nSIDE BETS FOR EXTRA ACTION\n• Perfect Pairs: Mixed, Colored, and Perfect payouts\n• 21+3: Flush, Straight, Trips, Straight Flush, and Suited Trips\n\nLEARN AND IMPROVE\n• Real-time basic strategy hints for every hand\n• Guidance adapts to your selected rules\n• Built-in Hi-Lo card counting trainer\n• Running Count, True Count, betting hints, and Illustrious 18 deviations\n\nSESSION STATS THAT MATTER\n• Live current-session tracking\n• Global lifetime statistics\n• Session history with detailed performance breakdowns\n• Hands played, win rate, net result, blackjacks, busts, doubles, splits, and bet metrics\n\nSYNCED AND ACCESSIBLE\n• iCloud sync for balance, settings, and statistics across devices\n• Dynamic Type and VoiceOver-friendly interface\n• Smooth dealing animations with sound and haptics\n\nNEW TO THE TABLE?\n• First-launch welcome sheet and guided spotlight walkthrough\n• Skippable onboarding shown only once\n\nThis app is for entertainment only and does not offer real-money gambling."
-    },
-    "sync": {
-      "asc": {
-        "appId": "6757250589",
-        "bundleId": "com.mbrucedogs.Blackjack",
-        "primaryLocale": "en-US",
-        "appStoreState": "REJECTED",
-        "versionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
-        "syncedAt": "2026-03-31T13:05:18.603Z",
-        "screenshotDisplayType": "APP_IPHONE_67",
-        "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-02-10T19:28:04.464Z",
-        "draftVersionId": "cc7c5c5a-be2d-405c-b0be-27a7174147ac",
-        "publicVersionString": "1.9.1",
-        "draftVersionString": "1.9.1",
-        "isLive": false
-      },
-      "fallback": {
-        "name": false,
-        "tagline": false,
-        "platform": false,
-        "category": false,
-        "price": false,
-        "rating": false,
-        "version": false,
-        "updatedAt": "2026-03-31T13:05:18.603Z"
-      }
     }
   },
   {
@@ -578,6 +580,44 @@
       "name": "Selfie Cam by Topdog",
       "tagline": "Pro Selfie Camera & Ring Light"
     },
+    "presentation": {
+      "icon": "/assets/selfiecam/asc-icon.jpg",
+      "screenshots": [
+        "/assets/selfiecam/asc-01.png",
+        "/assets/selfiecam/asc-02.png",
+        "/assets/selfiecam/asc-03.png"
+      ]
+    },
+    "sync": {
+      "asc": {
+        "appId": "6758676824",
+        "bundleId": "com.mbrucedogs.SelfieCam",
+        "primaryLocale": "en-US",
+        "appStoreState": "READY_FOR_SALE",
+        "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
+        "syncedAt": "2026-03-31T13:05:20.465Z",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-08T14:43:34.800Z",
+        "draftVersionId": "529bd58c-cfc5-485c-a872-a7778284879f",
+        "publicVersionString": "1.3.2",
+        "draftVersionString": "1.3.2",
+        "isLive": true,
+        "liveVersionId": "529bd58c-cfc5-485c-a872-a7778284879f",
+        "iconSyncedAt": "2026-04-08T14:43:32.545Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4f/a3/5a/4fa35a12-960d-7486-29a0-3321d7ef0b2e/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-03-31T13:05:20.465Z"
+      }
+    },
     "store": {
       "category": "Photo And Video",
       "version": "1.3.2",
@@ -593,14 +633,6 @@
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
       "isLive": true
-    },
-    "presentation": {
-      "icon": "/assets/selfie-cam/AppIcon.png",
-      "screenshots": [
-        "/assets/selfie-cam/01-launch-screen.png",
-        "/assets/selfie-cam/02-camera-ring-light.png",
-        "/assets/selfie-cam/03-settings-popup.png"
-      ]
     },
     "content": {
       "summary": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.",
@@ -673,34 +705,6 @@
       "promotionalText": "Take better selfies in any light with a customizable screen ring light, pro camera controls, and quick timer capture.",
       "keywords": "selfie,camera,ring light,portrait,beauty,low light,timer,flash,creator,mirror,grid,hdr,photo editor",
       "description": "Selfie Cam is a professional selfie camera built for better lighting and cleaner results.\n\nPerfect for creators, makeup artists, video calls, and anyone who wants more flattering selfies in any environment.\n\nCore features:\n- Customizable screen ring light with adjustable size, color, and brightness\n- Front/back camera switching with smooth full-screen preview\n- Flash controls (Off, On, Auto) plus front flash support\n- Self-timer options with visual countdown\n- Pinch-to-zoom and optional composition grid\n- Post-capture preview with quick sharing\n\nPro features:\n- Premium lighting presets and custom ring light colors\n- HDR mode and higher photo quality options\n- True Mirror mode\n- Skin smoothing and advanced capture controls\n- Extended timer options\n\nBuilt with accessibility in mind:\n- VoiceOver-friendly controls and labels\n- Dynamic Type support for readable text\n\nSelfie Cam also supports iCloud settings sync, so your preferences stay consistent across devices.\n\nDownload Selfie Cam and get studio-style selfie lighting straight from your screen.\n\nTerms of Use: https://topdoglabs.com/terms"
-    },
-    "sync": {
-      "asc": {
-        "appId": "6758676824",
-        "bundleId": "com.mbrucedogs.SelfieCam",
-        "primaryLocale": "en-US",
-        "appStoreState": "READY_FOR_SALE",
-        "versionId": "529bd58c-cfc5-485c-a872-a7778284879f",
-        "syncedAt": "2026-03-31T13:05:20.465Z",
-        "screenshotDisplayType": "APP_IPHONE_67",
-        "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-02-10T19:28:07.086Z",
-        "draftVersionId": "529bd58c-cfc5-485c-a872-a7778284879f",
-        "publicVersionString": "1.3.2",
-        "draftVersionString": "1.3.2",
-        "isLive": true,
-        "liveVersionId": "529bd58c-cfc5-485c-a872-a7778284879f"
-      },
-      "fallback": {
-        "name": false,
-        "tagline": false,
-        "platform": false,
-        "category": false,
-        "price": false,
-        "rating": false,
-        "version": false,
-        "updatedAt": "2026-03-31T13:05:20.465Z"
-      }
     }
   },
   {
@@ -709,6 +713,45 @@
     "identity": {
       "name": "Business Card by TopDog",
       "tagline": "Digital Cards and QR Sharing"
+    },
+    "presentation": {
+      "icon": "/assets/businesscard/asc-icon.jpg",
+      "screenshots": [
+        "/assets/businesscard/asc-01.png",
+        "/assets/businesscard/asc-02.png",
+        "/assets/businesscard/asc-03.png",
+        "/assets/businesscard/asc-04.png"
+      ]
+    },
+    "sync": {
+      "asc": {
+        "appId": "6759007469",
+        "bundleId": "com.mbrucedogs.BusinessCard",
+        "primaryLocale": "en-US",
+        "appStoreState": "READY_FOR_SALE",
+        "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
+        "syncedAt": "2026-04-02T20:49:44.970Z",
+        "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
+        "publicVersionString": "1.1.2",
+        "draftVersionString": "1.1.2",
+        "isLive": true,
+        "iconSyncedAt": "2026-04-08T14:43:35.413Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/95/30/2295300a-8a86-b7c8-cc51-d7b2580b8975/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
+        "screenshotDisplayType": "APP_IPHONE_67",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-08T14:43:36.550Z",
+        "liveVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "version": false,
+        "rating": false,
+        "price": false,
+        "updatedAt": "2026-04-02T20:49:44.971Z"
+      }
     },
     "store": {
       "category": "Business",
@@ -725,15 +768,6 @@
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
       "isLive": true
-    },
-    "presentation": {
-      "icon": "/assets/businesscard/asc-icon.jpg",
-      "screenshots": [
-        "/assets/businesscard/asc-01.png",
-        "/assets/businesscard/asc-02.png",
-        "/assets/businesscard/asc-03.png",
-        "/assets/businesscard/asc-04.png"
-      ]
     },
     "content": {
       "summary": "BusinessCard helps you create modern digital business cards and share them in seconds.",
@@ -817,25 +851,44 @@
       "promotionalText": "Create polished digital business cards, share instantly with QR codes, and track follow-up with contacts, notes, and Apple Watch access.",
       "keywords": "business card,qr code,networking,contact manager,contacts,vcard,apple watch,follow up",
       "description": "BusinessCard helps you create modern digital business cards and share them in seconds.\n\nBuild a card that fits your personal brand:\n- Add profile, cover, and company logo images\n- Choose from multiple header layouts\n- Customize themes and card details\n- Add unlimited contact fields, social profiles, and links\n\nShare your card anywhere:\n- Show a QR code for instant scanning\n- Share by text, email, WhatsApp, LinkedIn, and more\n- Choose a default card to share quickly\n- Enable offline sharing when needed\n\nStay on top of your network:\n- Track who received your card and when\n- Save contacts manually or by scanning QR codes\n- Add notes, tags, reminder dates, and where you met\n- Search contacts fast across names, companies, tags, and notes\n\nWorks across your Apple devices:\n- iCloud sync keeps cards and contacts up to date on iPhone and iPad\n- Apple Watch companion displays your default card QR code for quick sharing\n\nDesigned for professionals who want faster follow-up and better relationship tracking after every introduction."
+    }
+  },
+  {
+    "slug": "word-rush",
+    "comingSoon": false,
+    "identity": {
+      "name": "Word Rush by TopDog",
+      "tagline": "Daily Word Puzzle Sprint"
+    },
+    "presentation": {
+      "icon": "/assets/word-rush/asc-icon.jpg",
+      "screenshots": [
+        "/assets/word-rush/asc-01.png",
+        "/assets/word-rush/asc-02.png",
+        "/assets/word-rush/asc-03.png",
+        "/assets/word-rush/asc-04.png",
+        "/assets/word-rush/asc-05.png",
+        "/assets/word-rush/asc-06.png"
+      ]
     },
     "sync": {
       "asc": {
-        "appId": "6759007469",
-        "bundleId": "com.mbrucedogs.BusinessCard",
+        "appId": "6761315998",
+        "bundleId": "com.topdoglabs.WordRush",
         "primaryLocale": "en-US",
         "appStoreState": "READY_FOR_SALE",
-        "versionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "syncedAt": "2026-04-02T20:49:44.970Z",
-        "draftVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155",
-        "publicVersionString": "1.1.2",
-        "draftVersionString": "1.1.2",
+        "draftVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
+        "draftVersionString": "1.0",
         "isLive": true,
-        "iconSyncedAt": "2026-04-02T20:49:21.511Z",
-        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fb/fb/dc/fbfbdc96-9561-8efa-354b-c85b7f591f2c/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
-        "screenshotDisplayType": "APP_IPHONE_67",
+        "versionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
+        "publicVersionString": "1.0",
+        "syncedAt": "2026-04-02T20:49:45.970Z",
+        "iconSyncedAt": "2026-04-08T14:43:37.172Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/cd/d2/bbcdd207-e08d-cbfe-9a5b-c4ab4e5279c8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "screenshotDisplayType": "APP_IPHONE_65",
         "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-04-02T20:49:25.619Z",
-        "liveVersionId": "47f7582d-6b0b-42e3-a952-7a4eb5db5155"
+        "screenshotSyncedAt": "2026-04-08T14:43:38.235Z",
+        "liveVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f"
       },
       "fallback": {
         "name": false,
@@ -845,16 +898,8 @@
         "version": false,
         "rating": false,
         "price": false,
-        "updatedAt": "2026-04-02T20:49:44.971Z"
+        "updatedAt": "2026-04-02T20:49:45.970Z"
       }
-    }
-  },
-  {
-    "slug": "word-rush",
-    "comingSoon": false,
-    "identity": {
-      "name": "Word Rush by TopDog",
-      "tagline": "Daily Word Puzzle Sprint"
     },
     "store": {
       "category": "Games",
@@ -871,17 +916,6 @@
       "supportUrl": "https://topdoglabs.com/support",
       "privacyPolicyUrl": "https://topdoglabs.com/privacy",
       "isLive": true
-    },
-    "presentation": {
-      "icon": "/assets/word-rush/asc-icon.jpg",
-      "screenshots": [
-        "/assets/word-rush/asc-01.png",
-        "/assets/word-rush/asc-02.png",
-        "/assets/word-rush/asc-03.png",
-        "/assets/word-rush/asc-04.png",
-        "/assets/word-rush/asc-05.png",
-        "/assets/word-rush/asc-06.png"
-      ]
     },
     "content": {
       "summary": "Word Rush is a fast, replayable word game with Quick Play, a daily challenge, and a handcrafted campaign built for quick sessions and longer streaks.",
@@ -953,36 +987,6 @@
       "promotionalText": "Word Rush is a fast word puzzle with Quick Play, a daily challenge, a handcrafted campaign, and a premium upgrade for archive access, stats, and Boss Gauntlet.",
       "keywords": "word puzzle,anagram,daily puzzle,brain game,vocabulary,spelling,letters,offline,campaign",
       "description": "Word Rush is a fast, replayable word game built for quick sessions and longer streaks. Build words from a rotating letter bank, chase score, and clear every main target before the timer runs out.\n\nFREE TO PLAY\n• Quick Play with a clean starter preset and repeatable runs\n• A fresh Daily Challenge every day\n• Chapter 1 of the handcrafted campaign\n• Optional rewarded boosts and free-user ad-supported Quick Play\n\nPREMIUM UNLOCK\n• Full campaign access beyond Chapter 1\n• 14-Day Archive for replaying recent daily puzzles\n• Advanced stats, streak tracking, and chapter completion progress\n• Boss Gauntlet premium challenge mode\n• No rewarded prompts or Quick Play interstitials\n\nFEATURES\n• Timed word-building rounds with flexible difficulty tuning\n• Daily puzzles that stay deterministic for each date\n• Campaign progression with stars, bosses, and chapter maps\n• Coins, boosts, and tile skins to customize your run\n• iPhone and iPad support\n\nWhether you want a quick vocabulary sprint or a longer progression chase, Word Rush gives you a sharp daily word puzzle loop without unnecessary friction."
-    },
-    "sync": {
-      "asc": {
-        "appId": "6761315998",
-        "bundleId": "com.topdoglabs.WordRush",
-        "primaryLocale": "en-US",
-        "appStoreState": "READY_FOR_SALE",
-        "draftVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
-        "draftVersionString": "1.0",
-        "isLive": true,
-        "versionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f",
-        "publicVersionString": "1.0",
-        "syncedAt": "2026-04-02T20:49:45.970Z",
-        "iconSyncedAt": "2026-04-02T20:49:26.986Z",
-        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/cd/d2/bbcdd207-e08d-cbfe-9a5b-c4ab4e5279c8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "screenshotDisplayType": "APP_IPHONE_65",
-        "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-04-02T20:49:30.974Z",
-        "liveVersionId": "f3ab5f4d-9a85-4ca6-893c-e275e11ebe2f"
-      },
-      "fallback": {
-        "name": false,
-        "tagline": false,
-        "platform": false,
-        "category": false,
-        "version": false,
-        "rating": false,
-        "price": false,
-        "updatedAt": "2026-04-02T20:49:45.970Z"
-      }
     }
   },
   {
@@ -1016,7 +1020,7 @@
         "syncedAt": "2026-04-04T19:49:11.731Z",
         "screenshotDisplayType": "APP_IPHONE_65",
         "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-04-04T19:56:07.447Z"
+        "screenshotSyncedAt": "2026-04-08T14:43:39.912Z"
       },
       "fallback": {
         "name": false,
@@ -1081,6 +1085,200 @@
       "promotionalText": "Smash through 240 handcrafted boards, daily challenges, and endless runs while chaining power-ups, earning coins, and building your collection.",
       "keywords": "breakout,brick breaker,arcade,combo,daily challenge,endless,classic,bricks,paddle,power-up",
       "description": "BreakVibe is a modern brick breaker built for fast restarts, satisfying combos, and steady progression. Jump into classic boards, today's daily challenge, or an endless run that keeps the pressure climbing while you chase higher scores, bigger streaks, and more rewards.\n\nFEATURES\n- 240 handcrafted Classic levels with evolving board patterns and guaranteed power-up drops\n- Endless Rush with escalating speed, combo pressure, and score chasing that never settles\n- Daily Challenge boards with seeded layouts, special modifiers, and score rewards\n- Power-ups including multi-ball, laser, slow-mo, shield, rocket, and magnet effects\n- Coins, cosmetics, achievements, and a season track that keep every run feeding long-term progress\n- Game Center leaderboards for Classic, Daily, Endless, and Bonus Boards\n\nPLAY YOUR WAY\nBreakVibe keeps the controls simple while letting you tune haptics, audio, control style, and color-blind support. Spend coins on new balls, paddles, trails, and backgrounds, then load into the next run with a sharper look and a better plan.\n\nFREE TO START\nBreakVibe is free to download. Free players can use rewarded ads for specific run boosts, and a one-time premium unlock removes ads while opening Bonus Boards, premium season rewards, and extra cosmetics.\n\nWhether you want a quick arcade run or a longer score chase, BreakVibe keeps the board moving."
+    }
+  },
+  {
+    "slug": "2048-rush",
+    "comingSoon": true,
+    "identity": {
+      "name": "2048 Rush by TopDog",
+      "tagline": "Number Merge Puzzle Game"
+    },
+    "presentation": {
+      "icon": "/assets/2048-rush/AppIcon.png",
+      "screenshots": [
+        "/assets/2048-rush/asc-01.png",
+        "/assets/2048-rush/asc-02.png",
+        "/assets/2048-rush/asc-03.png",
+        "/assets/2048-rush/asc-04.png",
+        "/assets/2048-rush/asc-05.png"
+      ]
+    },
+    "sync": {
+      "asc": {
+        "appId": "6761767422",
+        "bundleId": "com.topdoglabs.game2048",
+        "primaryLocale": "en-US",
+        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "versionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
+        "draftVersionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": false,
+        "screenshotDisplayType": "APP_IPHONE_65",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-08T14:43:44.690Z"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false
+      }
+    },
+    "store": {
+      "category": "Games",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "Not yet rated",
+      "platform": "iOS",
+      "releaseDate": "April 7, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6761767422",
+      "website": "https://topdoglabs.com/apps/2048-rush",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "content": {
+      "summary": "2048 Rush is a modern number-merge puzzle with Classic, Rush, Big Board, and daily modes built for quick sessions and steady progression.",
+      "description": "2048 Rush is a modern take on the number-merge puzzle built for quick sessions and steady progression. Swipe to combine matching tiles, push past 2048, and switch between steady Classic runs, higher-pressure Rush sessions, bigger 5x5 boards, and a daily challenge that pays out coins once per day.\n\nFeatures:\n- Classic 4x4 play with familiar merge rules that stay easy to read and hard to put down\n- Rush mode with score-driven coin rewards and extra bonus claims after a strong run\n- Big Board 5x5 games that open more recovery space and longer planning lines\n- Daily challenge boards with a once-per-day coin payout\n- Unlockable board themes with app-wide styling, collection progress, and best-score tracking\n- Undo support, haptics, and a polished SwiftUI shell built for iPhone and iPad\n\nCollect And Improve:\nRush and daily rewards feed your coin balance, which you can spend on new themes in the collection. Track your best scores across modes, build daily streaks, and keep refining your runs one swipe at a time.",
+      "whatsNew": "Initial App Store listing for 2048 Rush 1.0 with Classic and Rush modes, Big Board play, daily challenges, unlockable themes, and best-score tracking.",
+      "highlights": [
+        "Classic 4x4 play with familiar merge rules",
+        "Rush mode with score-driven coin rewards",
+        "Big Board 5x5 games for longer planning lines",
+        "Daily challenge boards with a once-per-day coin payout",
+        "Unlockable board themes and collection progress",
+        "Undo support, haptics, and iPhone and iPad support"
+      ],
+      "features": [
+        {
+          "title": "Classic, Rush, And Big Board Modes",
+          "description": "Move between steady Classic runs, higher-pressure Rush sessions, and roomier 5x5 Big Board games while pushing past 2048 and chasing stronger scores."
+        },
+        {
+          "title": "Daily Rewards And Long-Term Progress",
+          "description": "Take on a fresh daily challenge for coin payouts, build streaks, and use Rush rewards to keep unlocking more of the game over time."
+        },
+        {
+          "title": "Themes, Scores, And Collection Tracking",
+          "description": "Spend coins on vivid board themes, track collection progress, and compare your best scores across the different modes."
+        },
+        {
+          "title": "Polished Puzzle Sessions",
+          "description": "Use undo support, responsive haptics, and a clean SwiftUI interface designed for quick sessions on both iPhone and iPad."
+        }
+      ],
+      "copy": null
+    },
+    "appStore": {
+      "promotionalText": "Merge tiles across Classic, Rush, Big Board, and daily runs while earning coins, chasing bigger scores, and collecting vivid board themes.",
+      "keywords": "2048,puzzle,merge,numbers,brain,daily,rush,tiles,classic,offline,score,themes",
+      "description": "2048 Rush is a modern take on the number-merge puzzle built for quick sessions and steady progression. Swipe to combine matching tiles, push past 2048, and switch between steady Classic runs, higher-pressure Rush sessions, bigger 5x5 boards, and a daily challenge that pays out coins once per day.\n\nFEATURES\n- Classic 4x4 play with familiar merge rules that stay easy to read and hard to put down\n- Rush mode with score-driven coin rewards and extra bonus claims after a strong run\n- Big Board 5x5 games that open more recovery space and longer planning lines\n- Daily challenge boards with a once-per-day coin payout\n- Unlockable board themes with app-wide styling, collection progress, and best-score tracking\n- Undo support, haptics, and a polished SwiftUI shell built for iPhone and iPad\n\nCOLLECT AND IMPROVE\nRush and daily rewards feed your coin balance, which you can spend on new themes in the collection. Track your best scores across modes, build daily streaks, and keep refining your runs one swipe at a time."
+    }
+  },
+  {
+    "slug": "pattern-lock",
+    "comingSoon": true,
+    "identity": {
+      "name": "Pattern Lock by TopDog",
+      "tagline": "Rotate rows. Match patterns."
+    },
+    "presentation": {
+      "icon": "/assets/pattern-lock/AppIcon.png",
+      "screenshots": [
+        "/assets/pattern-lock/asc-01.png",
+        "/assets/pattern-lock/asc-02.png",
+        "/assets/pattern-lock/asc-03.png",
+        "/assets/pattern-lock/asc-04.png",
+        "/assets/pattern-lock/asc-05.png",
+        "/assets/pattern-lock/asc-06.png",
+        "/assets/pattern-lock/asc-07.png"
+      ]
+    },
+    "sync": {
+      "asc": {
+        "appId": "6761767215",
+        "bundleId": "com.topdoglabs.patternlock",
+        "primaryLocale": "en-US",
+        "appStoreState": "PREPARE_FOR_SUBMISSION",
+        "versionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
+        "draftVersionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": false,
+        "screenshotDisplayType": "APP_IPHONE_65",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-08T14:43:52.135Z"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false
+      }
+    },
+    "store": {
+      "category": "Games",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "Not yet rated",
+      "platform": "iOS",
+      "releaseDate": "April 7, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/app/id6761767215",
+      "website": "https://topdoglabs.com/apps/pattern-lock",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": false
+    },
+    "content": {
+      "summary": "Pattern Lock is a meditative logic puzzle about transforming one glowing grid into another by rotating rows and shifting columns in as few moves as possible.",
+      "description": "Pattern Lock is a meditative logic puzzle game about transforming one glowing grid into another.\n\nRotate rows. Shift columns. Study the target pattern. Then solve each board in as few moves as possible.\n\nWhy Players Come Back:\n- Daily puzzle with a fresh shared challenge\n- Journey mode with star goals and unlockable progression\n- Challenge and archive content for deeper runs\n- Hint system for when a board nearly clicks\n- Clean, tactile presentation built for quick sessions or longer streaks\n\nHow It Plays:\n- Every move rotates a row or shifts a column\n- Your goal is to match the target board exactly\n- Fewer moves means better stars\n- Replays let you improve your score and chase cleaner solutions\n\nProgression:\n- Start with free Journey content and the Daily puzzle\n- Unlock premium worlds, challenge boards, archive play, premium themes, and ad-free play with the one-time premium unlock\n\nPattern Lock is designed for players who enjoy spatial reasoning, satisfying puzzle flow, and compact aha moments.",
+      "whatsNew": "Initial App Store listing for Pattern Lock 1.0 with a daily puzzle, Journey progression, challenge boards, hints, and a one-time premium unlock.",
+      "highlights": [
+        "Daily puzzle with a fresh shared challenge",
+        "Journey mode with star goals and unlockable progression",
+        "Challenge and archive content for deeper runs",
+        "Hint system for nearly solved boards",
+        "Row rotation and column shifting puzzle mechanics",
+        "Clean, tactile presentation for quick sessions or longer streaks"
+      ],
+      "features": [
+        {
+          "title": "Daily Puzzles And Journey Progression",
+          "description": "Return for a fresh daily puzzle, work through Journey boards with star goals, and unlock more handcrafted content as you improve."
+        },
+        {
+          "title": "Row And Column Logic",
+          "description": "Transform the starting grid into the target pattern by rotating rows, shifting columns, and finding the cleanest sequence of moves."
+        },
+        {
+          "title": "Replay, Hints, And Better Scores",
+          "description": "Use hints when a board nearly clicks, replay levels to find shorter solutions, and chase stronger star ratings with fewer moves."
+        },
+        {
+          "title": "Premium Worlds And Themes",
+          "description": "Start with free Journey content and the Daily puzzle, then unlock premium worlds, challenge boards, archive play, premium themes, and ad-free play with a one-time upgrade."
+        }
+      ],
+      "copy": null
+    },
+    "appStore": {
+      "promotionalText": "Match glowing grids, solve a fresh Daily puzzle, and unlock a handcrafted journey of row-and-column brainteasers.",
+      "keywords": "puzzle,logic,grid,pattern,brain,brain teaser,daily puzzle,match,rotate,columns",
+      "description": "Pattern Lock is a meditative logic puzzle game about transforming one glowing grid into another.\n\nRotate rows. Shift columns. Study the target pattern. Then solve each board in as few moves as possible.\n\nWhy players come back:\n- Daily puzzle with a fresh shared challenge\n- Journey mode with star goals and unlockable progression\n- Challenge and archive content for deeper runs\n- Hint system for when a board nearly clicks\n- Clean, tactile presentation built for quick sessions or longer streaks\n\nHow it plays:\n- Every move rotates a row or shifts a column\n- Your goal is to match the target board exactly\n- Fewer moves means better stars\n- Replays let you improve your score and chase cleaner solutions\n\nProgression:\n- Start with free Journey content and the Daily puzzle\n- Unlock premium worlds, challenge boards, archive play, premium themes, and ad-free play with the one-time premium unlock\n\nPattern Lock is designed for players who enjoy spatial reasoning, satisfying puzzle flow, and compact aha moments."
     }
   }
 ]
