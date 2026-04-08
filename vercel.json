@@ -1,6 +1,19 @@
 {
   "headers": [
     {
+      "source": "/app-ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
       "source": "/.well-known/apple-app-site-association",
       "headers": [
         {
@@ -28,6 +41,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/app-ads.txt",
+      "destination": "/app-ads.txt"
+    },
     {
       "source": "/.well-known/apple-app-site-association",
       "destination": "/.well-known/apple-app-site-association"
