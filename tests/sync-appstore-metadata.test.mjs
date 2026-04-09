@@ -107,3 +107,48 @@ test("slug-filtered metadata sync preserves untouched apps", async () => {
     await fs.rm(tempDir, { recursive: true, force: true });
   }
 });
+
+test("live app metadata sync uses the public App Store release date", async () => {
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "topdog-asc-live-date-"));
+  const tempAppsPath = path.join(tempDir, "apps.json");
+
+  try {
+    const sourceApps = JSON.parse(await fs.readFile(sourceAppsPath, "utf8"));
+    const patternLock = sourceApps.find((app) => app.slug === "pattern-lock");
+
+    await fs.writeFile(tempAppsPath, `${JSON.stringify([patternLock], null, 2)}\n`, "utf8");
+
+    await execFileAsync(
+      "node",
+      [
+        "scripts/sync-appstore-metadata.mjs",
+        "--apps-file",
+        tempAppsPath,
+        "--slug",
+        "pattern-lock",
+      ],
+      {
+        cwd: repoRoot,
+        maxBuffer: 20 * 1024 * 1024,
+      }
+    );
+
+    const lookupResponse = await fetch("https://itunes.apple.com/lookup?id=6761767215&country=us");
+    const lookupPayload = await lookupResponse.json();
+    const lookupApp = lookupPayload.results?.[0];
+    const expectedReleaseDate = new Date(
+      lookupApp.currentVersionReleaseDate || lookupApp.releaseDate
+    ).toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+
+    const syncedApps = JSON.parse(await fs.readFile(tempAppsPath, "utf8"));
+    const syncedPatternLock = syncedApps.find((app) => app.slug === "pattern-lock");
+
+    assert.equal(syncedPatternLock.store.releaseDate, expectedReleaseDate);
+  } finally {
+    await fs.rm(tempDir, { recursive: true, force: true });
+  }
+});

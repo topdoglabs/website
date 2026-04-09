@@ -1186,13 +1186,29 @@
   },
   {
     "slug": "pattern-lock",
-    "comingSoon": true,
+    "comingSoon": false,
     "identity": {
       "name": "Pattern Lock by TopDog",
       "tagline": "Rotate rows. Match patterns."
     },
+    "store": {
+      "category": "Games",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "0.0",
+      "platform": "iOS",
+      "releaseDate": "April 9, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/us/app/pattern-lock-by-topdog/id6761767215?uo=4",
+      "website": "https://topdoglabs.com/apps/pattern-lock",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": true
+    },
     "presentation": {
-      "icon": "/assets/pattern-lock/AppIcon.png",
+      "icon": "/assets/pattern-lock/asc-icon.jpg",
       "screenshots": [
         "/assets/pattern-lock/asc-01.png",
         "/assets/pattern-lock/asc-02.png",
@@ -1202,47 +1218,6 @@
         "/assets/pattern-lock/asc-06.png",
         "/assets/pattern-lock/asc-07.png"
       ]
-    },
-    "sync": {
-      "asc": {
-        "appId": "6761767215",
-        "bundleId": "com.topdoglabs.patternlock",
-        "primaryLocale": "en-US",
-        "appStoreState": "PREPARE_FOR_SUBMISSION",
-        "versionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
-        "draftVersionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
-        "publicVersionString": "1.0",
-        "draftVersionString": "1.0",
-        "isLive": false,
-        "screenshotDisplayType": "APP_IPHONE_65",
-        "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-04-08T14:43:52.135Z"
-      },
-      "fallback": {
-        "name": false,
-        "tagline": false,
-        "platform": false,
-        "category": false,
-        "price": false,
-        "rating": false,
-        "version": false
-      }
-    },
-    "store": {
-      "category": "Games",
-      "version": "1.0",
-      "price": "Free",
-      "rating": "Not yet rated",
-      "platform": "iOS",
-      "releaseDate": "April 7, 2026"
-    },
-    "distribution": {
-      "appStoreUrl": "https://apps.apple.com/app/id6761767215",
-      "website": "https://topdoglabs.com/apps/pattern-lock",
-      "supportEmail": "info@topdoglabs.com",
-      "supportUrl": "https://topdoglabs.com/support",
-      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
-      "isLive": false
     },
     "content": {
       "summary": "Pattern Lock is a meditative logic puzzle about transforming one glowing grid into another by rotating rows and shifting columns in as few moves as possible.",
@@ -1280,6 +1255,36 @@
       "promotionalText": "Match glowing grids, solve a fresh Daily puzzle, and unlock a handcrafted journey of row-and-column brainteasers.",
       "keywords": "puzzle,logic,grid,pattern,brain,brain teaser,daily puzzle,match,rotate,columns",
       "description": "Pattern Lock is a meditative logic puzzle game about transforming one glowing grid into another.\n\nRotate rows. Shift columns. Study the target pattern. Then solve each board in as few moves as possible.\n\nWhy players come back:\n- Daily puzzle with a fresh shared challenge\n- Journey mode with star goals and unlockable progression\n- Challenge and archive content for deeper runs\n- Hint system for when a board nearly clicks\n- Clean, tactile presentation built for quick sessions or longer streaks\n\nHow it plays:\n- Every move rotates a row or shifts a column\n- Your goal is to match the target board exactly\n- Fewer moves means better stars\n- Replays let you improve your score and chase cleaner solutions\n\nProgression:\n- Start with free Journey content and the Daily puzzle\n- Unlock premium worlds, challenge boards, archive play, premium themes, and ad-free play with the one-time premium unlock\n\nPattern Lock is designed for players who enjoy spatial reasoning, satisfying puzzle flow, and compact aha moments."
+    },
+    "sync": {
+      "asc": {
+        "appId": "6761767215",
+        "bundleId": "com.topdoglabs.patternlock",
+        "primaryLocale": "en-US",
+        "appStoreState": "READY_FOR_SALE",
+        "versionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
+        "draftVersionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": true,
+        "screenshotDisplayType": "APP_IPHONE_65",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-09T13:18:14.631Z",
+        "liveVersionId": "3c94bb5b-970d-48b0-8e7f-7939ca8e08d7",
+        "syncedAt": "2026-04-09T13:19:38.856Z",
+        "iconSyncedAt": "2026-04-09T13:18:13.996Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/73/95/f8739577-81a2-4af6-5009-39e0dadc32af/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-04-09T13:19:38.856Z"
+      }
     }
   }
 ]

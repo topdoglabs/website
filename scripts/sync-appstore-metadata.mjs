@@ -362,7 +362,7 @@ function buildUpdatedApp({
     },
   };
 
-  const dateSource = valueOr(publicVersion?.attributes?.createdDate, lookupReleaseDate);
+  const dateSource = valueOr(lookupReleaseDate, publicVersion?.attributes?.createdDate);
   if (dateSource) {
     next.store.releaseDate = new Date(dateSource).toLocaleDateString("en-US", {
       month: "long",
