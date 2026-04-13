@@ -1,6 +1,19 @@
 {
   "headers": [
     {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
       "source": "/app-ads.txt",
       "headers": [
         {
@@ -41,6 +54,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
     {
       "source": "/app-ads.txt",
       "destination": "/app-ads.txt"

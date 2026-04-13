@@ -1090,13 +1090,29 @@
   },
   {
     "slug": "2048-rush",
-    "comingSoon": true,
+    "comingSoon": false,
     "identity": {
       "name": "2048 Rush by TopDog",
       "tagline": "Number Merge Puzzle Game"
     },
+    "store": {
+      "category": "Games",
+      "version": "1.0",
+      "price": "Free",
+      "rating": "0.0",
+      "platform": "iOS",
+      "releaseDate": "April 13, 2026"
+    },
+    "distribution": {
+      "appStoreUrl": "https://apps.apple.com/us/app/2048-rush-by-topdog/id6761767422?uo=4",
+      "website": "https://topdoglabs.com/apps/2048-rush",
+      "supportEmail": "info@topdoglabs.com",
+      "supportUrl": "https://topdoglabs.com/support",
+      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
+      "isLive": true
+    },
     "presentation": {
-      "icon": "/assets/2048-rush/AppIcon.png",
+      "icon": "/assets/2048-rush/asc-icon.jpg",
       "screenshots": [
         "/assets/2048-rush/asc-01.png",
         "/assets/2048-rush/asc-02.png",
@@ -1104,47 +1120,6 @@
         "/assets/2048-rush/asc-04.png",
         "/assets/2048-rush/asc-05.png"
       ]
-    },
-    "sync": {
-      "asc": {
-        "appId": "6761767422",
-        "bundleId": "com.topdoglabs.game2048",
-        "primaryLocale": "en-US",
-        "appStoreState": "PREPARE_FOR_SUBMISSION",
-        "versionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
-        "draftVersionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
-        "publicVersionString": "1.0",
-        "draftVersionString": "1.0",
-        "isLive": false,
-        "screenshotDisplayType": "APP_IPHONE_65",
-        "screenshotLocale": "en-US",
-        "screenshotSyncedAt": "2026-04-08T14:43:44.690Z"
-      },
-      "fallback": {
-        "name": false,
-        "tagline": false,
-        "platform": false,
-        "category": false,
-        "price": false,
-        "rating": false,
-        "version": false
-      }
-    },
-    "store": {
-      "category": "Games",
-      "version": "1.0",
-      "price": "Free",
-      "rating": "Not yet rated",
-      "platform": "iOS",
-      "releaseDate": "April 7, 2026"
-    },
-    "distribution": {
-      "appStoreUrl": "https://apps.apple.com/app/id6761767422",
-      "website": "https://topdoglabs.com/apps/2048-rush",
-      "supportEmail": "info@topdoglabs.com",
-      "supportUrl": "https://topdoglabs.com/support",
-      "privacyPolicyUrl": "https://topdoglabs.com/privacy",
-      "isLive": false
     },
     "content": {
       "summary": "2048 Rush is a modern number-merge puzzle with Classic, Rush, Big Board, and daily modes built for quick sessions and steady progression.",
@@ -1182,6 +1157,36 @@
       "promotionalText": "Merge tiles across Classic, Rush, Big Board, and daily runs while earning coins, chasing bigger scores, and collecting vivid board themes.",
       "keywords": "2048,puzzle,merge,numbers,brain,daily,rush,tiles,classic,offline,score,themes",
       "description": "2048 Rush is a modern take on the number-merge puzzle built for quick sessions and steady progression. Swipe to combine matching tiles, push past 2048, and switch between steady Classic runs, higher-pressure Rush sessions, bigger 5x5 boards, and a daily challenge that pays out coins once per day.\n\nFEATURES\n- Classic 4x4 play with familiar merge rules that stay easy to read and hard to put down\n- Rush mode with score-driven coin rewards and extra bonus claims after a strong run\n- Big Board 5x5 games that open more recovery space and longer planning lines\n- Daily challenge boards with a once-per-day coin payout\n- Unlockable board themes with app-wide styling, collection progress, and best-score tracking\n- Undo support, haptics, and a polished SwiftUI shell built for iPhone and iPad\n\nCOLLECT AND IMPROVE\nRush and daily rewards feed your coin balance, which you can spend on new themes in the collection. Track your best scores across modes, build daily streaks, and keep refining your runs one swipe at a time."
+    },
+    "sync": {
+      "asc": {
+        "appId": "6761767422",
+        "bundleId": "com.topdoglabs.game2048",
+        "primaryLocale": "en-US",
+        "appStoreState": "READY_FOR_SALE",
+        "versionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
+        "draftVersionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
+        "publicVersionString": "1.0",
+        "draftVersionString": "1.0",
+        "isLive": true,
+        "screenshotDisplayType": "APP_IPHONE_65",
+        "screenshotLocale": "en-US",
+        "screenshotSyncedAt": "2026-04-13T14:03:19.394Z",
+        "iconSyncedAt": "2026-04-13T14:03:18.599Z",
+        "iconSourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1a/e5/54/1ae55414-afda-8c96-72b5-c946445bb144/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "liveVersionId": "b18f80f6-2783-423a-8dce-50abd47a2c04",
+        "syncedAt": "2026-04-13T14:04:10.538Z"
+      },
+      "fallback": {
+        "name": false,
+        "tagline": false,
+        "platform": false,
+        "category": false,
+        "price": false,
+        "rating": false,
+        "version": false,
+        "updatedAt": "2026-04-13T14:04:10.539Z"
+      }
     }
   },
   {
