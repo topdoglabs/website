@@ -1,0 +1,39 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import handler from '../api/send-email.js';
+
+test('support requests validate input, keep email text literal, and limit repeated sends', async (t) => {
+  const previousKey = process.env.RESEND_API_KEY;
+  process.env.RESEND_API_KEY = 'local-test-key';
+  const sent = [];
+  t.mock.method(globalThis, 'fetch', async (_url, options) => {
+    sent.push(JSON.parse(options.body));
+    return { ok: true, status: 200, json: async () => ({ id: 'test' }) };
+  });
+  t.after(() => {
+    if (previousKey === undefined) delete process.env.RESEND_API_KEY;
+    else process.env.RESEND_API_KEY = previousKey;
+  });
+  const submit = async (body, ip = '192.0.2.1', extra = {}) => {
+    const response = { statusCode: 200, headers: {}, setHeader(k, v) { this.headers[k] = v; }, status(s) { this.statusCode = s; return this; }, json(data) { this.data = data; return this; } };
+    await handler({ method: 'POST', headers: { 'content-type': 'application/json' }, socket: { remoteAddress: ip }, body, ...extra }, response);
+    return response;
+  };
+  const valid = { name: 'Test User', email: 'test@example.com', message: 'A support question', subject: 'General Support' };
+  for (const body of [undefined, null, [], {}, { ...valid, message: 123 }, { ...valid, name: '   ' }, { ...valid, email: 'invalid' }, { ...valid, message: 'x'.repeat(10001) }]) {
+    const response = await submit(body);
+    assert.equal(response.statusCode, 400, `invalid payload: ${JSON.stringify(body)?.slice(0,100)}`);
+  }
+  assert.equal(sent.length, 0);
+  const injected = { ...valid, name: '<b>Test</b>', message: '<a href="https://example.com">hello</a>\nSecond line' };
+  assert.equal((await submit(injected)).statusCode, 200);
+  assert.ok(!sent[0].html || !sent[0].html.includes('<b>Test</b>'));
+  assert.ok(sent[0].text.includes(injected.message));
+  assert.equal((await submit({ ...valid, website: 'bot.example' })).statusCode, 200);
+  assert.equal(sent.length, 1, 'honeypot submissions must not send mail');
+  assert.equal((await submit(valid, '192.0.2.2', { headers: { origin: 'https://unrelated.example', 'content-type': 'application/json' } })).statusCode, 403);
+  for (let index = 0; index < 5; index++) assert.equal((await submit(valid, '192.0.2.3')).statusCode, 200);
+  const limited = await submit(valid, '192.0.2.3');
+  assert.equal(limited.statusCode, 429);
+  assert.ok(Number(limited.headers['Retry-After']) > 0);
+});

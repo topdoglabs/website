@@ -100,7 +100,7 @@ export const HomePage = () => {
                 </div>
                 <div className="app-meta">
                   <div>
-                    <h4>{getAppName(featured)}</h4>
+                    <h3>{getAppName(featured)}</h3>
                     <span>{getAppSubline(featured)}</span>
                   </div>
                   <p>{getAppBody(featured)}</p>
@@ -122,7 +122,7 @@ export const HomePage = () => {
                 </div>
                 <div className="app-meta">
                   <div>
-                    <h4>{getAppName(featured)}</h4>
+                    <h3>{getAppName(featured)}</h3>
                     <span>{getAppSubline(featured)}</span>
                   </div>
                   <p>{getAppBody(featured)}</p>

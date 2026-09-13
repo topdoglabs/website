@@ -1,44 +1,8 @@
-import { useEffect, useState } from "react";
+import { mergeSiteContent } from "../lib/site-content.js";
+import fallback from "../../public/site.json";
+import { createJsonResource } from "./use-json-resource.js";
 
-const emptyContent = { footerColumns: [], pages: {} };
+const useContentData = createJsonResource("/site.json", fallback, (data) => mergeSiteContent(fallback, data),
+  (data) => Boolean(data?.home?.heroTitle && data?.ui && data?.pages && Array.isArray(data?.navigation?.headerLinks) && Array.isArray(data?.footerColumns)));
 
-export const useSiteContent = () => {
-  const [content, setContent] = useState(emptyContent);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadContent = async () => {
-      try {
-        const response = await fetch("/site.json");
-        if (!response.ok) {
-          throw new Error("Failed to load site content");
-        }
-        const data = await response.json();
-        if (isMounted) {
-          setContent(data || emptyContent);
-          setError(null);
-        }
-      } catch (err) {
-        if (isMounted) {
-          setError(err);
-          setContent(emptyContent);
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    loadContent();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  return { content, isLoading, error };
-};
+export const useSiteContent = () => ({ content: useContentData(), isLoading: false, error: null });

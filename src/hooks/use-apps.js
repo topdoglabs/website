@@ -1,45 +1,8 @@
-import { useEffect, useState } from "react";
+import fallback from "../../public/apps.json";
 import { normalizeApps } from "../lib/app-model.js";
+import { createJsonResource } from "./use-json-resource.js";
 
-const emptyApps = [];
+const useAppData = createJsonResource("/apps.json", fallback, normalizeApps,
+  (data) => Array.isArray(data) && data.length > 0 && data.every((app) => app?.slug && app?.identity?.name));
 
-export const useApps = () => {
-  const [apps, setApps] = useState(emptyApps);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadApps = async () => {
-      try {
-        const response = await fetch("/apps.json");
-        if (!response.ok) {
-          throw new Error("Failed to load apps");
-        }
-        const data = await response.json();
-        if (isMounted) {
-          setApps(normalizeApps(data));
-          setError(null);
-        }
-      } catch (err) {
-        if (isMounted) {
-          setError(err);
-          setApps(emptyApps);
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    loadApps();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  return { apps, isLoading, error };
-};
+export const useApps = () => ({ apps: useAppData(), isLoading: false, error: null });

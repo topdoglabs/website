@@ -13,7 +13,7 @@ export const SiteHeader = () => {
         <img src="/assets/logos/logo-2.svg" alt="TopDog Labs Logo" className="logo-img" />
         TopDog Labs
       </Link>
-      <nav className="nav">
+      <nav className="nav" aria-label="Main navigation">
         {links.map((link) => (
           <NavLink key={link.label} className={navClass} to={link.href}>
             {link.label}

@@ -17,7 +17,7 @@ TopDog Labs is dedicated to building premium iOS experiences that feel calm, rel
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- [Node.js](https://nodejs.org/) (v22.12 or later)
 - `npm` or `yarn`
 
 ### Installation
@@ -54,7 +54,7 @@ This site also hosts the App Clip association and fallback route for BusinessCar
   - `/appclip/businesscard` (primary namespaced path)
   - `/appclip` (legacy compatibility)
   - `/api/*`
-  - SPA fallback to `/index.html`
+  - Generated route HTML and a genuine `404.html` fallback for unknown paths
 
 ## 🏗 Architecture & Content Management
 
@@ -67,7 +67,7 @@ This website is designed to be **data-driven**. Most of the copy and content is 
   - **Copy**: All headlines, body text, and CTA labels for the Home, About, FAQ, and Privacy pages.
   - **Footer**: Branding note and copyright text.
 - **`public/apps.json`**: The database for TopDog apps.
-  - Add a new object here to automatically generate a new app detail page.
+  - Add a new object here and rebuild to generate a new app detail page.
   - Uses a nested schema:
     - `identity` (`name`, `tagline`)
     - `store` (`category`, `version`, `price`, `rating`, `platform`, `releaseDate`)
@@ -137,3 +137,22 @@ If you need to make changes 6 months from now, here is your quick-start guide:
 ---
 
 © 2026 TopDog Labs. All rights reserved.
+
+
+## Build, preview, and regression checks
+
+Use Node.js 22.12 or newer. Run `npm ci`, `npm run build`, and `npm test` before publishing.
+
+The build validates catalog assets, generates 480px and 960px WebP screenshots, builds the React client, and prerenders each known route with content and unique search/social metadata. It also generates the static support dropdown from `apps.json` and `site.json`, plus `sitemap.xml`. Generated screenshots are ignored by Git and recreated by `npm run dev` and `npm run build`. Keep the original PNGs for subsequent App Store syncs.
+
+Content hooks share one refresh request per JSON resource and retain a bundled build snapshot when a refresh fails. Changes to catalog routes, privacy copy, or site metadata require a rebuild so the generated HTML and browser fallback stay consistent. Run a build before the build-output regression tests.
+
+`npm run preview` serves the generated site at `http://127.0.0.1:4173`, applies explicit static rewrites, and returns real 404 responses for missing paths. It intentionally does not send email. Vercel is configured as a static output with explicit API/App Clip/support handling; there is no blanket SPA rewrite. Verify the same route status codes in a Vercel preview before promoting a deployment.
+
+## Support form protections
+
+Both forms submit to `/api/send-email`. The handler validates types, required fields, email format, and field lengths; sends plain text; rejects unrelated browser origins; checks a hidden honeypot; limits each client to five attempts per ten minutes per warm function instance; and returns controlled provider errors. Request names, email addresses, and messages are no longer written to application logs.
+
+`RESEND_API_KEY` remains required. `SUPPORT_FROM_EMAIL` can optionally select an already-verified Resend sender. The existing `onboarding@resend.dev` sender and fixed recipient are preserved until a verified sender is configured.
+
+**Production-wide rate limiting needs a Vercel firewall rule.** In the project's Firewall settings, add a rate-limit rule matching `POST` requests to `/api/send-email`, keyed by client IP, with a limit of five requests per ten minutes and a temporary deny/rate-limit response. Check for an existing rule first. The in-process limit is defense in depth and resets on cold starts; it is not shared across instances or regions. This repository change does not create or verify the dashboard rule. See [Vercel's rate-limit documentation](https://vercel.com/kb/guide/add-rate-limiting-vercel).

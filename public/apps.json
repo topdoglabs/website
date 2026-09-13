@@ -449,11 +449,7 @@
     },
     "presentation": {
       "icon": "/assets/baccarat/AppIcon.png",
-      "screenshots": [
-        "/assets/baccarat/screen-1.png",
-        "/assets/baccarat/screen-2.png",
-        "/assets/baccarat/screen-3.png"
-      ]
+      "screenshots": []
     },
     "content": {
       "summary": "Play Baccarat (Punto Banco) with authentic casino rules, polished SwiftUI visuals, and no real-money risk.",

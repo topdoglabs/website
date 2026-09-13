@@ -93,6 +93,25 @@ async function main() {
       }
     }
 
+    const assetPaths = [app.presentation?.icon, ...(Array.isArray(app.presentation?.screenshots) ? app.presentation.screenshots : [])];
+    for (const asset of assetPaths) {
+      if (typeof asset !== "string" || !asset.startsWith("/assets/")) {
+        errors.push(`${label}: assets must use local /assets/ paths`);
+        continue;
+      }
+      const assetRoot = path.dirname(appsFile);
+      const resolvedAsset = path.resolve(assetRoot, `.${asset}`);
+      if (!resolvedAsset.startsWith(`${assetRoot}${path.sep}`)) {
+        errors.push(`${label}: invalid asset path ${asset}`);
+        continue;
+      }
+      try {
+        if (!(await fs.stat(resolvedAsset)).isFile()) throw new Error("Not a file");
+      } catch {
+        errors.push(`${label}: missing asset ${asset}`);
+      }
+    }
+
     if (isObject(app.content)) {
       requiredString(app.content.summary, `${label}: content.summary`, errors);
       requiredString(app.content.description, `${label}: content.description`, errors);

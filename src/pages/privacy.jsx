@@ -1,42 +1,11 @@
-import { useEffect, useState } from "react";
+import policyHtml from "../../public/privacy-embed.html?raw";
 import { Link } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useSiteContent } from "../hooks/use-site-content.js";
 
 export const PrivacyPage = () => {
-  const [policyHtml, setPolicyHtml] = useState("");
-  const [hasError, setHasError] = useState(false);
   const { content } = useSiteContent();
   const privacy = content.privacy || {};
-  const ui = content.ui || {};
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadPolicy = async () => {
-      try {
-        const response = await fetch("/privacy-embed.html");
-        if (!response.ok) {
-          throw new Error("Failed to load privacy policy");
-        }
-        const html = await response.text();
-        if (isMounted) {
-          setPolicyHtml(html);
-          setHasError(false);
-        }
-      } catch (error) {
-        if (isMounted) {
-          setHasError(true);
-        }
-      }
-    };
-
-    loadPolicy();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   return (
     <Layout>
@@ -57,19 +26,7 @@ export const PrivacyPage = () => {
 
       <section className="privacy-content">
         <div className="privacy-shell">
-          {hasError ? (
-            <div>
-              {privacy.sectionTitle ? <h2>{privacy.sectionTitle}</h2> : null}
-              <p>{ui.errorPolicy}</p>
-            </div>
-          ) : policyHtml ? (
-            <div
-              className="privacy-embed"
-              dangerouslySetInnerHTML={{ __html: policyHtml }}
-            />
-          ) : (
-            <p>{ui.loadingPolicy}</p>
-          )}
+          <div className="privacy-embed" role="region" aria-label="Privacy policy" tabIndex={0} dangerouslySetInnerHTML={{ __html: policyHtml }} />
         </div>
       </section>
     </Layout>

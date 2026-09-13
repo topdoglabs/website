@@ -5,19 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "build": "npm run validate:apps && node scripts/optimize-images.mjs && vite build && node scripts/prerender.mjs",
+    "preview": "node scripts/preview.mjs",
     "sync:appstore": "node scripts/sync-appstore-metadata.mjs",
     "sync:screenshots": "node scripts/sync-appstore-screenshots.mjs",
-    "validate:apps": "node scripts/validate-apps-schema.mjs"
+    "validate:apps": "node scripts/validate-apps-schema.mjs",
+    "predev": "node scripts/optimize-images.mjs",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.8"
+    "@vitejs/plugin-react": "^6.1.1",
+    "sharp": "^0.35.4",
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
