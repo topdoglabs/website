@@ -49,6 +49,14 @@ body { line-height: 1.6; }
   overflow: visible;
   gap: 40px;
 }
+/* The skip-link target can receive focus on a content tap in WebKit.
+   Keep the landmark focusable without framing the entire page. */
+#main-content:focus { outline: none; }
+#main-content:focus-visible h1 {
+  outline: 3px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
 .hero-bg { background: none; }
 .hero-bg::after { display: none; }
 .hero-sub { line-height: 1.7; }
