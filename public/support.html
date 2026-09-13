@@ -380,15 +380,16 @@
       .form-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
       @media(max-width:720px) { .logo { font-size: clamp(30px,12vw,55px); } .logo-img { height: clamp(64px,22vw,100px); } }
     </style>
+    <link rel="stylesheet" href="/src/brand.css" />
   <link rel="icon" type="image/png" href="/favicon-96x96.png" />
   </head>
   <body>
     <div class="page">
       <a class="skip-link" href="#main-content">Skip to main content</a>
       <header class="header">
-        <a class="logo" href="/">
-          <img src="/assets/logos/logo-2.svg" alt="TopDog Labs Logo" class="logo-img" />
-          TopDog Labs
+        <a class="logo" href="/" aria-label="TopDog Labs home">
+          <img src="/assets/logos/schnauzer-160.webp" alt="" width="80" height="80" class="logo-img" />
+          <span class="brand-name">TopDog <span class="brand-accent">Labs</span></span>
         </a>
         <nav class="nav" aria-label="Main navigation">
           <a href="/apps">Apps</a>
