@@ -10,7 +10,7 @@
     />
     <style>
       :root {
-        color-scheme: light;
+        color-scheme: dark;
         --font-sans: "Sora", "Segoe UI", sans-serif;
         --font-serif: var(--font-sans);
         --bg: #0b0d12;
@@ -162,7 +162,7 @@
 
       .support-merge {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
         gap: 28px;
         align-items: start;
         background: var(--surface);
@@ -246,7 +246,7 @@
 
       .page-sections {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
         gap: 24px;
         border-top: 1px solid var(--line);
         padding-top: 32px;
@@ -302,7 +302,7 @@
         font-size: 13px;
       }
 
-      .footer-grid h4 {
+      .footer-grid h2 {
         margin: 0 0 8px;
         color: var(--ink);
         font-size: 13px;
@@ -371,10 +371,20 @@
           padding: 20px;
         }
       }
+
+      .support-copy, .form, .form label, .page-section { min-width: 0; overflow-wrap: anywhere; }
+      .form input, .form textarea, .form select { width: 100%; min-width: 0; font-size: 16px; }
+      :where(a,button,input,select,textarea):focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+      .skip-link { position: fixed; top: 12px; left: 12px; z-index: 200; padding: 12px; background: var(--accent); color: var(--bg); transform: translateY(-160%); }
+      .skip-link:focus { transform: translateY(0); }
+      .form-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+      @media(max-width:720px) { .logo { font-size: clamp(30px,12vw,55px); } .logo-img { height: clamp(64px,22vw,100px); } }
     </style>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" />
   </head>
   <body>
     <div class="page">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
       <header class="header">
         <a class="logo" href="/">
           <img src="/assets/logos/logo-2.svg" alt="TopDog Labs Logo" class="logo-img" />
@@ -387,7 +397,7 @@
         </nav>
       </header>
 
-      <main class="content">
+      <main class="content" id="main-content" tabindex="-1">
         <section class="hero hero-bg">
           <h1>Support Center.</h1>
           <p class="hero-sub">Find help for TopDog apps.</p>
@@ -415,31 +425,36 @@
             <label>
               Subject
               <select name="subject" required>
-                <option value="General Support">General Support</option>
-                <option value="Bug Report">Bug Report</option>
-                <option value="Feature Request">Feature Request</option>
-                <option value="Rituals by TopDog">Rituals by TopDog</option>
-                <option value="The Noise Clock by TopDog">The Noise Clock by TopDog</option>
-                <option value="Blackjack by TopDog">Blackjack by TopDog</option>
-                <option value="Baccarat by TopDog">Baccarat by TopDog</option>
-                <option value="Selfie Cam by Topdog">Selfie Cam by Topdog</option>
-                <option value="Business Card by TopDog">Business Card by TopDog</option>
-              </select>
+<option value="General Support">General Support</option>
+<option value="Bug Report">Bug Report</option>
+<option value="Feature Request">Feature Request</option>
+<option value="Rituals by TopDog">Rituals by TopDog</option>
+<option value="The Noise Clock by TopDog">The Noise Clock by TopDog</option>
+<option value="Blackjack by TopDog">Blackjack by TopDog</option>
+<option value="Baccarat by TopDog">Baccarat by TopDog</option>
+<option value="Selfie Cam by Topdog">Selfie Cam by Topdog</option>
+<option value="Business Card by TopDog">Business Card by TopDog</option>
+<option value="Word Rush by TopDog">Word Rush by TopDog</option>
+<option value="BreakVibe by TopDog">BreakVibe by TopDog</option>
+<option value="2048 Rush by TopDog">2048 Rush by TopDog</option>
+<option value="Pattern Lock by TopDog">Pattern Lock by TopDog</option>
+</select>
             </label>
             <label>
               Name
-              <input name="name" type="text" required placeholder="Jane Smith" />
+              <input name="name" type="text" autocomplete="name" maxlength="100" required placeholder="Jane Smith" />
             </label>
             <label>
               Email
-              <input name="email" type="email" required placeholder="you@example.com" />
+              <input name="email" type="email" autocomplete="email" spellcheck="false" maxlength="254" required placeholder="you@example.com" />
             </label>
             <label>
               Message
-              <textarea name="message" required placeholder="Your message..." rows="4"></textarea>
+              <textarea name="message" maxlength="10000" required placeholder="Your message…" rows="4"></textarea>
             </label>
+            <label class="form-trap" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off" /></label>
             <button class="button primary" type="submit" id="support-submit">Submit</button>
-            <p class="form-status" id="form-status" aria-live="polite">
+            <p class="form-status" id="form-status" tabindex="-1" aria-live="polite">
               Send your request and we will reply by email.
             </p>
           </form>
@@ -471,18 +486,18 @@
       <footer class="footer">
         <div class="footer-grid">
           <div>
-            <h4>Navigation</h4>
+            <h2>Navigation</h2>
             <a href="/apps">Apps</a>
             <a href="/about">About</a>
           </div>
           <div>
-            <h4>Support</h4>
+            <h2>Support</h2>
             <a href="mailto:info@topdoglabs.com">Email</a>
             <a href="/support">Support</a>
             <a href="/faq">FAQ</a>
           </div>
           <div>
-            <h4>Legal</h4>
+            <h2>Legal</h2>
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms</a>
             <a href="/cookies">Cookies</a>
@@ -505,7 +520,7 @@
         form.addEventListener("submit", async function (event) {
           event.preventDefault();
           const originalLabel = button.textContent;
-          button.textContent = "Sending...";
+          button.textContent = "Sending…";
           status.className = "form-status";
           status.textContent = "";
           button.disabled = true;
@@ -516,6 +531,7 @@
             name: formData.get("name") || "",
             email: formData.get("email") || "",
             message: formData.get("message") || "",
+            website: formData.get("website") || "",
           };
 
           try {
@@ -532,17 +548,19 @@
               result = {};
             }
 
-            if (response.ok) {
+            if (response.ok && result.success === true) {
               status.textContent = "Your message has been sent. We'll get back to you soon.";
               status.className = "form-status success";
               form.reset();
             } else {
               status.textContent = result.error || "Failed to send email";
               status.className = "form-status error";
+              status.focus();
             }
           } catch (error) {
             status.textContent = "Network error. Please try again.";
             status.className = "form-status error";
+              status.focus();
           } finally {
             button.textContent = originalLabel;
             button.disabled = false;

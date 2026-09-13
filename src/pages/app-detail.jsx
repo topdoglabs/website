@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { NotFoundPage } from "./not-found.jsx";
+import { ScreenshotDialog } from "../components/screenshot-dialog.jsx";
+import { getScreenshotImageProps } from "../lib/image-model.js";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
 import { useSiteContent } from "../hooks/use-site-content.js";
@@ -42,23 +45,7 @@ export const AppDetailPage = () => {
     );
   }
 
-  if (error || !app) {
-    return (
-      <Layout>
-        <section className="hero">
-          {ui.errorAppTitle ? <h1>{ui.errorAppTitle}</h1> : null}
-          {ui.errorAppSubtitle ? (
-            <p className="hero-sub">{ui.errorAppSubtitle}</p>
-          ) : null}
-          <div className="hero-actions">
-            <Link className="button primary" to="/apps">
-              {ui.viewAllAppsCta}
-            </Link>
-          </div>
-        </section>
-      </Layout>
-    );
-  }
+  if (error || !app) return <NotFoundPage />;
 
   const screenshots = getAppScreenshots(app);
   const appStoreUrl = getAppStoreUrl(app);
@@ -131,7 +118,7 @@ export const AppDetailPage = () => {
 
       return (
         <section className="detail-copy-block" key={`desc-block-${blockIndex}`}>
-          {heading ? <h3 className="detail-copy-heading">{heading}</h3> : null}
+          {heading ? <h2 className="detail-copy-heading">{heading}</h2> : null}
           {bodyLines.map((line, lineIndex) => (
             <p
               className={`detail-copy-line${isLead ? " lead" : ""}`}
@@ -167,7 +154,7 @@ export const AppDetailPage = () => {
         {showSections ? sections.map((section, sectionIndex) => (
           <section className="detail-copy-block" key={`copy-section-${sectionIndex}`}>
             {section.heading ? (
-              <h3 className="detail-copy-heading">{section.heading}</h3>
+              <h2 className="detail-copy-heading">{section.heading}</h2>
             ) : null}
             {Array.isArray(section.bullets) && section.bullets.length > 0 ? (
               <ul className="detail-copy-list">
@@ -195,7 +182,7 @@ export const AppDetailPage = () => {
     const scrollAmount = clientWidth * 0.9;
     sliderRef.current.scrollBy({
       left: direction === "next" ? scrollAmount : -scrollAmount,
-      behavior: "smooth",
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
     });
   };
 
@@ -206,7 +193,7 @@ export const AppDetailPage = () => {
           <div className="detail-title">
             <div className="detail-icon">
               {getAppIcon(app) ? (
-                <img src={getAppIcon(app)} alt={`${appName} app icon`} loading="lazy" />
+                <img src={getAppIcon(app)} alt={`${appName} app icon`} width="128" height="128" />
               ) : (
                 <div className="app-icon placeholder" aria-hidden="true"></div>
               )}
@@ -259,9 +246,10 @@ export const AppDetailPage = () => {
               aria-label={`Open ${appName} screenshot 1`}
             >
               <img
-                src={screenshots[0]}
+                {...getScreenshotImageProps(screenshots[0], "(max-width: 720px) 80vw, 400px")}
                 alt={`${appName} screenshot 1`}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 onError={() =>
                   setBrokenShots((prev) => new Set(prev).add(0))
                 }
@@ -323,7 +311,7 @@ export const AppDetailPage = () => {
                     </div>
                   ) : (
                     <img
-                      src={shot}
+                      {...getScreenshotImageProps(shot, "(max-width: 720px) 35vw, 240px")}
                       alt={`${appName} screenshot ${index + 1}`}
                       loading="lazy"
                       onError={() =>
@@ -384,20 +372,7 @@ export const AppDetailPage = () => {
       </section>
 
       {activeShotIndex !== null ? (
-        <div className="modal" role="dialog" aria-modal="true">
-          <div
-            className="modal-backdrop"
-            onClick={() => setActiveShotIndex(null)}
-          />
-          <div className="modal-content">
-            <button
-              className="modal-close"
-              type="button"
-              onClick={() => setActiveShotIndex(null)}
-              aria-label="Close image"
-            >
-              ✕
-            </button>
+        <ScreenshotDialog title={`${appName} screenshots`} onDismiss={() => setActiveShotIndex(null)}>
             <button
               className="modal-nav left"
               type="button"
@@ -416,7 +391,7 @@ export const AppDetailPage = () => {
               </div>
             ) : (
               <img
-                src={screenshots[activeShotIndex]}
+                {...getScreenshotImageProps(screenshots[activeShotIndex], "90vw")}
                 alt={`${appName} screenshot ${activeShotIndex + 1}`}
                 onError={() =>
                   setBrokenShots((prev) => new Set(prev).add(activeShotIndex))
@@ -435,8 +410,7 @@ export const AppDetailPage = () => {
             >
               →
             </button>
-          </div>
-        </div>
+        </ScreenshotDialog>
       ) : null}
     </Layout>
   );

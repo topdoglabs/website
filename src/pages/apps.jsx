@@ -95,7 +95,7 @@ export const AppsPage = () => {
                 </div>
                 <div className="app-meta">
                   <div>
-                    <h4>{getAppName(app)}</h4>
+                    <h3>{getAppName(app)}</h3>
                     <span>{getAppSubline(app)}</span>
                   </div>
                   <p>{getAppBody(app)}</p>

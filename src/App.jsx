@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { ScrollToTop } from "./components/scroll-to-top.jsx";
 import { AppDetailPage } from "./pages/app-detail.jsx";
 import { AppsPage } from "./pages/apps.jsx";
+import { NotFoundPage } from "./pages/not-found.jsx";
+import { PageMetadata } from "./components/page-metadata.jsx";
 import { HomePage } from "./pages/home.jsx";
 import { PrivacyPage } from "./pages/privacy.jsx";
 import { StaticPage } from "./pages/static-page.jsx";
@@ -10,7 +12,7 @@ import { SupportPage } from "./pages/support.jsx";
 
 const SupportStaticRedirect = () => {
   useEffect(() => {
-    window.location.assign("/support.html");
+    window.location.replace("/support.html");
   }, []);
 
   return null;
@@ -20,6 +22,7 @@ export const App = () => {
   return (
     <>
       <ScrollToTop />
+      <PageMetadata />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/apps" element={<AppsPage />} />
@@ -32,7 +35,7 @@ export const App = () => {
         <Route path="/terms" element={<StaticPage slug="terms" />} />
         <Route path="/cookies" element={<StaticPage slug="cookies" />} />
         <Route path="/connect" element={<StaticPage slug="connect" />} />
-        <Route path="*" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );

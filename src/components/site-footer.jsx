@@ -14,7 +14,7 @@ export const SiteFooter = () => {
       <div className="footer-grid">
         {columns.map((column) => (
           <div key={column.title}>
-            <h4>{column.title}</h4>
+            <h2>{column.title}</h2>
             {column.links.map((link) =>
               isExternal(link.href) ? (
                 <a key={link.label} href={link.href}>

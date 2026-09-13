@@ -3,8 +3,9 @@ import { SiteHeader } from "./site-header.jsx";
 
 export const Layout = ({ children }) => (
   <div className="page">
+    <a className="skip-link" href="#main-content">Skip to main content</a>
     <SiteHeader />
-    <main className="content">{children}</main>
+    <main className="content" id="main-content" tabIndex={-1}>{children}</main>
     <SiteFooter />
   </div>
 );

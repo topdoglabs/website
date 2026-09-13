@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --phone-shot-ratio: 1320 / 2868;
   --font-sans: "Sora", "Segoe UI", sans-serif;
   --font-serif: var(--font-sans);
@@ -296,7 +296,7 @@ a {
 
 .pillars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 24px;
 }
 
@@ -327,7 +327,7 @@ a {
 
 .featured {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 28px;
   align-items: center;
   background: var(--surface);
@@ -386,7 +386,7 @@ a {
 
 .split {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 32px;
   align-items: start;
   border-top: 1px solid var(--line);
@@ -423,7 +423,7 @@ a {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 24px;
 }
 
@@ -525,14 +525,14 @@ a {
 }
 
 .bento-card.feature {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   align-items: center;
   gap: 20px;
 }
 
 .bento-shots {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-columns: repeat(2, minmax(min(100%, 100px), 1fr));
   gap: 12px;
 }
 
@@ -546,7 +546,7 @@ a {
 
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 18px;
 }
 
@@ -616,7 +616,7 @@ a {
   line-height: 1.3;
 }
 
-.app-meta h4 {
+.app-meta h3 {
   margin: 0 0 4px;
   font-size: 16px;
 }
@@ -655,7 +655,7 @@ a {
 
 .app-hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 32px;
   align-items: start;
   text-align: left;
@@ -703,7 +703,7 @@ a {
 
 .detail-meta {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
   gap: 16px;
   border-top: 1px solid var(--line);
   padding-top: 24px;
@@ -727,7 +727,7 @@ a {
   background: var(--card);
   border-radius: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
   align-items: center;
   justify-items: center;
   gap: 18px;
@@ -1034,7 +1034,7 @@ a {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 16px;
 }
 
@@ -1140,7 +1140,7 @@ a {
 
 .support-merge {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 28px;
   align-items: start;
   background: var(--surface);
@@ -1195,7 +1195,7 @@ a {
 
 .page-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 24px;
   border-top: 1px solid var(--line);
   padding-top: 32px;
@@ -1283,7 +1283,7 @@ a {
   font-size: 13px;
 }
 
-.footer-grid h4 {
+.footer-grid h2 {
   margin: 0 0 8px;
   color: var(--ink);
   font-size: 13px;
@@ -1380,4 +1380,36 @@ a {
   .shot-track {
     grid-auto-columns: calc((100% - 16px) / 2);
   }
+}
+
+/* Allow padded grids and their children to shrink on narrow screens. */
+.content > *, .page-section, .support-copy, .form, .form label,
+.app-hero-copy, .app-hero-media, .shot-track, .app-meta { min-width: 0; }
+.page-section, .support-copy, .detail-title, .detail-meta { overflow-wrap: anywhere; }
+.form input, .form textarea, .form select { width: 100%; min-width: 0; font-size: 16px; }
+:where(a, button, input, textarea, select):focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.skip-link { position: fixed; top: 12px; left: 12px; z-index: 200; padding: 12px 18px; background: var(--accent); color: var(--bg); transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+.sr-only, .form-trap { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.modal { width: 100%; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 20px; border: 0; background: transparent; color: var(--ink); overscroll-behavior: contain; }
+.modal:not([open]) { display: none; }
+.modal::backdrop { background: rgba(0, 0, 0, 0.8); }
+.modal-content { min-width: 0; max-width: 100%; }
+.modal-content img { width: auto; max-width: 100%; height: auto; }
+@media (max-width: 720px) {
+  .shot-shell { grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; }
+  .shot-nav { display: block; width: 32px; height: 40px; }
+  .shot-track { grid-auto-columns: calc((100% - 16px) / 2); }
+  .logo { font-size: clamp(30px, 12vw, 55px); }
+  .logo-img { height: clamp(64px, 22vw, 100px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+.apps-overview { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.overview-content, .apps-stats { min-width: 0; overflow-wrap: anywhere; }
+.privacy-embed { min-width: 0; overflow-x: auto; overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+  .apps-overview { grid-template-columns: minmax(0, 1fr); }
+  .overview-content { padding: 20px; }
 }

@@ -68,7 +68,7 @@
     "heroPrimaryCta": "Email Support",
     "heroSecondaryCta": "Send a Message",
     "bodyTitle": "Welcome to TopDog Labs Support.",
-    "bodyText": "We help you get the most out of our iOS apps, including Blackjack by TopDog and upcoming releases. Send your request below and we will respond quickly.",
+    "bodyText": "We help you get the most out of our iOS apps and upcoming releases. Send your request below and we will respond quickly.",
     "subjectLabel": "Subject",
     "subjectOptions": [
       "General Support",
@@ -80,7 +80,7 @@
     "emailLabel": "Email",
     "emailPlaceholder": "you@example.com",
     "messageLabel": "Message",
-    "messagePlaceholder": "Your message...",
+    "messagePlaceholder": "Your message…",
     "submitLabel": "Submit"
   },
   "appDetail": {
@@ -98,12 +98,12 @@
     "sectionTitle": "Privacy policy"
   },
   "ui": {
-    "loadingApps": "Loading apps...",
-    "loadingApp": "Loading app...",
-    "loadingPolicy": "Loading policy...",
-    "appLoadingTitle": "Loading...",
+    "loadingApps": "Loading apps…",
+    "loadingApp": "Loading app…",
+    "loadingPolicy": "Loading policy…",
+    "appLoadingTitle": "Loading…",
     "appLoadingSubtitle": "Fetching app details.",
-    "pageLoadingTitle": "Loading...",
+    "pageLoadingTitle": "Loading…",
     "pageLoadingSubtitle": "Fetching content.",
     "errorApps": "Unable to load apps right now.",
     "errorAppTitle": "App not found.",
@@ -111,7 +111,8 @@
     "errorPageTitle": "Page not found.",
     "errorPageSubtitle": "We could not load this section.",
     "viewAllAppsCta": "View all apps",
-    "errorPolicy": "We could not load the privacy policy. Please try again."
+    "errorPolicy": "We could not load the privacy policy. Please try again.",
+    "notFoundHelp": "This page may have moved or the address may be incorrect. Browse our apps to find what you need."
   },
   "footerColumns": [
     {
@@ -305,5 +306,11 @@
         }
       ]
     }
+  },
+  "seo": {
+    "siteUrl": "https://topdoglabs.com",
+    "title": "TopDog Labs",
+    "description": "TopDog Labs builds polished iOS apps. Explore our App Store portfolio and get support.",
+    "image": "/web-app-manifest-512x512.png"
   }
 }

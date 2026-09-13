@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components/layout.jsx";
 import { useApps } from "../hooks/use-apps.js";
@@ -18,8 +18,10 @@ export const SupportPage = () => {
     name: "",
     email: "",
     message: "",
+    website: "",
   });
 
+  const statusRef = useRef(null);
   const [status, setStatus] = useState("idle"); // idle, loading, success, error
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -42,15 +44,17 @@ export const SupportPage = () => {
 
       const result = await response.json();
 
-      if (response.ok) {
+      if (response.ok && result.success === true) {
         setStatus("success");
       } else {
         setStatus("error");
-        setErrorMessage(result.error || "Failed to send email");
+        setErrorMessage(result.error || "Failed to send email. Please try again.");
+        requestAnimationFrame(() => statusRef.current?.focus());
       }
     } catch (err) {
       setStatus("error");
       setErrorMessage("Network error. Please try again.");
+      requestAnimationFrame(() => statusRef.current?.focus());
     }
   };
 
@@ -87,7 +91,7 @@ export const SupportPage = () => {
           {support.bodyTitle ? <h2>{support.bodyTitle}</h2> : null}
           {support.bodyText ? <p>{support.bodyText}</p> : null}
           {status === "error" && (
-            <p style={{ color: "var(--accent)", marginTop: "20px" }}>
+            <p ref={statusRef} role="alert" tabIndex={-1} style={{ color: "var(--accent)", marginTop: "20px" }}>
               {errorMessage || "Something went wrong. Please try emailing us directly."}
             </p>
           )}
@@ -107,6 +111,8 @@ export const SupportPage = () => {
             {support.nameLabel}
             <input
               name="name"
+              autoComplete="name"
+              maxLength={100}
               type="text"
               required
               placeholder={support.namePlaceholder}
@@ -118,6 +124,9 @@ export const SupportPage = () => {
             {support.emailLabel}
             <input
               name="email"
+              autoComplete="email"
+              spellCheck={false}
+              maxLength={254}
               type="email"
               required
               placeholder={support.emailPlaceholder}
@@ -129,6 +138,7 @@ export const SupportPage = () => {
             {support.messageLabel}
             <textarea
               name="message"
+              maxLength={10000}
               required
               placeholder={support.messagePlaceholder}
               rows="4"
@@ -136,12 +146,13 @@ export const SupportPage = () => {
               onChange={handleChange}
             ></textarea>
           </label>
+          <label className="form-trap" aria-hidden="true">Leave this empty<input name="website" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} /></label>
           <button
             className="button primary"
             type="submit"
             disabled={status === "loading"}
           >
-            {status === "loading" ? "Sending..." : support.submitLabel}
+            {status === "loading" ? "Sending…" : support.submitLabel}
           </button>
         </form>
       </section>
