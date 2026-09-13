@@ -2,6 +2,40 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import handler from '../api/send-email.js';
 
+test('support accepts its deployment and branch preview origins while rejecting other projects', async (t) => {
+  const environment = {
+    RESEND_API_KEY: 'local-test-key',
+    VERCEL_URL: 'website-abc123-team.vercel.app',
+    VERCEL_BRANCH_URL: 'website-git-audit-team.vercel.app',
+  };
+  const previous = Object.fromEntries(Object.keys(environment).map(key => [key, process.env[key]]));
+  Object.assign(process.env, environment);
+  t.after(() => {
+    for (const [key, value] of Object.entries(previous)) {
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  });
+  let sent = 0;
+  t.mock.method(globalThis, 'fetch', async () => { sent += 1; return { ok: true }; });
+  for (const [origin, expected] of [
+    [`https://${environment.VERCEL_URL}`, 200],
+    [`https://${environment.VERCEL_BRANCH_URL}`, 200],
+    ['https://topdoglabs.com', 200],
+    ['https://another-project.vercel.app', 403],
+    [`https://${environment.VERCEL_BRANCH_URL}.unrelated.example`, 403],
+  ]) {
+    const response = { statusCode: 200, setHeader() {}, status(code) { this.statusCode = code; return this; }, json() { return this; } };
+    await handler({
+      method: 'POST', headers: { origin, 'content-type': 'application/json' },
+      socket: { remoteAddress: '192.0.2.50' },
+      body: { name: 'Preview Test', email: 'test@example.com', message: 'Preview support check' },
+    }, response);
+    assert.equal(response.statusCode, expected, origin);
+  }
+  assert.equal(sent, 3);
+});
+
 test('support requests validate input, keep email text literal, and limit repeated sends', async (t) => {
   const previousKey = process.env.RESEND_API_KEY;
   process.env.RESEND_API_KEY = 'local-test-key';

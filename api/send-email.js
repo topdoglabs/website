@@ -28,8 +28,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
   const origin = req.headers?.origin;
-  const previewOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null;
-  if (origin && !allowedOrigins.has(origin) && origin !== previewOrigin) {
+  const previewOrigins = [process.env.VERCEL_URL, process.env.VERCEL_BRANCH_URL]
+    .filter(Boolean).map(host => `https://${host}`);
+  if (origin && !allowedOrigins.has(origin) && !previewOrigins.includes(origin)) {
     return res.status(403).json({ error: 'Please use the support form on topdoglabs.com.' });
   }
   if (!req.headers?.['content-type']?.toLowerCase().startsWith('application/json')) {
