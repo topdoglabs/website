@@ -49,10 +49,14 @@ body { line-height: 1.6; }
   overflow: visible;
   gap: 40px;
 }
-/* The skip-link target can receive focus on a content tap in WebKit.
-   Keep the landmark focusable without framing the entire page. */
+/* Keep focus semantics while avoiding WebKit's touch-triggered focus rings.
+   Text fields retain their focus feedback; keyboard navigation retains all rings.
+   Without JavaScript, the browser's native :focus-visible behavior still applies. */
+html[data-focus-input="pointer"] :where(a, button, [tabindex]):focus {
+  outline: none;
+}
 #main-content:focus { outline: none; }
-#main-content:focus-visible h1 {
+html:not([data-focus-input="pointer"]) #main-content:focus-visible h1 {
   outline: 3px solid var(--accent);
   outline-offset: 6px;
   border-radius: 4px;
