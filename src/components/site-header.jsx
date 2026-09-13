@@ -9,9 +9,9 @@ export const SiteHeader = () => {
 
   return (
     <header className="header">
-      <Link className="logo" to="/">
-        <img src="/assets/logos/logo-2.svg" alt="TopDog Labs Logo" className="logo-img" />
-        TopDog Labs
+      <Link className="logo" to="/" aria-label="TopDog Labs home">
+        <img src="/assets/logos/schnauzer-160.webp" alt="" width="80" height="80" className="logo-img" />
+        <span className="brand-name">TopDog <span className="brand-accent">Labs</span></span>
       </Link>
       <nav className="nav" aria-label="Main navigation">
         {links.map((link) => (

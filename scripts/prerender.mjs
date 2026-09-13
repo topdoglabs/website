@@ -36,8 +36,10 @@ try {
   }
 } finally { await server.close(); }
 const support = await fs.readFile('dist/support.html', 'utf8');
+const stylesheets = (template.match(/<link\b[^>]*rel="stylesheet"[^>]*>/g) || []).join('\n');
+if (!stylesheets) throw new Error('The support page needs the built site stylesheet.');
 const options = [...site.support.subjectOptions, ...apps.map((app) => app.identity.name)].map((name) => `<option value="${escape(name)}">${escape(name)}</option>`).join('\n');
-await fs.writeFile('dist/support.html', withMeta(support.replace(/(<select name="subject"[^>]*>)[\s\S]*?(<\/select>)/, (_match, open, close) => `${open}${options}${close}`), '/support'));
+await fs.writeFile('dist/support.html', withMeta(support.replace('<link rel="stylesheet" href="/src/brand.css" />', stylesheets).replace(/(<select name="subject"[^>]*>)[\s\S]*?(<\/select>)/, (_match, open, close) => `${open}${options}${close}`), '/support'));
 await fs.writeFile('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...routes.filter((route) => !['/404', '/support-form'].includes(route)), '/support'].map((route) => `<url><loc>${escape(site.seo.siteUrl + (route === '/' ? '' : route))}</loc></url>`).join('')}</urlset>`);
 await fs.appendFile('dist/robots.txt', `\nSitemap: ${site.seo.siteUrl}/sitemap.xml\n`);
 console.log(`Prerendered ${routes.length} pages, support catalog, and sitemap.`);

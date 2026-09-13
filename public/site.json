@@ -18,35 +18,41 @@
   "home": {
     "heroTitle": "Crafting premium iOS experiences.",
     "heroSubtitle": "Simple, focused apps built for clarity and performance.",
-    "heroPrimaryCta": "Browse Apps",
-    "heroSecondaryCta": "Get Support",
+    "heroPrimaryCta": "Browse apps",
+    "heroSecondaryCta": "Get support",
     "splitTitle": "Quality over quantity.",
-    "splitBody": "We ship small, high-polish utilities and games that respect your time and privacy. No tracking, no clutter.",
+    "splitBody": "We ship small, high-polish utilities and games that respect your time and privacy.",
     "splitCardTitle": "Always Native",
     "splitCardBody": "Built with SwiftUI and modern Apple frameworks for the best possible experience on iPhone and iPad.",
     "pillars": [
       {
         "title": "Private",
-        "body": "No tracking, no analytics, no surprise data collection."
+        "body": "Respect for your privacy.",
+        "icon": "privacy"
       },
       {
         "title": "Native",
-        "body": "SwiftUI interfaces tuned for speed and haptic feedback."
+        "body": "Built for Apple devices.",
+        "icon": "native"
       },
       {
         "title": "Offline",
-        "body": "Your apps work everywhere, even without a connection."
+        "body": "Ready wherever you are.",
+        "icon": "offline"
       }
     ],
     "featuredEyebrow": "Latest Release",
     "featuredTitle": "A new way to play.",
     "featuredBody": "Our apps represent a commitment to craft, from the first launch to everyday use.",
-    "featuredPrimaryCta": "View All",
+    "featuredPrimaryCta": "View all apps",
     "featuredSecondaryCta": "Support",
     "newsletterTitle": "",
     "newsletterBody": "",
     "newsletterPlaceholder": "",
-    "newsletterButton": ""
+    "newsletterButton": "",
+    "mascotAlt": "TopDog Labs salt-and-pepper miniature schnauzer wearing glasses, with a mint laboratory flask",
+    "featuredAppCta": "Explore the app",
+    "studioNote": "Small apps. Big enjoyment."
   },
   "appsPage": {
     "heroTitle": "Apps",
