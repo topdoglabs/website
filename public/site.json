@@ -74,7 +74,7 @@
     "heroPrimaryCta": "Email Support",
     "heroSecondaryCta": "Send a Message",
     "bodyTitle": "Welcome to TopDog Labs Support.",
-    "bodyText": "We help you get the most out of our iOS apps and upcoming releases. Send your request below and we will respond quickly.",
+    "bodyText": "Brand: TopDog Labs. Operated by TopDog Collective LLC. Contact: Matt Bruce. Email: info@topdoglabs.com. Location: Frisco, Texas, United States. Send your request below and we will respond quickly.",
     "subjectLabel": "Subject",
     "subjectOptions": [
       "General Support",
@@ -169,7 +169,7 @@
       ]
     }
   ],
-  "footerNote": "© 2026 TopDog Labs. All rights reserved.",
+  "footerNote": "© 2026 TopDog Collective LLC. TopDog Labs and TopDogMerch are brands of TopDog Collective LLC.",
   "pages": {
     "about": {
       "title": "About TopDog Labs",
@@ -194,7 +194,7 @@
           "body": "Privacy by default — no tracking, no analytics, minimal data collection. Offline-first whenever possible. Thoughtful first-time experiences (welcome sheets, spotlight tours). Haptics, animations, and sound used intentionally to make interactions feel premium."
         }
       ],
-      "closing": "TopDog Labs is a solo effort by Matt Bruce in Frisco, Texas. We’re here to ship apps that respect your time and attention."
+      "closing": "TopDog Labs is the apps brand of TopDog Collective LLC, based in Frisco, Texas. Founded by Matt Bruce, we ship apps that respect your time and attention."
     },
     "faq": {
       "title": "FAQ.",
@@ -236,15 +236,15 @@
       "title": "Terms of Service",
       "subtitle": "Last updated: January 20, 2026",
       "summaryTitle": "Agreement to Terms",
-      "summaryBody": "By accessing or using TopDog Labs apps and services, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the service.",
+      "summaryBody": "These Terms are an agreement between you and TopDog Collective LLC (operating the TopDog Labs apps and website). By accessing or using TopDog Labs apps and services, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the service.",
       "sections": [
         {
           "title": "1. Usage License",
-          "body": "TopDog Labs grants you a personal, non-exclusive, non-transferable, limited license to use our apps for personal, non-commercial purposes on devices you own or control, in accordance with the App Store Terms of Service."
+          "body": "TopDog Collective LLC (operating as TopDog Labs) grants you a personal, non-exclusive, non-transferable, limited license to use our apps for personal, non-commercial purposes on devices you own or control, in accordance with the App Store Terms of Service."
         },
         {
           "title": "2. Intellectual Property",
-          "body": "The apps, including their original content, features, and functionality, are and will remain the exclusive property of TopDog Labs and its licensors. Our trademarks and trade dress may not be used in connection with any product or service without prior written consent."
+          "body": "The apps, including their original content, features, and functionality, are and will remain the exclusive property of TopDog Collective LLC and its licensors. Our trademarks and trade dress may not be used in connection with any product or service without prior written consent."
         },
         {
           "title": "3. User Conduct",
@@ -256,15 +256,19 @@
         },
         {
           "title": "5. Limitation of Liability",
-          "body": "In no event shall TopDog Labs be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of the service."
+          "body": "In no event shall TopDog Collective LLC be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of the service."
         },
         {
           "title": "6. Changes to Terms",
           "body": "We reserve the right to modify these terms at any time. We will provide notice of any significant changes by posting the new terms on this page. Your continued use of the apps after changes constitute acceptance of the new terms."
         },
         {
-          "title": "7. Contact",
-          "body": "If you have any questions about these Terms, please contact us at info@topdoglabs.com."
+          "title": "7. Governing Law",
+          "body": "These Terms are governed by the laws of the State of Texas, United States, without regard to conflict-of-law principles. You agree that courts located in Texas have exclusive jurisdiction over disputes arising from these Terms, except where prohibited by law."
+        },
+        {
+          "title": "8. Contact",
+          "body": "If you have any questions about these Terms, contact TopDog Collective LLC (TopDog Labs) at info@topdoglabs.com. Mailing address: Matthew Bruce, 7205 Greystone Ln, Frisco, TX 75034."
         }
       ]
     },
@@ -272,7 +276,7 @@
       "title": "Cookie Policy",
       "subtitle": "Transparency regarding our usage of cookies.",
       "summaryTitle": "Our Approach to Privacy",
-      "summaryBody": "At TopDog Labs, we believe in minimal data collection. This brochure website is designed to be as private as possible.",
+      "summaryBody": "TopDog Collective LLC operates the TopDog Labs brochure website with minimal data collection. This site is designed to be as private as possible.",
       "sections": [
         {
           "title": "What are cookies?",
@@ -280,7 +284,7 @@
         },
         {
           "title": "Our Usage",
-          "body": "TopDog Labs does not use persistent tracking cookies, advertising cookies, or third-party analytics cookies on this website. We respect your privacy and aim for a cookie-free experience."
+          "body": "TopDog Collective LLC (TopDog Labs) does not use persistent tracking cookies, advertising cookies, or third-party analytics cookies on this website. We respect your privacy and aim for a cookie-free experience."
         },
         {
           "title": "Essential Cookies",
